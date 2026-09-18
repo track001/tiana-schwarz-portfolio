@@ -14,10 +14,10 @@ import "./styles.css";
 ========================================================= */
 
 // CodeSandbox
-const BASE_URL = "";
+// const BASE_URL = "";
 
 // GitHub Pages
-// const BASE_URL = "/tiana-schwarz-portfolio";
+const BASE_URL = "/tiana-schwarz-portfolio";
 
 const assetPath = (path: string) => `${BASE_URL}${path}`;
 
