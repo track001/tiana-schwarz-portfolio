@@ -14,10 +14,10 @@ import "./styles.css";
 ========================================================= */
 
 // CodeSandbox
-// const BASE_URL = "";
+const BASE_URL = "";
 
 // GitHub Pages
-const BASE_URL = "/tiana-schwarz-portfolio";
+// const BASE_URL = "/tiana-schwarz-portfolio";
 
 const assetPath = (path: string) => `${BASE_URL}${path}`;
 
@@ -82,7 +82,7 @@ const projects: Project[] = [
     title: "Bubby's Wayback Machine",
     subtitle: "GameRant Article Archive",
     description:
-      "A personal digital archive built to preserve my sister's 282 published GameRant articles in one searchable collection, with archived copies, filtering, HTML downloads, and print-ready exports.",
+      "A client-focused digital archive developed to preserve and organize 282 published GameRant articles, featuring searchable content, filtering, archived source copies, HTML downloads, and print-ready exports.",
     stack: [
       "React",
       "TypeScript",
@@ -242,12 +242,19 @@ const timeline: TimelineItem[] = [
     title: "MRT-C Mission Analyst",
     location: "Colorado Springs, CO",
     summary:
-      "Cyber mission analysis supporting USSF mission risk and terrain assessments.",
+      "Cyber mission analysis supporting U.S. Space Force mission assurance, cyber terrain, and risk assessments.",
     details: [
-      "Analyze mission-relevant cyber terrain, dependencies, and key terrain.",
-      "Support mission decomposition through Mission Thread Engineering (MEngT) to support technical analysis and documentation for MRT-C assessments.",
+      "Analyze mission-relevant cyber terrain, system dependencies, vulnerabilities, and Key Terrain–Cyber supporting USSF mission systems.",
+      "Support mission decomposition through Mission Thread Engineering (MEngT) and develop technical analysis supporting Operational Risk Assessments (ORAs), Asset Defense Plans (ADPs), and MRT-C mission data.",
+      "Support cross-team Quality Assurance (QA) reviews to improve the consistency, technical accuracy, and documentation quality of mission deliverables.",
     ],
-    tags: ["TOP SECRET Clearance", "ORA", "ADP", "MADSS"],
+    tags: [
+      "TS/SCI Clearance",
+      "Mission Analysis",
+      "ORA / ADP",
+      "MADSS",
+      "Mission Dependencies",
+    ],
     type: "work",
   },
   {
