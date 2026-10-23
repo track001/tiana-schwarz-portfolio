@@ -129,7 +129,7 @@ const projects: Project[] = [
   title: "TRON Telemetry",
   subtitle: "Portable Windows Desktop Monitoring Dashboard",
   description:
-    "A client-focused Rainmeter dashboard developed to monitor and visualize Windows system performance. Built with PowerShell and native Windows performance counters, featuring real-time CPU, GPU, and RAM telemetry, live utilization graphs, and hardware specifications. Includes interactive hover tooltips that explain technical metrics, customizable character overlays, and personalized interface elements tailored to the client's preferences.",
+  "A client-focused, downloadable Rainmeter dashboard developed to monitor and visualize Windows system performance. Built with PowerShell and native Windows performance counters, it features real-time CPU, GPU, and RAM telemetry, live utilization graphs, and hardware specifications. Interactive hover tooltips explain technical metrics, while customizable character overlays and interface elements reflect the client's preferences. The project and its source code are publicly available on GitHub for download and customization: https://github.com/track001/TRON-Telemetry",
   stack: [
     "Rainmeter",
     "PowerShell",
