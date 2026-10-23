@@ -129,7 +129,7 @@ const projects: Project[] = [
   title: "TRON Telemetry",
   subtitle: "Portable Windows Desktop Monitoring Dashboard",
   description:
-  "A client-focused, downloadable Rainmeter dashboard developed to monitor and visualize Windows system performance. Built with PowerShell and native Windows performance counters, it features real-time CPU, GPU, and RAM telemetry, live utilization graphs, and hardware specifications. Interactive hover tooltips explain technical metrics, while customizable character overlays and interface elements reflect the client's preferences. The project and its source code are publicly available on GitHub for download and customization: https://github.com/track001/TRON-Telemetry",
+     "A client-focused, downloadable Rainmeter dashboard developed to monitor and visualize Windows system performance. Built with PowerShell and native Windows performance counters, it features real-time CPU, GPU, and RAM telemetry, live utilization graphs, and hardware specifications. Interactive hover tooltips explain technical metrics, while customizable character overlays and interface elements reflect the client's preferences. The project and its source code are publicly available for download and customization.",
   stack: [
     "Rainmeter",
     "PowerShell",
@@ -525,9 +525,36 @@ export default function App() {
                   <h2>{project.title}</h2>
                   <h3>{project.subtitle}</h3>
 
-                  <p>{project.description}</p>
 
-                  <div className="tags">
+<p>{project.description}</p>
+
+{project.title === "TRON Telemetry" && project.github && (
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "8px",
+      width: "fit-content",
+      marginTop: "12px",
+      marginBottom: "20px",
+      color: "#e97759",
+      fontSize: "14px",
+      fontWeight: 600,
+      letterSpacing: "0.04em",
+      textDecoration: "none",
+      borderBottom: "1px solid #e97759",
+      paddingBottom: "5px",
+    }}
+  >
+    ↓ DOWNLOAD TRON TELEMETRY ON GITHUB ↗
+  </a>
+)}
+
+<div className="tags">
+
                     {project.stack.map((tech) => (
                       <span key={tech}>{tech}</span>
                     ))}
