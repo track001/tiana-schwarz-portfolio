@@ -115,13 +115,36 @@ const projects: Project[] = [
       "I2C",
       "Embedded Systems",
     ],
+
     images: [
       assetPath("/images/ares-preview1.png"),
       assetPath("/images/ares-preview2.png"),
       assetPath("/images/ares-preview3.png"),
     ],
   },
+  {
+    number: "04",
+    category: "SYSTEM MONITORING / AUTOMATION",
+    title: "TRON Telemetry",
+    subtitle: "Portable Windows Desktop Monitoring Dashboard",
+    description:
+      "A customizable Rainmeter dashboard built with PowerShell and native Windows performance counters to monitor CPU, GPU, and RAM performance. Features live utilization graphs, hardware specifications, interactive technical tooltips, and optional character overlays.",
+    stack: [
+      "Rainmeter",
+      "PowerShell",
+      "Windows",
+      "Performance Counters",
+      "WMI/CIM",
+    ],
+    images: [
+      assetPath("/images/version7.png"),
+      assetPath("/images/GPUinfo.png"),
+      assetPath("/images/smirky_dog.png"),
+    ],
+    github: "https://github.com/track001/TRON-Telemetry",
+  },
 ];
+
 
 /* =========================================================
    PROJECT CAROUSEL
@@ -511,7 +534,7 @@ export default function App() {
 
             <article className="project-card placeholder">
               <div className="placeholder-inner">
-                <span>04 / NEXT</span>
+               <span>05 / NEXT</span>
 
                 <h2>Adding More Projects Soon...</h2>
 
