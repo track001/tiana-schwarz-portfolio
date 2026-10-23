@@ -122,27 +122,31 @@ const projects: Project[] = [
       assetPath("/images/ares-preview3.png"),
     ],
   },
-  {
-    number: "04",
-    category: "SYSTEM MONITORING / AUTOMATION",
-    title: "TRON Telemetry",
-    subtitle: "Portable Windows Desktop Monitoring Dashboard",
-    description:
-      "A customizable Rainmeter dashboard built with PowerShell and native Windows performance counters to monitor CPU, GPU, and RAM performance. Features live utilization graphs, hardware specifications, interactive technical tooltips, and optional character overlays.",
-    stack: [
-      "Rainmeter",
-      "PowerShell",
-      "Windows",
-      "Performance Counters",
-      "WMI/CIM",
-    ],
-    images: [
-      assetPath("/images/version7.png"),
-      assetPath("/images/GPUinfo.png"),
-      assetPath("/images/smirky_dog.png"),
-    ],
-    github: "https://github.com/track001/TRON-Telemetry",
-  },
+ 
+{
+  number: "04",
+  category: "SYSTEM MONITORING / AUTOMATION",
+  title: "TRON Telemetry",
+  subtitle: "Portable Windows Desktop Monitoring Dashboard",
+  description:
+    "A client-focused Rainmeter dashboard developed to monitor and visualize Windows system performance. Built with PowerShell and native Windows performance counters, featuring real-time CPU, GPU, and RAM telemetry, live utilization graphs, and hardware specifications. Includes interactive hover tooltips that explain technical metrics, customizable character overlays, and personalized interface elements tailored to the client's preferences.",
+  stack: [
+    "Rainmeter",
+    "PowerShell",
+    "Windows",
+    "Performance Counters",
+    "WMI/CIM",
+  ],
+  images: [
+    assetPath("/images/version7.png"),
+    assetPath("/images/CPU-preview.png"),
+    assetPath("/images/GPU-preview.png"),
+    assetPath("/images/RAM-preview.png"),
+    assetPath("/images/GPUinfo.png"),
+  ],
+  github: "https://github.com/track001/TRON-Telemetry",
+},
+
 ];
 
 
