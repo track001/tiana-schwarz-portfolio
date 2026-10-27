@@ -346,15 +346,16 @@ type Credential = {
   date: string;
   validity?: string;
   detail: string;
+  sortDate?: string;
 };
 
 const credentials: Credential[] = [
-  { title: "CompTIA Security+ (SY0-601)", issuer: "CompTIA", date: "May 29, 2024", validity: "Valid through May 29, 2027", detail: "Tiana Schwarz earned the CompTIA Security+ (SY0-601) certification, validating foundational knowledge of threats, vulnerabilities, security architecture, security operations, and risk management." },
-  { title: "Level 2 Youth Coach", issuer: "USA Climbing", date: "November 2023", validity: "Membership through August 14, 2027", detail: "USA Climbing Level 2 Youth Coach with experience developing youth athletes, guiding structured practices, supporting competition preparation, and fostering a positive team environment." },
-  { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "Tiana Schwarz completed USA Climbing Level 1 Routesetter training, developing skills in movement design, route development, setting practices, and competition routesetting." },
-  { title: "Para Routesetting", issuer: "USA Climbing", date: "April 17, 2026", detail: "Tiana Schwarz completed a three-day USA Climbing Para Routesetting course focused on inclusive route design, adaptive movement, and routesetting considerations for para athletes." },
-  { title: "CPR / AED / First Aid", issuer: "National CPR Foundation", date: "August 13, 2026", validity: "Renewal August 13, 2028", detail: "Tiana Schwarz completed CPR, AED, and First Aid training covering emergency response, lifesaving techniques, and basic first aid procedures." },
-  { title: "Cyber Security Analyst Virtual Experience", issuer: "Telstra / Forage", date: "July 10, 2023", detail: "Tiana Schwarz completed the Telstra Cyber Security Analyst program, gaining hands-on experience in malware attack response, firewall rule creation, Python-based mitigation, and incident post-mortem documentation." },
+  { title: "CompTIA Security+ (SY0-601)", issuer: "CompTIA", date: "May 29, 2024", validity: "Valid through May 29, 2027", detail: "Tiana Schwarz earned the CompTIA Security+ (SY0-601) certification, validating foundational knowledge of threats, vulnerabilities, security architecture, security operations, and risk management.", sortDate: "2024-05-29" },
+  { title: "Level 2 Youth Coach", issuer: "USA Climbing", date: "November 2023", validity: "Membership through August 14, 2027", detail: "USA Climbing Level 2 Youth Coach with experience developing youth athletes, guiding structured practices, supporting competition preparation, and fostering a positive team environment.", sortDate: "2023-11-01" },
+  { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "Tiana Schwarz completed USA Climbing Level 1 Routesetter training, developing skills in movement design, route development, setting practices, and competition routesetting.", sortDate: "2026-07-12" },
+  { title: "Para Routesetting", issuer: "USA Climbing", date: "April 17, 2026", detail: "Tiana Schwarz completed a three-day USA Climbing Para Routesetting course focused on inclusive route design, adaptive movement, and routesetting considerations for para athletes.", sortDate: "2026-04-17" },
+  { title: "CPR / AED / First Aid", issuer: "National CPR Foundation", date: "August 13, 2026", validity: "Renewal August 13, 2028", detail: "Tiana Schwarz completed CPR, AED, and First Aid training covering emergency response, lifesaving techniques, and basic first aid procedures.", sortDate: "2026-08-13" },
+  { title: "Cyber Security Analyst Virtual Experience", issuer: "Telstra / Forage", date: "July 10, 2023", detail: "Tiana Schwarz completed the Telstra Cyber Security Analyst program, gaining hands-on experience in malware attack response, firewall rule creation, Python-based mitigation, and incident post-mortem documentation.", sortDate: "2023-07-10" },
   { title: "SketchUp Fundamentals", issuer: "SketchUp", date: "Date not specified", detail: "Tiana Schwarz earned the SketchUp Fundamentals (Desktop) certification, validating skills in precision modeling, texturing, and scene creation using the desktop version of SketchUp. The certification confirms her ability to navigate the full toolset and produce cross-platform visualizations." },
 ];
 
@@ -365,6 +366,7 @@ type Recognition = {
   category: RecognitionCategory;
   description: string;
   url?: string;
+  sortDate?: string;
 };
 
 const recognition: Recognition[] = [
@@ -373,142 +375,136 @@ const recognition: Recognition[] = [
   { title: "Springs Climbing Center Continues to Push Students to Greater Heights", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in The Scribe, the University of Colorado Colorado Springs student newspaper, in its coverage of Springs Climbing Center and the local student climbing community.", url: "https://scribe.uccs.edu/springs-climbing-center-continues-to-push-students-to-greater-heights/" },
   { title: "The Impact Driver Podcast", source: "The Impact Driver · Planned appearance", category: "Writing & Media", description: "A potential future podcast feature discussing climbing and the intersection of athletic and professional pursuits. Details and release date are pending confirmation." },
   { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe", category: "Academic Honors", description: "Tiana Schwarz was part of the UCCS A.R.E.S. Project team recognized by the Colorado Space Grant Consortium for innovative research on inertial measurement units (IMUs) in microgravity. The team explored how wearable technology could support human movement and monitoring in space.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
-  { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy", category: "Academic Honors", description: "SkyView Academy featured alumna Tiana Schwarz (Class of 2018), highlighting her academic journey, professional work in cybersecurity, and continued involvement in climbing and community activities.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018" },
-  { title: "2022–2023 Colorado Space Grant Consortium Institutional Scholarship", source: "Colorado Space Grant Consortium", category: "Academic Honors", description: "Tiana Schwarz was selected as a recipient of the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship, part of NASA's National Space Grant College and Fellowship Program supporting future scientists, engineers, and leaders.", },
+  { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy", category: "Academic Honors", description: "SkyView Academy featured alumna Tiana Schwarz (Class of 2018), highlighting her academic journey, professional work in cybersecurity, and continued involvement in climbing and community activities.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018", sortDate: "2025-11-04" },
+  { title: "2022–2023 Colorado Space Grant Consortium Institutional Scholarship", source: "Colorado Space Grant Consortium", category: "Academic Honors", description: "Tiana Schwarz was selected as a recipient of the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship, part of NASA's National Space Grant College and Fellowship Program supporting future scientists, engineers, and leaders." },
   { title: "Fall 2023 President's List", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized on the Fall 2023 President's List at the University of Colorado Colorado Springs for achieving a 4.0 semester GPA in the College of Engineering and Applied Science.", url: "https://communique.uccs.edu/?p=153687" },
   { title: "Fall 2021 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized for academic excellence during the Fall 2021 semester in the College of Engineering and Applied Science at UCCS, where she studied Computer Science in the ABET-accredited program.", url: "https://communique.uccs.edu/?p=137114" },
   { title: "Fall 2019 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized for academic excellence during the Fall 2019 semester in the College of Engineering and Applied Science at UCCS, where she studied Computer Science in the ABET-accredited program.", url: "https://communique.uccs.edu/?p=118157" },
   { title: "Crux: 9 Photos That Capture the Power and Struggle of a Climb's Hardest Move", source: "Climbing Magazine · Chris Thai", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in Climbing Magazine's Crux photo contest as an honorable mention in Chris Thai's photograph, Flo Storm Crux. The image captures Schwarz preparing for the dynamic crux of Flo Storm (V8) in Heaven's Gate near Eleven Mile Canyon, Colorado, where the defining move requires throwing to the next hold and cutting feet.", url: "https://www.climbing.com/culture-climbing/crux-winning-photo-summer-2026-contest/" },
-  { title: "USA Climbing Competition Results & Rankings", source: "USAC Database · Athlete profile", category: "Climbing & Athletics", description: "USA Climbing collegiate competition record, including first-place finishes in the 2024 Collegiate National Boulder qualifier and final (Women's Intermediate), first place at the 2024 Collegiate divisional Boulder competition, and additional collegiate qualifying results. Athlete ID: 29690465. The linked database provides event-by-event rankings, including Boulder and Lead/Top Rope tabs.", url: "https://usac.climb8a.com/climber/29690465" },
-  { title: "2024 Collegiate National Championships", source: "USA Climbing", category: "Climbing & Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/" },
+  { title: "USA Climbing Competition Results & Rankings", source: "USAC Database · Athlete profile", category: "Climbing & Athletics", description: "USA Climbing collegiate competition record, including first-place finishes in the 2024 Collegiate National Boulder qualifier and final (Women's Intermediate), first place at the 2024 Collegiate divisional Boulder competition, and additional collegiate qualifying results. Athlete ID: 29690465. The linked database provides event-by-event rankings, including Boulder and Lead/Top Rope tabs.", url: "https://usac.climb8a.com/climber/29690465", sortDate: "2024-05-24" },
+  { title: "2024 Collegiate National Championships", source: "USA Climbing", category: "Climbing & Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/", sortDate: "2024-05-24" },
   { title: "Eagle Valley Shines at Weekend of Mixed Climbing Events", source: "Vail Daily", category: "Climbing & Athletics", description: "Tiana Schwarz of the University of Colorado Colorado Springs won the women’s lead/top-rope category at a weekend of mixed climbing events hosted by Eagle Climbing & Fitness.", url: "https://www.vaildaily.com/news/eagle-climbing-and-fitness-hosts-weekend-of-mixed-climbing-events-eagle-valley-middle-school-climber-tops-individual-leaderboard/" },
   { title: "SkyView Academy High School Track & Field Records", source: "Athletic.net", category: "Climbing & Athletics", description: "Tiana Schwarz is the current SkyView Academy record holder in the 400m, 800m, 4×400m relay, 4×800m relay, and SMR 800m relay, and ranks third all-time in the 200m, with primary focus on the 400m and 800m. Last updated August 2026.", url: "https://www.athletic.net/team/42708/track-and-field-outdoor/2026/team-records/f" },
   { title: "Great Southwest Classic Colorado Entry List", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Tiana Schwarz was selected to represent Colorado at the prestigious Great Southwest Track & Field Classic, an invite-only meet at the University of New Mexico that draws top high school athletes from across the nation. Competing in the 800m, she ran a 2:26.03 against elite competition in this nationally recognized multi-day event.", url: "https://co.milesplit.com/articles/155390/updated-great-southwest-entry-list-for-colorado" },
   { title: "Colorado Class 3A Volleyball Statistical Leaders", source: "Colorado Preps", category: "Climbing & Athletics", description: "At the Class 3A volleyball level in Colorado, Tiana Schwarz ranked seventh in digs with 368 total, placing her among the elite dig leaders in the state that Fall 2017 season.", url: "https://coloradopreps.com/class-3a-volleyball-statistical-leaders/" },
   { title: "Volleyball Players to Watch: SkyView Academy", source: "Colorado Community Media", category: "Climbing & Athletics", description: "Colorado Community Media featured Tiana Schwarz in coverage of SkyView Academy volleyball and the team's competitive development.", url: "https://www.coloradocommunitymedia.com/stories/volleyball-squads-work-in-ways-like-football-teams,253643/" },
-  { title: "Colorado 3A Girls Track and Field State Meet Results 2015", source: "The Denver Post", category: "Climbing & Athletics", description: "Tiana Schwarz placed sixth in the 400m dash with a time of 1:00.04. In the 800m, despite suffering a fall mid-race that required immediate stitches, she pushed through to finish 16th, clocking a 64-second opening lap. She also anchored SkyView Academy's 4×800m relay team to a seventh-place finish, earning valuable points for the school.", url: "https://www.denverpost.com/2015/05/16/colorado-3a-girls-track-and-field-state-meet-results-2015/" },
+  { title: "Colorado 3A Girls Track and Field State Meet Results 2015", source: "The Denver Post", category: "Climbing & Athletics", description: "Tiana Schwarz placed sixth in the 400m dash with a time of 1:00.04. In the 800m, despite suffering a fall mid-race that required immediate stitches, she pushed through to finish 16th, clocking a 64-second opening lap. She also anchored SkyView Academy's 4×800m relay team to a seventh-place finish, earning valuable points for the school.", url: "https://www.denverpost.com/2015/05/16/colorado-3a-girls-track-and-field-state-meet-results-2015/", sortDate: "2015-05-16" },
   { title: "Top Small-School Track Performances", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Coverage of Colorado small-school track and field performances during the 2015 season.", url: "https://co.milesplit.com/articles/151240/top-small-school-performances-of-the-past-week" },
   { title: "2016 Colorado State Track Championships", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Tiana Schwarz competed in the 2016 Colorado State Track and Field Championships as part of SkyView Academy's 4×800m relay team, which finished 14th in 10:43.30.", url: "https://co.milesplit.com/meets/220074-colorado-state-track-and-field-championships-2016/results/453815/raw" },
 ];
 
+type CommunityItem = {
+  title: string;
+  category: string;
+  dateLabel: string;
+  organization?: string;
+  description: string;
+  sortDate?: string;
+  url?: string;
+  linkLabel?: string;
+};
+
+const communityItems: CommunityItem[] = [
+  { title: "UCCS Scholarship Essay Review", category: "EDUCATION · VOLUNTEERING", dateLabel: "Date not specified", organization: "UCCS Alumni Volunteer Opportunities", description: "Volunteered to review scholarship application essays, supporting the evaluation of student submissions and access to educational opportunities.", url: "https://alumni.uccs.edu/get-involved/volunteer-opportunities", linkLabel: "UCCS volunteer opportunities ↗" },
+  { title: "Outside Days 2026", category: "ADAPTIVE RECREATION", dateLabel: "May 30, 2026", sortDate: "2026-05-30", organization: "Adaptive Adventures · Westminster, Colorado", description: "Assisted adaptive athletes and para climbers at the climbing wall and information booth. Supported inclusive recreation and learned more about equipment considerations and accessibility barriers." },
+  { title: "Pikes Peak Regional Science & Engineering Fair", category: "STEM OUTREACH", dateLabel: "February 2022", sortDate: "2022-02-01", organization: "Volunteer Judge · Colorado", description: "Reviewed more than 40 STEM projects by students in grades 6–12 from four Colorado counties, evaluated presentations, and offered feedback to encourage future scientists and engineers." },
+  { title: "CU Medical Foot Clinic", category: "HEALTHCARE ACCESS", dateLabel: "February–June 2022", sortDate: "2022-06-01", organization: "Springs Rescue Mission · Colorado Springs", description: "Supported podiatric care for adults experiencing homelessness alongside medical professionals, including foot-health screening, patient education, and follow-up referrals." },
+  { title: "Diversity & Inclusion Council", category: "HEALTH EQUITY", dateLabel: "February 2022–June 2023", sortDate: "2023-06-01", organization: "CommonSpirit Health / Centura Health", description: "Served on the Health Disparities Committee, contributing to discussions and initiatives focused on health equity and inclusive practices for staff and patients." },
+  { title: "Assisted Living Community Project", category: "COMMUNITY DEVELOPMENT", dateLabel: "January–May 2018", sortDate: "2018-05-01", organization: "Big Idea Project · La Veta, Colorado", description: "Led a student team developing plans for an assisted living community space intended to address isolation among older adults, including project documentation and a video sharing residents' perspectives." },
+  { title: "Alumni Ambassador", category: "AEROSPACE MENTORSHIP", dateLabel: "August 2024–Present", sortDate: "2026-10-27", organization: "Colorado Space Business Roundtable (CSBR)", description: "Support aerospace and technology networking, mentorship, career guidance, and outreach for students and early-career professionals." },
+  { title: "Volunteering in Colorado Springs", category: "COMMUNITY RESOURCE", dateLabel: "Ongoing", sortDate: "2026-10-27", description: "I maintain a GitHub collection of local volunteer opportunities and organizations focused on homelessness, healthcare access, food insecurity, and older adults.", url: "https://github.com/track001/VolunteeringinCOS", linkLabel: "Explore volunteering resources ↗" },
+  { title: "Women's Climb Nights", category: "CLIMBING COMMUNITY", dateLabel: "2026", sortDate: "2026-09-25", organization: "Springs Climbing Center · Colorado Springs", description: "Co-hosted two women's climbing nights that welcomed more than 60 participants across the events. Reserved the gym for these gatherings to help create a welcoming environment for climbing, connection, and community." },
+  { title: "Community Food Pantry Support", category: "FOOD ACCESS", dateLabel: "Date not specified", organization: "Colorado Springs, Colorado", description: "Supported food pantry efforts serving underserved communities and improving access to essential food resources." },
+];
+
+type Timeframe = "All Time" | "Last 12 Months";
+const dateValue = (value?: string) => value ? new Date(`${value}T12:00:00`).getTime() : -1;
+const recentOnly = <T extends { sortDate?: string }>(items: T[], timeframe: Timeframe): T[] => {
+  if (timeframe === "All Time") return items;
+  const cutoff = new Date();
+  cutoff.setFullYear(cutoff.getFullYear() - 1);
+  return items.filter(item => item.sortDate && dateValue(item.sortDate) >= cutoff.getTime());
+};
+const newestFirst = <T extends { sortDate?: string }>(items: T[]): T[] =>
+  [...items].sort((a, b) => dateValue(b.sortDate) - dateValue(a.sortDate));
+
+function TimeframeButtons({ value, onChange }: { value: Timeframe; onChange: (value: Timeframe) => void }) {
+  return <div className="recognition-filters" aria-label="Filter by time period">
+    {(["All Time", "Last 12 Months"] as Timeframe[]).map(item =>
+      <button key={item} type="button" className={value === item ? "selected" : ""} aria-pressed={value === item} onClick={() => onChange(item)}>{item}</button>
+    )}
+  </div>;
+}
+
+const partnerLogos = [
+  { name: "The Denver Post", file: "denverpost.png", context: "Competition coverage" },
+  { name: "USA Climbing", file: "usaclimbing-logo.png", context: "Competitions, coaching & routesetting" },
+  { name: "Colorado Space Business Roundtable", file: "csbr.png", context: "Alumni ambassador" },
+  { name: "The Scribe", file: "the-scribe.png", context: "University newspaper features" },
+  { name: "Escape Climbing", file: "escape-climbing.png", context: "Climbing hold supplier" },
+  { name: "Climbing Business Journal", file: "climbingbusinessjournal.png", context: "Climbing industry publication" },
+  { name: "Climbing Magazine", file: "climbing-magazine.png", context: "Photography feature" },
+];
+
 function PortfolioAdditions() {
   const [category, setCategory] = useState<"All" | RecognitionCategory>("All");
+  const [certTime, setCertTime] = useState<Timeframe>("All Time");
+  const [recognitionTime, setRecognitionTime] = useState<Timeframe>("All Time");
+  const [communityTime, setCommunityTime] = useState<Timeframe>("All Time");
   const categories: Array<"All" | RecognitionCategory> = ["All", "Writing & Media", "Academic Honors", "Climbing & Athletics"];
-  const visible = category === "All" ? recognition : recognition.filter((item) => item.category === category);
+  const visibleCredentials = newestFirst(recentOnly(credentials, certTime));
+  const visibleRecognition = newestFirst(recentOnly(recognition.filter(item => category === "All" || item.category === category), recognitionTime));
+  const visibleCommunity = newestFirst(recentOnly(communityItems, communityTime));
 
-  // Prevent browser scroll anchoring from moving the page when filtered cards change height.
-  const changeCategory = (nextCategory: "All" | RecognitionCategory) => {
-    const previousScroll = window.scrollY;
-    setCategory(nextCategory);
-    window.requestAnimationFrame(() => window.scrollTo(0, previousScroll));
-  };
-
-  return (
-    <>
-      <section className="portfolio-extra-section" id="certifications">
-        <div className="section-label">CERTIFICATIONS & CREDENTIALS</div>
-        <h2>Training, credentials & continued learning.</h2>
-        <p className="extra-intro">Cybersecurity, competition routesetting, adaptive climbing, and professional development.</p>
-        <div className="extra-grid">
-          {credentials.map((item) => (
-            <article className="extra-card" key={item.title}>
-              <span className="extra-kicker">{item.issuer} · {item.date}</span>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-              {item.validity && <span className="extra-footnote">{item.validity}</span>}
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="portfolio-extra-section" id="recognition" style={{ overflowAnchor: "none" }}>
-        <div className="section-label">PUBLICATIONS & RECOGNITION</div>
-        <h2>Writing, research & milestones.</h2>
-        <p className="extra-intro">Published writing, media features, academic honors, and competition results.</p>
-        <div className="recognition-filters" aria-label="Filter publications and recognition">
-          {categories.map((item) => (
-            <button key={item} type="button" className={category === item ? "selected" : ""} onClick={() => changeCategory(item)} aria-pressed={category === item}>
-              {item}
-            </button>
-          ))}
-        </div>
-        <div className="extra-grid">
-          {visible.map((item) => (
-            <article className="extra-card" key={item.title}>
-              <span className="extra-kicker">{item.category} · {item.source}</span>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              {item.url && <a className="extra-link" href={item.url} target="_blank" rel="noopener noreferrer">Read source ↗</a>}
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="portfolio-extra-section" id="community">
-        <div className="section-label">COMMUNITY INVOLVEMENT</div>
-        <h2>Service, access & community.</h2>
-        <p className="extra-intro">Supporting local food access and inclusive outdoor recreation.</p>
-        <div className="extra-grid">
-          <article className="extra-card">
-            <span className="extra-kicker">ADAPTIVE RECREATION · MAY 30, 2026</span>
-            <h3>Outside Days 2026</h3>
-            <p className="extra-org">Adaptive Adventures · Westminster, Colorado</p>
-            <p>Volunteered at Outside Days 2026, assisting adaptive athletes and para climbers at the climbing wall and information booth. Supported safe, inclusive participation while learning more about accessibility barriers and equipment considerations for recreational climbing.</p>
-            <span className="extra-footnote">Volunteer role: Rock Climbing Support</span>
-          </article>
-          <article className="extra-card">
-            <span className="extra-kicker">STEM OUTREACH · FEB 2022</span>
-            <h3>Pikes Peak Regional Science & Engineering Fair</h3>
-            <p className="extra-org">Volunteer Judge · Colorado</p>
-            <p>Evaluated more than 40 STEM projects by students in grades 6–12 from Elbert, El Paso, Park, and Teller counties, reviewing project materials and presentations and providing feedback to encourage young scientists and engineers.</p>
-          </article>
-          <article className="extra-card">
-            <span className="extra-kicker">HEALTHCARE ACCESS · FEB–JUN 2022</span>
-            <h3>CU Medical Foot Clinic</h3>
-            <p className="extra-org">Springs Rescue Mission · Colorado Springs</p>
-            <p>Supported podiatric care for adults experiencing homelessness alongside medical professionals. Assisted with foot-health screening, patient education, and coordination of follow-up care and referrals.</p>
-          </article>
-          <article className="extra-card">
-            <span className="extra-kicker">HEALTH EQUITY · FEB 2022–JUN 2023</span>
-            <h3>Diversity & Inclusion Council</h3>
-            <p className="extra-org">CommonSpirit Health / Centura Health</p>
-            <p>Served on the Health Disparities Committee, contributing to discussions and initiatives focused on inclusive workplace practices, health equity, and the experiences of staff and patients.</p>
-          </article>
-          <article className="extra-card">
-            <span className="extra-kicker">COMMUNITY DEVELOPMENT · JAN–MAY 2018</span>
-            <h3>Assisted Living Community Project</h3>
-            <p className="extra-org">Big Idea Project · La Veta, Colorado</p>
-            <p>Led a student team working with the La Veta community on plans for an assisted living gathering space to address isolation among older adults. Helped develop project plans and a video featuring residents' perspectives.</p>
-          </article>
-          <article className="extra-card">
-            <span className="extra-kicker">AEROSPACE MENTORSHIP · AUG 2024–PRESENT</span>
-            <h3>Alumni Ambassador</h3>
-            <p className="extra-org">Colorado Space Business Roundtable (CSBR)</p>
-            <p>Support aerospace and technology networking, mentorship, career guidance, and outreach for students and early-career professionals, connecting participants with industry and educational resources.</p>
-          </article>
-          <article className="extra-card">
-            <span className="extra-kicker">VOLUNTEER RESOURCE · COLORADO SPRINGS</span>
-            <h3>Volunteering in Colorado Springs</h3>
-            <p>I maintain a collection of volunteer opportunities and community organizations around Colorado Springs that I've researched, volunteered with, or recommend.</p>
-            <p>It focuses primarily on homelessness, healthcare access, food insecurity, and support for older adults.</p>
-            <a className="extra-link" href="https://github.com/track001/VolunteeringinCOS" target="_blank" rel="noopener noreferrer">Explore Volunteering in Colorado Springs ↗</a>
-          </article>
-          <article className="extra-card">
-            <span className="extra-kicker">WOMEN'S CLIMBING · SPRINGS CLIMBING CENTER</span>
-            <h3>Women's Climb Nights</h3>
-            <p className="extra-org">Springs Climbing Center · Colorado Springs</p>
-            <p>Co-hosted two women-focused climbing nights, welcoming more than 60 women into the gym across the events. The gym was reserved for participants to help create a welcoming space for climbing, connection, and community.</p>
-          </article>
-          <article className="extra-card">
-            <span className="extra-kicker">COMMUNITY SERVICE · COLORADO SPRINGS</span>
-            <h3>Community Food Pantry Support</h3>
-            <p className="extra-org">Colorado Springs, Colorado</p>
-            <p>Supporting food pantry efforts serving underserved communities and helping improve access to essential food resources.</p>
-          </article>
-        </div>
-      </section>
-    </>
-  );
+  return <>
+    <section className="portfolio-extra-section" id="certifications" style={{ overflowAnchor: "none" }}>
+      <div className="section-label">CERTIFICATIONS & CREDENTIALS</div>
+      <h2>Training, credentials & continued learning.</h2>
+      <p className="extra-intro">Cybersecurity, competition routesetting, adaptive climbing, and professional development.</p>
+      <TimeframeButtons value={certTime} onChange={setCertTime} />
+      <div className="extra-grid">
+        {visibleCredentials.map(item => <article className="extra-card" key={item.title}>
+          <span className="extra-kicker">{item.issuer} · {item.date}</span>
+          <h3>{item.title}</h3><p>{item.detail}</p>
+          {item.validity && <span className="extra-footnote">{item.validity}</span>}
+        </article>)}
+      </div>
+      {visibleCredentials.length === 0 && <p className="extra-intro">No dated credentials in this timeframe.</p>}
+    </section>
+    <section className="portfolio-extra-section" id="recognition" style={{ overflowAnchor: "none" }}>
+      <div className="section-label">PUBLICATIONS & RECOGNITION</div>
+      <h2>Writing, research & milestones.</h2>
+      <p className="extra-intro">Published writing, media features, academic honors, and competition results.</p>
+      <div className="recognition-filters" aria-label="Filter by category">
+        {categories.map(item => <button key={item} type="button" className={category === item ? "selected" : ""} aria-pressed={category === item} onClick={() => setCategory(item)}>{item}</button>)}
+      </div>
+      <TimeframeButtons value={recognitionTime} onChange={setRecognitionTime} />
+      <div className="extra-grid">
+        {visibleRecognition.map(item => <article className="extra-card" key={item.title}>
+          <span className="extra-kicker">{item.category} · {item.source}</span>
+          <h3>{item.title}</h3><p>{item.description}</p>
+          {item.url && <a className="extra-link" href={item.url} target="_blank" rel="noopener noreferrer">Read source ↗</a>}
+        </article>)}
+      </div>
+      {visibleRecognition.length === 0 && <p className="extra-intro">No dated recognition in this timeframe. Undated features remain under All Time.</p>}
+    </section>
+    <section className="portfolio-extra-section" id="community" style={{ overflowAnchor: "none" }}>
+      <div className="section-label">COMMUNITY INVOLVEMENT</div>
+      <h2>Service, access & community.</h2>
+      <p className="extra-intro">Supporting local food access, STEM education, healthcare access, and inclusive recreation.</p>
+      <TimeframeButtons value={communityTime} onChange={setCommunityTime} />
+      <div className="extra-grid">
+        {visibleCommunity.map(item => <article className="extra-card" key={item.title}>
+          <span className="extra-kicker">{item.category} · {item.dateLabel}</span>
+          <h3>{item.title}</h3>
+          {item.organization && <p className="extra-org">{item.organization}</p>}
+          <p>{item.description}</p>
+          {item.url && <a className="extra-link" href={item.url} target="_blank" rel="noopener noreferrer">{item.linkLabel || "Learn more ↗"}</a>}
+        </article>)}
+      </div>
+      {visibleCommunity.length === 0 && <p className="extra-intro">No dated community activities in this timeframe.</p>}
+    </section>
+  </>;
 }
 
 export default function App() {
@@ -522,6 +518,15 @@ export default function App() {
     <div className="site">
 
         <style>{`
+
+          .organization-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:24px 0 45px}
+          .organization-logo-card{min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px;padding:20px 12px;border:1px solid var(--border,#40302c);background:rgba(27,21,20,.65);border-radius:6px}
+          .organization-logo-card img{display:block;width:100%;height:85px;object-fit:contain;background:#fff;border-radius:3px;padding:10px;box-sizing:border-box}
+          .organization-logo-card strong{color:var(--ivory,#eee0d8);font-size:13px;line-height:1.4}
+          .organization-logo-card span{color:var(--muted,#b0a7a0);font-size:11px;line-height:1.5}
+          .portfolio-extra-section{overflow-anchor:none}
+          @media(max-width:900px){.organization-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+          @media(max-width:600px){.organization-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.organization-logo-card{padding:12px 8px}.organization-logo-card img{height:68px;padding:6px}.recognition-filters button{font-size:12px;min-height:40px}.extra-grid{grid-template-columns:minmax(0,1fr)!important}.portfolio-extra-section h2{overflow-wrap:break-word}}
           .associations-list { display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 40px; }
           .association-pill { display:inline-block;padding:10px 14px;border:1px solid var(--border, #40302c);border-radius:999px;color:var(--ivory,#eee0d8);font-size:13px;line-height:1.5;background:rgba(36,25,23,.65); }
           @media(max-width:800px){
@@ -984,6 +989,19 @@ export default function App() {
               "UCCS Pre-Law Society",
               "UCCS Climbing Club · Founder & President (USA Climbing Collegiate)",
             ].map((name) => <span className="association-pill" key={name}>{name}</span>)}
+          </div>
+        </section>
+
+        <section className="portfolio-extra-section" id="featured-organizations" aria-labelledby="featured-organizations-heading">
+          <div className="section-label">PUBLICATIONS & ORGANIZATIONS</div>
+          <h2 id="featured-organizations-heading">Featured in, involved with & connected to.</h2>
+          <p className="extra-intro">Selected publications, climbing organizations, and professional connections. Each label identifies the relationship; logos do not imply sponsorship or endorsement.</p>
+          <div className="organization-logo-grid">
+            {partnerLogos.map(item => <div className="organization-logo-card" key={item.file}>
+              <img src={assetPath(`/images/${item.file}`)} alt={`${item.name} logo`} loading="lazy" />
+              <strong>{item.name}</strong>
+              <span>{item.context}</span>
+            </div>)}
           </div>
         </section>
       </main>
