@@ -2385,3 +2385,138 @@ footer {
   .space-background::after { display: none; }
 }
 
+/* ============================================================
+   SPACE UPDATE V4: NO GRID, WARM STARS, COMETS + SATCOM
+   Paste at the VERY BOTTOM of src/styles.css.
+   This overrides the previous celestial additions; do not
+   remove the rest of your existing stylesheet.
+   ============================================================ */
+
+/* Remove the dotted/grid-like background from the previous update. */
+.space-background {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Preserve warm orange glowing stars without a patterned grid. */
+.space-background .star {
+  opacity: .55;
+  color: #e6a16c;
+  text-shadow: 0 0 7px rgba(255, 163, 89, .78),
+               0 0 17px rgba(235, 108, 67, .45),
+               0 0 29px rgba(226, 112, 61, .2);
+}
+.space-background .star:nth-of-type(4n) { color: #f6caa0; }
+.space-background .star:nth-of-type(6n) { color: #e67e58; }
+
+/* The existing satellite moves faster and is easier to spot. */
+.space-background .satellite-1 {
+  opacity: .65;
+  animation-duration: 46s;
+  filter: drop-shadow(0 0 7px rgba(238, 146, 86, .55));
+}
+.space-background .satellite-panel {
+  width: 11px;
+  height: 7px;
+  border-color: rgba(242, 169, 110, .85);
+}
+
+/* Three extra SATCOM-style satellites using existing star elements.
+   No changes to App.tsx are necessary. */
+.space-background .star-8::after,
+.space-background .star-18::after,
+.space-background .star-29::after {
+  content: "▥  ◇  ▥";
+  position: absolute;
+  display: block;
+  width: max-content;
+  font: 13px/1 monospace;
+  letter-spacing: -2px;
+  color: #e6aa78;
+  text-shadow: 0 0 7px rgba(237, 131, 79, .65);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.space-background .star-8::after {
+  animation: satcomPassA 39s linear 2s infinite;
+}
+.space-background .star-18::after {
+  animation: satcomPassB 58s linear 15s infinite;
+}
+.space-background .star-29::after {
+  animation: satcomPassC 71s linear 30s infinite;
+}
+@keyframes satcomPassA {
+  0% { transform: translate(-55vw, 30px) rotate(-12deg); opacity: 0; }
+  15%, 78% { opacity: .68; }
+  100% { transform: translate(65vw, -100px) rotate(9deg); opacity: 0; }
+}
+@keyframes satcomPassB {
+  0% { transform: translate(58vw, -45px) rotate(12deg); opacity: 0; }
+  17%, 76% { opacity: .5; }
+  100% { transform: translate(-62vw, 85px) rotate(-8deg); opacity: 0; }
+}
+@keyframes satcomPassC {
+  0% { transform: translate(-45vw, -70px) rotate(-18deg); opacity: 0; }
+  20%, 75% { opacity: .55; }
+  100% { transform: translate(66vw, 55px) rotate(7deg); opacity: 0; }
+}
+
+/* Visible shooting stars with long tapered orange tails.
+   These use two existing stars as animation anchors. */
+.space-background .star-5::after,
+.space-background .star-23::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 145px;
+  height: 2px;
+  border-radius: 100%;
+  background: linear-gradient(90deg,
+    transparent 0%, rgba(225, 103, 61, .1) 15%,
+    rgba(249, 169, 99, .65) 70%, #fff0c6 100%);
+  box-shadow: 0 0 8px rgba(247, 136, 75, .45);
+  transform-origin: right center;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.space-background .star-5::after {
+  animation: cometAcrossA 17s ease-in 3s infinite;
+}
+.space-background .star-23::after {
+  width: 110px;
+  animation: cometAcrossB 23s ease-in 10s infinite;
+}
+@keyframes cometAcrossA {
+  0%, 67% { opacity: 0; transform: translate(-28vw, -90px) rotate(-29deg); }
+  70% { opacity: .95; }
+  83% { opacity: .85; }
+  91%, 100% { opacity: 0; transform: translate(52vw, 330px) rotate(-29deg); }
+}
+@keyframes cometAcrossB {
+  0%, 62% { opacity: 0; transform: translate(45vw, -140px) rotate(145deg); }
+  66% { opacity: .9; }
+  80% { opacity: .7; }
+  90%, 100% { opacity: 0; transform: translate(-48vw, 260px) rotate(145deg); }
+}
+
+/* Keep decorative effects behind text and unobtrusive on phones. */
+@media (max-width: 700px) {
+  .space-background .star { opacity: .42; }
+  .space-background .star-8::after,
+  .space-background .star-18::after,
+  .space-background .star-29::after { font-size: 10px; }
+  .space-background .star-5::after { width: 85px; }
+  .space-background .star-23::after { width: 70px; }
+}
+
+/* Honor accessibility settings. */
+@media (prefers-reduced-motion: reduce) {
+  .space-background .star-8::after,
+  .space-background .star-18::after,
+  .space-background .star-29::after,
+  .space-background .star-5::after,
+  .space-background .star-23::after { animation: none !important; display: none !important; }
+}
