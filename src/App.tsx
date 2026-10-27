@@ -335,6 +335,125 @@ const timeline: TimelineItem[] = [
   },
 ];
 
+
+/* =========================================================
+   CREDENTIALS, RECOGNITION & COMMUNITY
+========================================================= */
+
+type Credential = {
+  title: string;
+  issuer: string;
+  date: string;
+  validity?: string;
+  detail: string;
+};
+
+const credentials: Credential[] = [
+  { title: "CompTIA Security+ (SY0-601)", issuer: "CompTIA", date: "May 29, 2024", validity: "Expires May 29, 2027", detail: "Cybersecurity certification covering core security principles, threats, architecture, operations, and risk." },
+  { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "Competition routesetting training and credential." },
+  { title: "Para Routesetting", issuer: "USA Climbing", date: "April 17, 2026", validity: "No expiration specified", detail: "Completed a three-day specialized para routesetting course. The program is still in development; no physical certificate has been issued." },
+  { title: "CPR / AED / First Aid", issuer: "National CPR Foundation", date: "August 13, 2026", validity: "Renewal August 13, 2028", detail: "Emergency response and first aid training." },
+  { title: "Cyber Security Analyst Virtual Experience", issuer: "Telstra / Forage", date: "July 10, 2023", detail: "Cybersecurity analyst virtual experience program." },
+  { title: "SketchUp Fundamentals", issuer: "SketchUp", date: "Date not specified", detail: "Fundamentals training in 3D modeling." },
+];
+
+type RecognitionCategory = "Technical & Career" | "Academic Honors" | "Climbing" | "Athletics";
+type Recognition = {
+  title: string;
+  source: string;
+  category: RecognitionCategory;
+  description: string;
+  url: string;
+};
+
+const recognition: Recognition[] = [
+  { title: "Between Chalk and Code: Lessons from Climbing and Cyber", source: "Reinvented Magazine", category: "Technical & Career", description: "Authored article connecting lessons from climbing with a career in cybersecurity.", url: "https://www.reinventedmagazine.com/post/between-chalk-and-code-lessons-from-climbing-and-cyber" },
+  { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe", category: "Technical & Career", description: "Coverage of undergraduate aerospace research and the Colorado Space Grant Consortium prize.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
+  { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy", category: "Technical & Career", description: "Alumni feature covering academic, professional, and athletic pursuits.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018" },
+  { title: "Fall 2023 President's List", source: "UCCS Communique", category: "Academic Honors", description: "Academic recognition for the Fall 2023 semester.", url: "https://communique.uccs.edu/?p=153687" },
+  { title: "UCCS Academic Honors (2021)", source: "UCCS Communique", category: "Academic Honors", description: "Additional university academic honors article.", url: "https://communique.uccs.edu/?p=137114" },
+  { title: "UCCS Academic Honors (2019)", source: "UCCS Communique", category: "Academic Honors", description: "Additional university academic honors article.", url: "https://communique.uccs.edu/?p=118157" },
+  { title: "2024 Collegiate National Championships", source: "USA Climbing", category: "Climbing", description: "National championship coverage, including Women's Intermediate Boulder and Lead / Top Rope.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/" },
+  { title: "Eagle Climbing & Fitness Competition", source: "Vail Daily", category: "Climbing", description: "Competition coverage featuring women's lead and top-rope climbing.", url: "https://www.vaildaily.com/news/eagle-climbing-and-fitness-hosts-weekend-of-mixed-climbing-events-eagle-valley-middle-school-climber-tops-individual-leaderboard/" },
+  { title: "SkyView Academy Track & Field Records", source: "Athletic.net", category: "Athletics", description: "School track and field records and rankings.", url: "https://www.athletic.net/team/42708/track-and-field-outdoor/2026/team-records/f" },
+  { title: "Great Southwest Classic Colorado Entry List", source: "MileSplit Colorado", category: "Athletics", description: "Coverage of athletes selected to represent Colorado.", url: "https://co.milesplit.com/articles/155390/updated-great-southwest-entry-list-for-colorado" },
+  { title: "Class 3A Volleyball Statistical Leaders", source: "Colorado Preps", category: "Athletics", description: "High school volleyball statistical recognition.", url: "https://coloradopreps.com/class-3a-volleyball-statistical-leaders/" },
+  { title: "Volleyball Squads Work in Ways Like Football Teams", source: "Colorado Community Media", category: "Athletics", description: "High school volleyball team feature.", url: "https://www.coloradocommunitymedia.com/stories/volleyball-squads-work-in-ways-like-football-teams,253643/" },
+  { title: "2015 Colorado 3A State Track Results", source: "The Denver Post", category: "Athletics", description: "State championship track and field results.", url: "https://www.denverpost.com/2015/05/16/colorado-3a-girls-track-and-field-state-meet-results-2015/" },
+  { title: "Top Small-School Track Performances", source: "MileSplit Colorado", category: "Athletics", description: "Track and field performance coverage.", url: "https://co.milesplit.com/articles/151240/top-small-school-performances-of-the-past-week" },
+  { title: "2016 Colorado State Track Championships", source: "MileSplit Colorado", category: "Athletics", description: "State championship results, including the 4×800 relay.", url: "https://co.milesplit.com/meets/220074-colorado-state-track-and-field-championships-2016/results/453815/raw" },
+];
+
+function PortfolioAdditions() {
+  const [category, setCategory] = useState<"All" | RecognitionCategory>("All");
+  const categories: Array<"All" | RecognitionCategory> = ["All", "Technical & Career", "Academic Honors", "Climbing", "Athletics"];
+  const visible = category === "All" ? recognition : recognition.filter((item) => item.category === category);
+
+  return (
+    <>
+      <section className="portfolio-extra-section" id="certifications">
+        <div className="section-label">CERTIFICATIONS & CREDENTIALS</div>
+        <h2>Training, credentials & continued learning.</h2>
+        <p className="extra-intro">Cybersecurity, competition routesetting, adaptive climbing, and professional development.</p>
+        <div className="extra-grid">
+          {credentials.map((item) => (
+            <article className="extra-card" key={item.title}>
+              <span className="extra-kicker">{item.issuer} · {item.date}</span>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              {item.validity && <span className="extra-footnote">{item.validity}</span>}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="portfolio-extra-section" id="recognition">
+        <div className="section-label">PUBLICATIONS & RECOGNITION</div>
+        <h2>Writing, research & milestones.</h2>
+        <p className="extra-intro">Published work, academic honors, competition coverage, and athletics records.</p>
+        <div className="recognition-filters" aria-label="Filter publications and recognition">
+          {categories.map((item) => (
+            <button key={item} type="button" className={category === item ? "selected" : ""} onClick={() => setCategory(item)} aria-pressed={category === item}>
+              {item}
+            </button>
+          ))}
+        </div>
+        <div className="extra-grid">
+          {visible.map((item) => (
+            <article className="extra-card" key={item.url}>
+              <span className="extra-kicker">{item.category} · {item.source}</span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <a className="extra-link" href={item.url} target="_blank" rel="noopener noreferrer">Read source ↗</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="portfolio-extra-section" id="community">
+        <div className="section-label">COMMUNITY INVOLVEMENT</div>
+        <h2>Service, access & community.</h2>
+        <p className="extra-intro">Supporting local food access and inclusive outdoor recreation.</p>
+        <div className="extra-grid">
+          <article className="extra-card">
+            <span className="extra-kicker">ADAPTIVE RECREATION · MAY 30, 2026</span>
+            <h3>Outside Days 2026</h3>
+            <p className="extra-org">Adaptive Adventures · Westminster, Colorado</p>
+            <p>Rock climbing wall support for adaptive athletes at an inclusive outdoor recreation event.</p>
+            <span className="extra-footnote">Volunteer role: Rock Climbing Support</span>
+          </article>
+          <article className="extra-card">
+            <span className="extra-kicker">COMMUNITY SERVICE · COLORADO SPRINGS</span>
+            <h3>Community Food Pantry Support</h3>
+            <p className="extra-org">Colorado Springs, Colorado</p>
+            <p>Supporting food pantry efforts serving underserved communities and helping improve access to essential food resources.</p>
+          </article>
+        </div>
+      </section>
+    </>
+  );
+}
+
 export default function App() {
   const [openTimelineItem, setOpenTimelineItem] = useState<string | null>(null);
 
@@ -421,12 +540,22 @@ export default function App() {
           <a href="#experience">Experience</a>
           <span>|</span>
 
+          <a href="#recognition">Recognition</a>
+          <span>|</span>
+          <a href="#community">Community</a>
+          <span>|</span>
           <a href="#about">About</a>
           <span>|</span>
 
           <a href="#resumes">Résumés</a>
         </nav>
       </header>
+
+      <div className="security-banner">
+        <span>COMPTIA SECURITY+ · SY0-601</span>
+        <span>Certified May 29, 2024 · Valid through May 29, 2027</span>
+        <a href="#certifications">View credentials ↗</a>
+      </div>
 
       <main>
         {/* =====================================================
@@ -656,6 +785,8 @@ export default function App() {
             })}
           </div>
         </section>
+
+        <PortfolioAdditions />
 
         {/* =====================================================
             RESUMES
