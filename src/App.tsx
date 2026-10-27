@@ -441,7 +441,7 @@ const partnerLogos = [
   { name: "USA Climbing", file: "usaclimbing-logo.png", context: "Competitions, coaching & routesetting" },
   { name: "Colorado Space Business Roundtable", file: "csbr.png", context: "Alumni ambassador" },
   { name: "The Scribe", file: "the-scribe.png", context: "University newspaper features" },
-  { name: "Escape Climbing", file: "escape-climbing.png", context: "Climbing hold supplier" },
+  { name: "Escape Climbing", file: "escape-climbing.png", context: "Escape Athlete · Athlete support" },
   { name: "Climbing Business Journal", file: "climbingbusinessjournal.png", context: "Climbing industry publication" },
   { name: "Climbing Magazine", file: "climbing-magazine.png", context: "Photography feature" },
 ];
@@ -451,6 +451,9 @@ function PortfolioAdditions() {
   const [certTime, setCertTime] = useState<Timeframe>("All Time");
   const [recognitionTime, setRecognitionTime] = useState<Timeframe>("All Time");
   const [communityTime, setCommunityTime] = useState<Timeframe>("All Time");
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
+  const toggleSection = (name: string) => setExpandedSections(current => ({ ...current, [name]: !current[name] }));
+  const previewCount = 4;
   const categories: Array<"All" | RecognitionCategory> = ["All", "Writing & Media", "Academic Honors", "Climbing & Athletics"];
   const visibleCredentials = newestFirst(recentOnly(credentials, certTime));
   const visibleRecognition = newestFirst(recentOnly(recognition.filter(item => category === "All" || item.category === category), recognitionTime));
@@ -463,12 +466,20 @@ function PortfolioAdditions() {
       <p className="extra-intro">Cybersecurity, competition routesetting, adaptive climbing, and professional development.</p>
       <TimeframeButtons value={certTime} onChange={setCertTime} />
       <div className="extra-grid">
-        {visibleCredentials.map(item => <article className="extra-card" key={item.title}>
+        {(expandedSections.certifications ? visibleCredentials : visibleCredentials.slice(0, previewCount)).map(item => <article className="extra-card" key={item.title}>
           <span className="extra-kicker">{item.issuer} · {item.date}</span>
           <h3>{item.title}</h3><p>{item.detail}</p>
           {item.validity && <span className="extra-footnote">{item.validity}</span>}
         </article>)}
       </div>
+      {visibleCredentials.length > previewCount && (
+        <button className="section-expand-button" type="button"
+          aria-expanded={Boolean(expandedSections.certifications)}
+          onClick={() => toggleSection("certifications")}>
+          {expandedSections.certifications ? "Show fewer" : `Show all ${visibleCredentials.length} entries`}
+          <span aria-hidden="true">{expandedSections.certifications ? " ↑" : " ↓"}</span>
+        </button>
+      )}
       {visibleCredentials.length === 0 && <p className="extra-intro">No dated credentials in this timeframe.</p>}
     </section>
     <section className="portfolio-extra-section" id="recognition" style={{ overflowAnchor: "none" }}>
@@ -480,12 +491,20 @@ function PortfolioAdditions() {
       </div>
       <TimeframeButtons value={recognitionTime} onChange={setRecognitionTime} />
       <div className="extra-grid">
-        {visibleRecognition.map(item => <article className="extra-card" key={item.title}>
+        {(expandedSections.recognition ? visibleRecognition : visibleRecognition.slice(0, previewCount)).map(item => <article className="extra-card" key={item.title}>
           <span className="extra-kicker">{item.category} · {item.source}</span>
           <h3>{item.title}</h3><p>{item.description}</p>
           {item.url && <a className="extra-link" href={item.url} target="_blank" rel="noopener noreferrer">Read source ↗</a>}
         </article>)}
       </div>
+      {visibleRecognition.length > previewCount && (
+        <button className="section-expand-button" type="button"
+          aria-expanded={Boolean(expandedSections.recognition)}
+          onClick={() => toggleSection("recognition")}>
+          {expandedSections.recognition ? "Show fewer" : `Show all ${visibleRecognition.length} entries`}
+          <span aria-hidden="true">{expandedSections.recognition ? " ↑" : " ↓"}</span>
+        </button>
+      )}
       {visibleRecognition.length === 0 && <p className="extra-intro">No dated recognition in this timeframe. Undated features remain under All Time.</p>}
     </section>
     <section className="portfolio-extra-section" id="community" style={{ overflowAnchor: "none" }}>
@@ -494,7 +513,7 @@ function PortfolioAdditions() {
       <p className="extra-intro">Supporting local food access, STEM education, healthcare access, and inclusive recreation.</p>
       <TimeframeButtons value={communityTime} onChange={setCommunityTime} />
       <div className="extra-grid">
-        {visibleCommunity.map(item => <article className="extra-card" key={item.title}>
+        {(expandedSections.community ? visibleCommunity : visibleCommunity.slice(0, previewCount)).map(item => <article className="extra-card" key={item.title}>
           <span className="extra-kicker">{item.category} · {item.dateLabel}</span>
           <h3>{item.title}</h3>
           {item.organization && <p className="extra-org">{item.organization}</p>}
@@ -502,6 +521,14 @@ function PortfolioAdditions() {
           {item.url && <a className="extra-link" href={item.url} target="_blank" rel="noopener noreferrer">{item.linkLabel || "Learn more ↗"}</a>}
         </article>)}
       </div>
+      {visibleCommunity.length > previewCount && (
+        <button className="section-expand-button" type="button"
+          aria-expanded={Boolean(expandedSections.community)}
+          onClick={() => toggleSection("community")}>
+          {expandedSections.community ? "Show fewer" : `Show all ${visibleCommunity.length} entries`}
+          <span aria-hidden="true">{expandedSections.community ? " ↑" : " ↓"}</span>
+        </button>
+      )}
       {visibleCommunity.length === 0 && <p className="extra-intro">No dated community activities in this timeframe.</p>}
     </section>
   </>;
@@ -509,6 +536,7 @@ function PortfolioAdditions() {
 
 export default function App() {
   const [openTimelineItem, setOpenTimelineItem] = useState<string | null>(null);
+  const [showFullTimeline, setShowFullTimeline] = useState(false);
 
   const toggleTimelineItem = (id: string) => {
     setOpenTimelineItem((current) => (current === id ? null : id));
@@ -519,6 +547,9 @@ export default function App() {
 
         <style>{`
 
+          .section-expand-button{display:block;width:fit-content;max-width:100%;margin:25px auto 4px;padding:13px 22px;border:1px solid var(--red-bright,#e97759);border-radius:30px;background:rgba(40,25,23,.75);color:var(--ivory,#f3e9e1);font:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s}
+          .section-expand-button:hover{background:rgba(100,44,34,.55)}
+          .section-expand-button:focus-visible{outline:2px solid var(--amber,#e7b17a);outline-offset:3px}
           .organization-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:24px 0 45px}
           .organization-logo-card{min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px;padding:20px 12px;border:1px solid var(--border,#40302c);background:rgba(27,21,20,.65);border-radius:6px}
           .organization-logo-card img{display:block;width:100%;height:85px;object-fit:contain;background:#fff;border-radius:3px;padding:10px;box-sizing:border-box}
@@ -879,7 +910,7 @@ export default function App() {
           </div>
 
           <div className="timeline-list">
-            {timeline.map((item) => {
+            {(showFullTimeline ? timeline : timeline.slice(0, 3)).map((item) => {
               const isOpen = openTimelineItem === item.id;
               const canExpand = item.details && item.details.length > 0;
 
@@ -939,6 +970,14 @@ export default function App() {
               );
             })}
           </div>
+          {timeline.length > 3 && (
+            <button className="section-expand-button" type="button"
+              aria-expanded={showFullTimeline}
+              onClick={() => setShowFullTimeline(current => !current)}>
+              {showFullTimeline ? "Show fewer experiences" : `Show all ${timeline.length} timeline entries`}
+              <span aria-hidden="true">{showFullTimeline ? " ↑" : " ↓"}</span>
+            </button>
+          )}
         </section>
 
         <PortfolioAdditions />
