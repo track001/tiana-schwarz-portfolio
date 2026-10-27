@@ -350,6 +350,7 @@ type Credential = {
 
 const credentials: Credential[] = [
   { title: "CompTIA Security+ (SY0-601)", issuer: "CompTIA", date: "May 29, 2024", validity: "Valid through May 29, 2027", detail: "Tiana Schwarz earned the CompTIA Security+ (SY0-601) certification, validating foundational knowledge of threats, vulnerabilities, security architecture, security operations, and risk management." },
+  { title: "Level 2 Youth Coach", issuer: "USA Climbing", date: "November 2023", validity: "Membership through August 14, 2027", detail: "USA Climbing Level 2 Youth Coach with experience developing youth athletes, guiding structured practices, supporting competition preparation, and fostering a positive team environment." },
   { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "Tiana Schwarz completed USA Climbing Level 1 Routesetter training, developing skills in movement design, route development, setting practices, and competition routesetting." },
   { title: "Para Routesetting", issuer: "USA Climbing", date: "April 17, 2026", detail: "Tiana Schwarz completed a three-day USA Climbing Para Routesetting course focused on inclusive route design, adaptive movement, and routesetting considerations for para athletes." },
   { title: "CPR / AED / First Aid", issuer: "National CPR Foundation", date: "August 13, 2026", validity: "Renewal August 13, 2028", detail: "Tiana Schwarz completed CPR, AED, and First Aid training covering emergency response, lifesaving techniques, and basic first aid procedures." },
@@ -368,6 +369,8 @@ type Recognition = {
 
 const recognition: Recognition[] = [
   { title: "Between Chalk and Code: Lessons from Climbing and Cyber", source: "Reinvented Magazine", category: "Writing & Media", description: "Tiana Schwarz authored an article exploring how climbing has shaped her approach to cybersecurity, problem-solving, perseverance, and learning through difficult challenges.", url: "https://www.reinventedmagazine.com/post/between-chalk-and-code-lessons-from-climbing-and-cyber" },
+  { title: "Climbing Club Gains Popularity in Its First Semester", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz founded and served as president of this iteration of the UCCS Climbing Club, partnering with the on-campus SOLE recreation center and Springs Climbing Center to make climbing more accessible to college students. The club welcomed both recreational and competitive climbers while representing UCCS in USA Climbing Collegiate competitions.", url: "https://scribe.uccs.edu/climbing-club-gains-popularity-in-its-first-semester/" },
+  { title: "Springs Climbing Center Continues to Push Students to Greater Heights", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in The Scribe, the University of Colorado Colorado Springs student newspaper, in its coverage of Springs Climbing Center and the local student climbing community.", url: "https://scribe.uccs.edu/springs-climbing-center-continues-to-push-students-to-greater-heights/" },
   { title: "The Impact Driver Podcast", source: "The Impact Driver · Planned appearance", category: "Writing & Media", description: "A potential future podcast feature discussing climbing and the intersection of athletic and professional pursuits. Details and release date are pending confirmation." },
   { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe", category: "Academic Honors", description: "Tiana Schwarz was part of the UCCS A.R.E.S. Project team recognized by the Colorado Space Grant Consortium for innovative research on inertial measurement units (IMUs) in microgravity. The team explored how wearable technology could support human movement and monitoring in space.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
   { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy", category: "Academic Honors", description: "SkyView Academy featured alumna Tiana Schwarz (Class of 2018), highlighting her academic journey, professional work in cybersecurity, and continued involvement in climbing and community activities.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018" },
@@ -376,6 +379,7 @@ const recognition: Recognition[] = [
   { title: "Fall 2021 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized for academic excellence during the Fall 2021 semester in the College of Engineering and Applied Science at UCCS, where she studied Computer Science in the ABET-accredited program.", url: "https://communique.uccs.edu/?p=137114" },
   { title: "Fall 2019 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized for academic excellence during the Fall 2019 semester in the College of Engineering and Applied Science at UCCS, where she studied Computer Science in the ABET-accredited program.", url: "https://communique.uccs.edu/?p=118157" },
   { title: "Crux: 9 Photos That Capture the Power and Struggle of a Climb's Hardest Move", source: "Climbing Magazine · Chris Thai", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in Climbing Magazine's Crux photo contest as an honorable mention in Chris Thai's photograph, Flo Storm Crux. The image captures Schwarz preparing for the dynamic crux of Flo Storm (V8) in Heaven's Gate near Eleven Mile Canyon, Colorado, where the defining move requires throwing to the next hold and cutting feet.", url: "https://www.climbing.com/culture-climbing/crux-winning-photo-summer-2026-contest/" },
+  { title: "USA Climbing Competition Results & Rankings", source: "USAC Database · Athlete profile", category: "Climbing & Athletics", description: "USA Climbing collegiate competition record, including first-place finishes in the 2024 Collegiate National Boulder qualifier and final (Women's Intermediate), first place at the 2024 Collegiate divisional Boulder competition, and additional collegiate qualifying results. Athlete ID: 29690465. The linked database provides event-by-event rankings, including Boulder and Lead/Top Rope tabs.", url: "https://usac.climb8a.com/climber/29690465" },
   { title: "2024 Collegiate National Championships", source: "USA Climbing", category: "Climbing & Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/" },
   { title: "Eagle Valley Shines at Weekend of Mixed Climbing Events", source: "Vail Daily", category: "Climbing & Athletics", description: "Tiana Schwarz of the University of Colorado Colorado Springs won the women’s lead/top-rope category at a weekend of mixed climbing events hosted by Eagle Climbing & Fitness.", url: "https://www.vaildaily.com/news/eagle-climbing-and-fitness-hosts-weekend-of-mixed-climbing-events-eagle-valley-middle-school-climber-tops-individual-leaderboard/" },
   { title: "SkyView Academy High School Track & Field Records", source: "Athletic.net", category: "Climbing & Athletics", description: "Tiana Schwarz is the current SkyView Academy record holder in the 400m, 800m, 4×400m relay, 4×800m relay, and SMR 800m relay, and ranks third all-time in the 200m, with primary focus on the 400m and 800m. Last updated August 2026.", url: "https://www.athletic.net/team/42708/track-and-field-outdoor/2026/team-records/f" },
@@ -449,8 +453,38 @@ function PortfolioAdditions() {
             <span className="extra-kicker">ADAPTIVE RECREATION · MAY 30, 2026</span>
             <h3>Outside Days 2026</h3>
             <p className="extra-org">Adaptive Adventures · Westminster, Colorado</p>
-            <p>Rock climbing wall support for adaptive athletes at an inclusive outdoor recreation event.</p>
+            <p>Volunteered at Outside Days 2026, assisting adaptive athletes and para climbers at the climbing wall and information booth. Supported safe, inclusive participation while learning more about accessibility barriers and equipment considerations for recreational climbing.</p>
             <span className="extra-footnote">Volunteer role: Rock Climbing Support</span>
+          </article>
+          <article className="extra-card">
+            <span className="extra-kicker">STEM OUTREACH · FEB 2022</span>
+            <h3>Pikes Peak Regional Science & Engineering Fair</h3>
+            <p className="extra-org">Volunteer Judge · Colorado</p>
+            <p>Evaluated more than 40 STEM projects by students in grades 6–12 from Elbert, El Paso, Park, and Teller counties, reviewing project materials and presentations and providing feedback to encourage young scientists and engineers.</p>
+          </article>
+          <article className="extra-card">
+            <span className="extra-kicker">HEALTHCARE ACCESS · FEB–JUN 2022</span>
+            <h3>CU Medical Foot Clinic</h3>
+            <p className="extra-org">Springs Rescue Mission · Colorado Springs</p>
+            <p>Supported podiatric care for adults experiencing homelessness alongside medical professionals. Assisted with foot-health screening, patient education, and coordination of follow-up care and referrals.</p>
+          </article>
+          <article className="extra-card">
+            <span className="extra-kicker">HEALTH EQUITY · FEB 2022–JUN 2023</span>
+            <h3>Diversity & Inclusion Council</h3>
+            <p className="extra-org">CommonSpirit Health / Centura Health</p>
+            <p>Served on the Health Disparities Committee, contributing to discussions and initiatives focused on inclusive workplace practices, health equity, and the experiences of staff and patients.</p>
+          </article>
+          <article className="extra-card">
+            <span className="extra-kicker">COMMUNITY DEVELOPMENT · JAN–MAY 2018</span>
+            <h3>Assisted Living Community Project</h3>
+            <p className="extra-org">Big Idea Project · La Veta, Colorado</p>
+            <p>Led a student team working with the La Veta community on plans for an assisted living gathering space to address isolation among older adults. Helped develop project plans and a video featuring residents' perspectives.</p>
+          </article>
+          <article className="extra-card">
+            <span className="extra-kicker">AEROSPACE MENTORSHIP · AUG 2024–PRESENT</span>
+            <h3>Alumni Ambassador</h3>
+            <p className="extra-org">Colorado Space Business Roundtable (CSBR)</p>
+            <p>Support aerospace and technology networking, mentorship, career guidance, and outreach for students and early-career professionals, connecting participants with industry and educational resources.</p>
           </article>
           <article className="extra-card">
             <span className="extra-kicker">VOLUNTEER RESOURCE · COLORADO SPRINGS</span>
@@ -486,6 +520,34 @@ export default function App() {
 
   return (
     <div className="site">
+
+        <style>{`
+          .associations-list { display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 40px; }
+          .association-pill { display:inline-block;padding:10px 14px;border:1px solid var(--border, #40302c);border-radius:999px;color:var(--ivory,#eee0d8);font-size:13px;line-height:1.5;background:rgba(36,25,23,.65); }
+          @media(max-width:800px){
+            .nav { flex-wrap:wrap !important; gap:12px !important; }
+            .nav-identity { min-width:0 !important; }
+            .nav-contact { flex-wrap:wrap !important; gap:5px !important; overflow-wrap:anywhere; }
+            .nav-links { width:100% !important;display:flex !important;flex-wrap:wrap !important;justify-content:flex-start !important;gap:10px !important; }
+            .nav-links a { font-size:12px !important;white-space:nowrap; }
+            .hero { grid-template-columns:1fr !important; }
+            .hero-copy, .hero-photo-wrap { min-width:0 !important; }
+            .project-grid,.resume-preview,.extra-grid { grid-template-columns:1fr !important; }
+            .portfolio-extra-section { width:calc(100% - 32px) !important; }
+            .extra-card { min-width:0 !important;overflow-wrap:anywhere; }
+            .extra-card h3 { font-size:clamp(21px,5vw,27px) !important; }
+            .recognition-filters { gap:8px !important; }
+            .recognition-filters button { white-space:normal !important; }
+            .timeline-item { min-width:0 !important;overflow-wrap:anywhere; }
+          }
+          @media(max-width:480px){
+            .nav { padding-left:16px !important;padding-right:16px !important; }
+            .nav-contact { font-size:11px !important; }
+            .hero h1 { font-size:clamp(36px,10vw,56px) !important; }
+            .extra-card { padding:20px !important; }
+            .association-pill { font-size:12px; }
+          }
+        `}</style>
       {/* =====================================================
           AMBIENT BACKGROUND
       ===================================================== */}
@@ -887,31 +949,41 @@ export default function App() {
 
           <div className="about-copy">
             <p>
-              I'm a computer science graduate working in cyber mission analysis,
-              with a background in cybersecurity test and evaluation, software,
-              automation, and technical documentation.
+              I studied computer science at UCCS and now work in cyber mission analysis. I enjoy the technical side of my work, especially figuring out how systems connect, troubleshooting problems, and making complicated information easier to use.
             </p>
-
             <p>
-              My career hasn't followed one straight line. I've worked in
-              engineering, healthcare, research, and climbing, and I've learned
-              something different from each of them. I like learning new things,
-              doing work that matters, helping where I can, and leaving things
-              better than I found them.
+              My career has given me the opportunities to diverge across multiple paths of interest, from engineering and cybersecurity to healthcare, research, and climbing. I like being able to bring what I learn in one area into something completely different.
             </p>
-
             <p>
-              Outside of my engineering work, I'm a routesetter and coach. I
-              care about thoughtful movement, accessible climbing, competition
-              operations, and building stronger climbing communities.
+              Outside of work, I'm usually climbing, routesetting, coaching, or working on a project I thought would be fun to build. I care a lot about making climbing more accessible and creating opportunities for people to try something new.
             </p>
-
             <p>
-              I spend a lot of my time building things, asking questions, and
-              picking up new skills. The projects here range from software and
-              research to climbing tools and personal projects I've cared about
-              to continuously improve.
+              This site is a place to keep track of the things I've built, the communities I've been part of, and the projects I want to keep improving.
             </p>
+          </div>
+        </section>
+
+        <section className="portfolio-extra-section" id="associations" aria-labelledby="associations-heading">
+          <div className="section-label">ASSOCIATIONS & ORGANIZATIONS</div>
+          <h2 id="associations-heading">Organizations I've been part of.</h2>
+          <p className="extra-intro">A selection of academic, professional, athletic, and community organizations I've participated in, supported, or helped lead.</p>
+          <div className="associations-list">
+            {[
+              "Aerospace States Association (ASA)",
+              "AMTA Mock Trial",
+              "American Institute of Aeronautics and Astronautics (AIAA)",
+              "Asian Vibes in Denver (AVID)",
+              "Centura Diversity & Inclusion Council",
+              "Colorado Space Business Roundtable (CSBR)",
+              "Colorado Space Grant Consortium (COSGC)",
+              "Fellowship of Christian Athletes (FCA)",
+              "Phi Alpha Delta (P.A.D.)",
+              "Springs Rescue Mission · Volunteer",
+              "Society of Women Engineers (SWE)",
+              "UCCS Pre-Health Society",
+              "UCCS Pre-Law Society",
+              "UCCS Climbing Club · Founder & President (USA Climbing Collegiate)",
+            ].map((name) => <span className="association-pill" key={name}>{name}</span>)}
           </div>
         </section>
       </main>
