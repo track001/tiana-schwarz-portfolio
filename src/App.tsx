@@ -347,13 +347,14 @@ type Credential = {
   validity?: string;
   detail: string;
   sortDate?: string;
+  images?: string[];
 };
 
 const credentials: Credential[] = [
   { title: "CompTIA Security+ (SY0-601)", issuer: "CompTIA", date: "May 29, 2024", validity: "Valid through May 29, 2027", detail: "Tiana Schwarz earned the CompTIA Security+ (SY0-601) certification, validating foundational knowledge of threats, vulnerabilities, security architecture, security operations, and risk management.", sortDate: "2024-05-29" },
   { title: "Level 2 Youth Coach", issuer: "USA Climbing", date: "November 2023", validity: "Membership through August 14, 2027", detail: "USA Climbing Level 2 Youth Coach with experience developing youth athletes, guiding structured practices, supporting competition preparation, and fostering a positive team environment.", sortDate: "2023-11-01" },
-  { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "Tiana Schwarz completed USA Climbing Level 1 Routesetter training, developing skills in movement design, route development, setting practices, and competition routesetting.", sortDate: "2026-07-12" },
-  { title: "Para Routesetting", issuer: "USA Climbing", date: "April 17, 2026", detail: "Tiana Schwarz completed a three-day USA Climbing Para Routesetting course focused on inclusive route design, adaptive movement, and routesetting considerations for para athletes.", sortDate: "2026-04-17" },
+  { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "Tiana Schwarz completed USA Climbing Level 1 Routesetter training, developing skills in movement design, route development, setting practices, and competition routesetting.", sortDate: "2026-07-12", images: ["l1-part1.jpg", "l1-part2.jpg", "l1-part3.jpg"] },
+  { title: "Para Routesetting", issuer: "USA Climbing", date: "April 17, 2026", detail: "Tiana Schwarz completed a three-day USA Climbing Para Routesetting course focused on inclusive route design, adaptive movement, and routesetting considerations for para athletes.", sortDate: "2026-04-17", images: ["parasetting-1.jpg", "parasetting-2.jpg"] },
   { title: "CPR / AED / First Aid", issuer: "National CPR Foundation", date: "August 13, 2026", validity: "Renewal August 13, 2028", detail: "Tiana Schwarz completed CPR, AED, and First Aid training covering emergency response, lifesaving techniques, and basic first aid procedures.", sortDate: "2026-08-13" },
   { title: "Cyber Security Analyst Virtual Experience", issuer: "Telstra / Forage", date: "July 10, 2023", detail: "Tiana Schwarz completed the Telstra Cyber Security Analyst program, gaining hands-on experience in malware attack response, firewall rule creation, Python-based mitigation, and incident post-mortem documentation.", sortDate: "2023-07-10" },
   { title: "SketchUp Fundamentals", issuer: "SketchUp", date: "Date not specified", detail: "Tiana Schwarz earned the SketchUp Fundamentals (Desktop) certification, validating skills in precision modeling, texturing, and scene creation using the desktop version of SketchUp. The certification confirms her ability to navigate the full toolset and produce cross-platform visualizations." },
@@ -361,6 +362,7 @@ const credentials: Credential[] = [
 
 type RecognitionCategory = "Writing & Media" | "Academic Honors" | "Climbing & Athletics";
 type Recognition = {
+  images?: string[];
   title: string;
   source: string;
   category: RecognitionCategory;
@@ -386,7 +388,7 @@ const recognition: Recognition[] = [
   { title: "Fall 2019 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "UCCS published academic honors for the Fall 2019 semester, part of the broader record of Dean’s List and President’s List distinctions Tiana Schwarz earned during her undergraduate studies.", url: "https://communique.uccs.edu/?p=118157" },
   { title: "Crux: 9 Photos That Capture the Power and Struggle of a Climb's Hardest Move", source: "Climbing Magazine · Chris Thai", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in Climbing Magazine's Crux photo contest as an honorable mention in Chris Thai's photograph, Flo Storm Crux. The image captures Schwarz preparing for the dynamic crux of Flo Storm (V8) in Heaven's Gate near Eleven Mile Canyon, Colorado, where the defining move requires throwing to the next hold and cutting feet.", url: "https://www.climbing.com/culture-climbing/crux-winning-photo-summer-2026-contest/" },
   { title: "USA Climbing Competition Results & Rankings", source: "USAC Database · Athlete profile", category: "Climbing & Athletics", description: "USA Climbing collegiate competition record, including first-place finishes in the 2024 Collegiate National Boulder qualifier and final (Women's Intermediate), first place at the 2024 Collegiate divisional Boulder competition, and additional collegiate qualifying results. Athlete ID: 29690465. The linked database provides event-by-event rankings, including Boulder and Lead/Top Rope tabs.", url: "https://usac.climb8a.com/climber/29690465", sortDate: "2024-05-24" },
-  { title: "2024 Collegiate National Championships", source: "USA Climbing", category: "Climbing & Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/", sortDate: "2024-05-24" },
+  { title: "2024 Collegiate National Championships · May 28, 2024", source: "USA Climbing", category: "Climbing & Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/", sortDate: "2024-05-28", images: ["2024-championships.jpg"] },
   { title: "Eagle Valley Shines at Weekend of Mixed Climbing Events", source: "Vail Daily", category: "Climbing & Athletics", description: "Tiana Schwarz of the University of Colorado Colorado Springs won the women’s lead/top-rope category at a weekend of mixed climbing events hosted by Eagle Climbing & Fitness.", url: "https://www.vaildaily.com/news/eagle-climbing-and-fitness-hosts-weekend-of-mixed-climbing-events-eagle-valley-middle-school-climber-tops-individual-leaderboard/" },
   { title: "SkyView Academy High School Track & Field Records", source: "Athletic.net", category: "Climbing & Athletics", description: "Tiana Schwarz is the current SkyView Academy record holder in the 400m, 800m, 4×400m relay, 4×800m relay, and SMR 800m relay, and ranks third all-time in the 200m, with primary focus on the 400m and 800m. Last updated August 2026.", url: "https://www.athletic.net/team/42708/track-and-field-outdoor/2026/team-records/f" },
   { title: "Great Southwest Classic Colorado Entry List", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Tiana Schwarz was selected to represent Colorado at the prestigious Great Southwest Track & Field Classic, an invite-only meet at the University of New Mexico that draws top high school athletes from across the nation. Competing in the 800m, she ran a 2:26.03 against elite competition in this nationally recognized multi-day event.", url: "https://co.milesplit.com/articles/155390/updated-great-southwest-entry-list-for-colorado" },
@@ -398,6 +400,8 @@ const recognition: Recognition[] = [
 ];
 
 type CommunityItem = {
+  images?: string[];
+  links?: { label: string; url: string }[];
   title: string;
   category: string;
   dateLabel: string;
@@ -417,7 +421,8 @@ const communityItems: CommunityItem[] = [
   { title: "Assisted Living Community Project", category: "COMMUNITY DEVELOPMENT", dateLabel: "January–May 2018", sortDate: "2018-05-01", organization: "Big Idea Project · La Veta, Colorado", description: "Led a student team developing plans for an assisted living community space intended to address isolation among older adults, including project documentation and a video sharing residents' perspectives." },
   { title: "Alumni Ambassador", category: "AEROSPACE MENTORSHIP", dateLabel: "August 2024–Present", sortDate: "2026-10-27", organization: "Colorado Space Business Roundtable (CSBR) · Alumni Ambassador", description: "Support aerospace and technology networking, mentorship, career guidance, and outreach for students and early-career professionals." },
   { title: "Volunteering in Colorado Springs", category: "COMMUNITY RESOURCE", dateLabel: "Ongoing", sortDate: "2026-10-27", description: "I maintain a GitHub collection of local volunteer opportunities and organizations focused on homelessness, healthcare access, food insecurity, and older adults.", url: "https://github.com/track001/VolunteeringinCOS", linkLabel: "Explore volunteering resources ↗" },
-  { title: "Women's Climb Nights", category: "CLIMBING COMMUNITY", dateLabel: "2026", sortDate: "2026-09-25", organization: "Springs Climbing Center · Colorado Springs", description: "Co-hosted two women's climbing nights that welcomed more than 60 participants across the events. Reserved the gym for these gatherings to help create a welcoming environment for climbing, connection, and community." },
+  { title: "Women's Climb Nights", category: "CLIMBING COMMUNITY", dateLabel: "February 13, 2025 & September 26, 2026", sortDate: "2026-09-26", organization: "Springs Climbing Center · Colorado Springs", description: "Co-hosted the Galentine's Edition on February 13, 2025 and Fall Edition on September 26, 2026, welcoming more than 60 participants across both events. These gym-reserved gatherings created space for climbing, connection, and community.", links: [{ label: "Fall Edition · September 26, 2026 · Photo album ↗", url: "https://photos.app.goo.gl/rgmw6X1LwNFdekPc9" }, { label: "Galentine's Edition · February 13, 2025 · Photo album ↗", url: "https://photos.app.goo.gl/5CsNSrwEaoYZDmaWA" }] },
+  { title: "Amy Stone Project", category: "CLIMBING COMMUNITY", dateLabel: "Date not specified", organization: "Amy Stone Project", description: "Climbing community initiative and connection.", images: ["amy-stone-project.png"] },
   { title: "Community Food Pantry Support", category: "FOOD ACCESS", dateLabel: "Date not specified", organization: "Colorado Springs, Colorado", description: "Supported food pantry efforts serving underserved communities and improving access to essential food resources." },
 ];
 
@@ -452,6 +457,21 @@ const partnerLogos = [
   { name: "Colorado Space Grant Consortium (COSGC)", file: "csgc.jpeg", context: "Scholarship recipient · A.R.E.S. research presenter", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
 ];
 
+function MiniPhotoSlides({ images, label }: { images?: string[]; label: string }) {
+  const [index, setIndex] = useState(0);
+  if (!images?.length) return null;
+  return (
+    <div className="mini-photo-slides" aria-label={`${label} photo gallery`}>
+      <img src={assetPath(`/images/${images[index % images.length]}`)} alt={`${label}, photo ${index % images.length + 1} of ${images.length}`} loading="lazy" />
+      {images.length > 1 && <div className="mini-photo-controls">
+        <button type="button" onClick={() => setIndex(i => (i - 1 + images.length) % images.length)} aria-label={`Previous ${label} photo`}>‹</button>
+        <span>{index % images.length + 1} / {images.length}</span>
+        <button type="button" onClick={() => setIndex(i => (i + 1) % images.length)} aria-label={`Next ${label} photo`}>›</button>
+      </div>}
+    </div>
+  );
+}
+
 function PortfolioAdditions() {
   const [category, setCategory] = useState<"All" | RecognitionCategory>("All");
   const [certTime, setCertTime] = useState<Timeframe>("All Time");
@@ -468,7 +488,7 @@ function PortfolioAdditions() {
   const featuredRecognitionTitles = [
     "Between Chalk and Code: Lessons from Climbing and Cyber",
     "Alumni Spotlight: Class of 2018",
-    "2024 Collegiate National Championships",
+    "2024 Collegiate National Championships · May 28, 2024",
     "2022–2023 Colorado Space Grant Consortium Institutional Scholarship",
   ];
   const visibleRecognition = category === "All" && recognitionTime === "All Time"
@@ -489,6 +509,7 @@ function PortfolioAdditions() {
         {(expandedSections.certifications ? visibleCredentials : visibleCredentials.slice(0, previewCount)).map(item => <article className="extra-card" key={item.title}>
           <span className="extra-kicker">{item.issuer} · {item.date}</span>
           <h3>{item.title}</h3><p>{item.detail}</p>
+          <MiniPhotoSlides images={item.images} label={item.title} />
           {item.validity && <span className="extra-footnote">{item.validity}</span>}
         </article>)}
       </div>
@@ -514,6 +535,7 @@ function PortfolioAdditions() {
         {(expandedSections.recognition ? visibleRecognition : visibleRecognition.slice(0, previewCount)).map(item => <article className="extra-card" key={item.title}>
           <span className="extra-kicker">{item.category} · {item.source}</span>
           <h3>{item.title}</h3><p>{item.description}</p>
+          <MiniPhotoSlides images={item.images} label={item.title} />
           {item.url && <a className="extra-link" href={item.url} target="_blank" rel="noopener noreferrer">Read source ↗</a>}
         </article>)}
       </div>
@@ -538,6 +560,8 @@ function PortfolioAdditions() {
           <h3>{item.title}</h3>
           {item.organization && <p className="extra-org">{item.organization}</p>}
           <p>{item.description}</p>
+          <MiniPhotoSlides images={item.images} label={item.title} />
+          {item.links?.map(link => <a key={link.url} className="extra-link" href={link.url} target="_blank" rel="noopener noreferrer" style={{display:"block",marginTop:8}}>{link.label}</a>)}
           {item.url && <a className="extra-link" href={item.url} target="_blank" rel="noopener noreferrer">{item.linkLabel || "Learn more ↗"}</a>}
         </article>)}
       </div>
@@ -567,6 +591,11 @@ export default function App() {
 
         <style>{`
 
+          .mini-photo-slides{margin:16px 0 10px;max-width:100%;overflow:hidden;border-radius:7px;border:1px solid rgba(240,158,109,.22);background:#161313}
+          .mini-photo-slides img{display:block;width:100%;height:230px;object-fit:contain;background:#171414}
+          .mini-photo-controls{display:flex;justify-content:center;align-items:center;gap:18px;padding:8px;color:#eadbd0;font-size:12px}
+          .mini-photo-controls button{cursor:pointer;border:1px solid rgba(240,158,109,.5);border-radius:5px;background:rgba(56,35,29,.8);color:#ffe1c8;font-size:24px;width:36px;height:30px;line-height:22px}
+          .mini-photo-controls button:hover{background:rgba(134,70,46,.75)}
           .section-expand-button{display:block;width:fit-content;max-width:100%;margin:25px auto 4px;padding:13px 22px;border:1px solid var(--red-bright,#e97759);border-radius:30px;background:rgba(40,25,23,.75);color:var(--ivory,#f3e9e1);font:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s}
           .section-expand-button:hover{background:rgba(100,44,34,.55)}
           .section-expand-button:focus-visible{outline:2px solid var(--amber,#e7b17a);outline-offset:3px}
