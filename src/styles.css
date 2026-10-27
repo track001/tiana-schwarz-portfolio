@@ -2249,3 +2249,139 @@ footer {
   }
 }
 
+/* ============================================================
+   PORTFOLIO V3: CELESTIAL DETAILS + MOTION
+   Paste this entire block at the END of src/styles.css.
+   Compatible with the existing App.tsx star and satellite markup.
+   ============================================================ */
+
+/* More visible, but still restrained, existing stars */
+.space-background .star {
+  opacity: 0.42;
+  font-size: 10px;
+  text-shadow: 0 0 9px rgba(223, 101, 78, 0.48),
+               0 0 18px rgba(213, 139, 70, 0.22);
+}
+.space-background .star:nth-of-type(4n) { font-size: 13px; }
+.space-background .star:nth-of-type(7n) { color: #e9b78d; }
+
+/* A subtle additional star field; no extra JSX or images needed */
+.space-background {
+  background-image:
+    radial-gradient(circle, rgba(229, 221, 211, .34) 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(213, 139, 70, .28) 1px, transparent 2px),
+    radial-gradient(circle, rgba(223, 101, 78, .22) 1px, transparent 1.8px);
+  background-size: 251px 307px, 373px 419px, 487px 521px;
+  background-position: 24px 49px, 143px 181px, 282px 96px;
+}
+
+/* Crescent moon, tucked behind the page content near the hero */
+.space-background::before {
+  content: "";
+  position: absolute;
+  top: 340px;
+  right: clamp(16px, 7vw, 120px);
+  width: clamp(65px, 8vw, 116px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: -14px 9px 0 -5px rgba(226, 177, 131, .50),
+              -19px 12px 22px -13px rgba(223, 101, 78, .24);
+  transform: rotate(-22deg);
+  opacity: .55;
+  animation: portfolioMoonFloat 13s ease-in-out infinite;
+}
+
+@keyframes portfolioMoonFloat {
+  0%, 100% { transform: translateY(0) rotate(-22deg); opacity: .48; }
+  50% { transform: translateY(-14px) rotate(-18deg); opacity: .68; }
+}
+
+/* Additional distant satellite, built with CSS instead of new markup */
+.space-background::after {
+  content: "◇";
+  position: absolute;
+  top: 17%;
+  left: -55px;
+  width: 36px;
+  height: 16px;
+  text-align: center;
+  line-height: 16px;
+  font-size: 13px;
+  color: rgba(229, 181, 141, .75);
+  border-left: 10px double rgba(213, 139, 70, .48);
+  border-right: 10px double rgba(213, 139, 70, .48);
+  filter: drop-shadow(0 0 5px rgba(223, 101, 78, .32));
+  opacity: 0;
+  animation: portfolioSatellitePass 92s linear 6s infinite;
+}
+
+@keyframes portfolioSatellitePass {
+  0% { transform: translate(-30px, 0) rotate(12deg); opacity: 0; }
+  12% { opacity: .36; }
+  50% { transform: translate(53vw, 65px) rotate(-5deg); opacity: .42; }
+  86% { opacity: .3; }
+  100% { transform: translate(110vw, -25px) rotate(8deg); opacity: 0; }
+}
+
+/* Make the existing satellite noticeable without distracting from text */
+.space-background .satellite-1 {
+  opacity: .52;
+  filter: drop-shadow(0 0 6px rgba(213, 139, 70, .48));
+  animation-duration: 65s;
+}
+.space-background .satellite-panel {
+  width: 11px;
+  height: 7px;
+  border-color: rgba(229, 181, 141, .72);
+}
+
+/* Small entrance motion for the content cards */
+.portfolio-extra-section .extra-card,
+.organization-logo-card {
+  animation: portfolioCardReveal .55s ease-out both;
+}
+.portfolio-extra-section .extra-card:nth-child(2n),
+.organization-logo-card:nth-child(2n) { animation-delay: .09s; }
+.portfolio-extra-section .extra-card:nth-child(3n),
+.organization-logo-card:nth-child(3n) { animation-delay: .16s; }
+
+@keyframes portfolioCardReveal {
+  from { opacity: 0; transform: translateY(13px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (hover: hover) {
+  .portfolio-extra-section .extra-card,
+  .organization-logo-card {
+    transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  .portfolio-extra-section .extra-card:hover,
+  .organization-logo-card:hover {
+    border-color: rgba(223, 101, 78, .48);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+  }
+}
+
+/* Keep the moon and cards from crowding narrow phone screens */
+@media (max-width: 700px) {
+  .space-background::before {
+    top: 280px;
+    right: 18px;
+    width: 64px;
+    opacity: .28;
+  }
+  .space-background .star { font-size: 8px; }
+  .portfolio-extra-section .extra-grid { grid-template-columns: minmax(0, 1fr); }
+  .portfolio-extra-section .extra-card { min-width: 0; overflow-wrap: anywhere; }
+  .portfolio-extra-section .extra-card h3 { font-size: clamp(20px, 5vw, 27px); }
+}
+
+/* Accessibility: respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .space-background::before,
+  .space-background::after,
+  .portfolio-extra-section .extra-card,
+  .organization-logo-card { animation: none !important; }
+  .space-background::after { display: none; }
+}
+
