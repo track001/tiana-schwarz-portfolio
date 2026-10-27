@@ -269,7 +269,7 @@ const timeline: TimelineItem[] = [
     title: "MRT-C Mission Analyst",
     location: "Colorado Springs, CO",
     summary:
-      "Cyber mission analyst supporting Combat Forces Command (CFC) through cyber mission assurance, cyber terrain assessments, and operational risk analysis.",
+      "Cyber mission analyst supporting the U.S. Department of Defense (DoD), specifically Combat Forces Command (CFC), through cyber mission assurance, cyber terrain assessments, and operational risk analysis.",
     details: [
       "Analyze mission-relevant cyber terrain, system dependencies, vulnerabilities, and Key Terrain–Cyber supporting USSF mission systems.",
       "Support mission decomposition through Mission Thread Engineering (MEngT) and develop technical analysis supporting Operational Risk Assessments (ORAs), Asset Defense Plans (ADPs), and MRT-C mission data.",
@@ -376,7 +376,7 @@ const recognition: Recognition[] = [
   { title: "Dean's List · Eight Semesters", source: "UCCS · College of Engineering and Applied Science", category: "Academic Honors", sortDate: "2023-12-15", description: "Recognized across eight academic semesters: Fall 2018, Spring 2019, Spring 2021, Summer 2021, Fall 2021, Spring 2023, Summer 2023, and Fall 2023. UCCS published academic honors announcements for multiple semesters, including President’s List recognition for the 4.0 GPA earned in Fall 2023. The eight-semester distinction reflects the academic honors recorded on her LinkedIn profile." },
   { title: "Track & Field Awards · SkyView Academy", source: "CHSAA · SkyView Academy", category: "Climbing & Athletics", sortDate: "2018-05-01", description: "Earned the 2015 Heart of the Hawk Award and Varsity MVP recognition. At the 2015 Colorado state meet, placed sixth in the 400m, 16th in the 800m, seventh with the 4×800m relay, and 12th with the 4×400m relay. Competed for Colorado at the Great Southwest Invitational in the 800m. Returned to state competition in the 4×800m relay in 2016 (14th) and anchored the 2017 4×400m relay team to 11th place.", url: "https://co.milesplit.com/athletes/4986072/stats" },
   { title: "AMTA Mock Trial · Outstanding Witness", source: "American Mock Trial Association · February 2022", category: "Academic Honors", sortDate: "2022-02-01", description: "Recognized as an Outstanding Witness through AMTA’s ballot process in February 2022. AMTA-certified judges scored her 8/10 for Direct Examination and 9/10 for Cross Examination. The role required memorization, familiarity with courtroom proceedings and terminology, and effective communication with attorney roles." },
-  { title: "Between Chalk and Code: Lessons from Climbing and Cyber", source: "Reinvented Magazine", category: "Writing & Media", description: "Tiana Schwarz authored an article exploring how climbing has shaped her approach to cybersecurity, problem-solving, perseverance, and learning through difficult challenges.", url: "https://www.reinventedmagazine.com/post/between-chalk-and-code-lessons-from-climbing-and-cyber", images: ["betweenchalkandcode.png"] },
+  { title: "Between Chalk and Code: Lessons from Climbing and Cyber", source: "Reinvented Magazine · ellianysplese · June 30, 2026", category: "Writing & Media", sortDate: "2026-06-30", description: "Tiana Schwarz authored an article exploring how climbing has shaped her approach to cybersecurity, problem-solving, perseverance, and learning through difficult challenges.", url: "https://www.reinventedmagazine.com/post/between-chalk-and-code-lessons-from-climbing-and-cyber", images: ["betweenchalkandcode.png"] },
   { title: "Climbing Club Gains Popularity in Its First Semester", source: "The Scribe · Paul Czarnecki · September 7, 2022", category: "Climbing & Athletics", description: "Tiana Schwarz founded and served as president of this iteration of the UCCS Climbing Club, partnering with the on-campus SOLE recreation center and Springs Climbing Center to make climbing more accessible to college students. The club welcomed both recreational and competitive climbers while representing UCCS in USA Climbing Collegiate competitions.", url: "https://scribe.uccs.edu/climbing-club-gains-popularity-in-its-first-semester/" , sortDate: "2022-09-07" },
   { title: "Springs Climbing Center Continues to Push Students to Greater Heights", source: "The Scribe · Taylor B · November 27, 2020", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in The Scribe, the University of Colorado Colorado Springs student newspaper, in its coverage of Springs Climbing Center and the local student climbing community.", url: "https://scribe.uccs.edu/springs-climbing-center-continues-to-push-students-to-greater-heights/" , sortDate: "2020-11-27" },
   { title: "The Impact Driver Podcast · Upcoming Guest", source: "The Impact Driver · Climbing Business Journal · Upcoming / Not Yet Published", category: "Writing & Media", description: "Tiana Schwarz has been invited to appear on The Impact Driver Podcast, a Climbing Business Journal podcast focused on routesetting and the people, ideas, and challenges shaping the routesetting industry. The planned conversation will draw on her experience as a routesetter and climbing coach. Once released, the episode is expected to be available in audio on Apple Podcasts, Spotify, and Podbean, with a video version on YouTube and a written transcript. Recording and publication details are pending." },
@@ -486,10 +486,10 @@ function PortfolioAdditions() {
   // The unfiltered landing view intentionally mixes writing, academic honors,
   // and climbing achievements instead of showing only the most recent dates.
   const featuredRecognitionTitles = [
-    "Between Chalk and Code: Lessons from Climbing and Cyber",
     "Alumni Spotlight: Class of 2018",
-    "2024 Collegiate National Championships · May 28, 2024",
     "2022–2023 Colorado Space Grant Consortium Institutional Scholarship",
+    "Between Chalk and Code: Lessons from Climbing and Cyber",
+    "2024 Collegiate National Championships · May 28, 2024",
   ];
   const visibleRecognition = category === "All" && recognitionTime === "All Time"
     ? [
@@ -497,7 +497,12 @@ function PortfolioAdditions() {
         ...datedRecognition.filter(item => !featuredRecognitionTitles.includes(item.title)),
       ]
     : datedRecognition;
-  const visibleCommunity = newestFirst(recentOnly(communityItems, communityTime));
+  const communitySorted = newestFirst(recentOnly(communityItems, communityTime));
+  const womensNightTitles = ["Women's Climb Night · Fall Edition", "Women's Climb Night · Galentine's Edition"];
+  const visibleCommunity = [
+    ...womensNightTitles.flatMap(title => communitySorted.filter(item => item.title === title)),
+    ...communitySorted.filter(item => !womensNightTitles.includes(item.title)),
+  ];
 
   return <>
     <section className="portfolio-extra-section" id="certifications" style={{ overflowAnchor: "none" }}>
@@ -1066,7 +1071,7 @@ export default function App() {
               My career has given me the opportunities to diverge across multiple paths of interest, from engineering and cybersecurity to healthcare, research, and climbing. I like being able to bring what I learn in one area into something completely different.
             </p>
             <p>
-              Outside of work, I'm usually climbing, routesetting, coaching, or working on a project I thought would be fun to build. I'm passionate about mentorship and routesetting, and about making climbing more accessible to others. I've climbed up to V11, flashed multiple V10s, and am a board climber at heart. I love creating opportunities for people to try something new and grow through climbing. I was especially excited to be featured in the Board Report as a dedicated board climber and longtime enthusiast of Tension Climbing, whose quality products and contributions to the progression of the board climbing community I deeply appreciate.
+              Outside of work, I'm usually climbing, routesetting, coaching, or working on a project I thought would be fun to build. I'm passionate about mentorship and routesetting, and about making climbing more accessible to others. I've climbed up to V11, flashed multiple V10s, and am a board climber at heart. I love creating opportunities for people to try something new and grow through climbing. I was especially excited to be featured in Tension Climbing’s Board Report, something I hold dearly as a board climber at heart. Tension Climbing is my favorite climbing brand, and I deeply appreciate the quality of its products and its commitment to progressing the board climbing community.
             </p>
             <p>
               You can see the <a href="https://www.instagram.com/p/DbGk6XglvJX/?img_index=6&amp;xtok=MTh3N2dyaHp3ZHpwZw==" target="_blank" rel="noopener noreferrer">Tension Climbing Board Report feature ↗</a>. This site is a place to keep track of the things I've built, the communities I've been part of, and the projects I want to keep improving.
