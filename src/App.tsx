@@ -1114,7 +1114,7 @@ export default function App() {
           <h2 id="competitions-heading">Competition results & placements.</h2>
           <p className="extra-intro">A developing record of collegiate and open competitions. Unconfirmed placements and dates are marked for verification rather than presented as official results.</p>
           <div className="extra-grid" style={{margin:"22px 0 28px"}}>
-            <div><h3 style={{fontSize:"1.1rem",marginBottom:8}}>Heart and Soul · 2025</h3><MiniPhotoSlides label="Heart and Soul 2025" images={["heart and soul 2025.jpg"]} /></div>
+            <div><h3 style={{fontSize:"1.1rem",marginBottom:8}}>Heart and Soul · 2025</h3><MiniPhotoSlides label="Heart and Soul 2026" images={["heart and soul 2025.jpg"]} /></div>
             <div><h3 style={{fontSize:"1.1rem",marginBottom:8}}>BFL6 · 2026</h3><MiniPhotoSlides label="BFL6 2026" images={["BFL 2026.jpg"]} /></div>
           </div>
           <div style={{margin:"22px 0 28px"}}>
