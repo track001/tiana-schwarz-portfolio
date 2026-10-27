@@ -357,7 +357,7 @@ const credentials: Credential[] = [
   { title: "SketchUp Fundamentals", issuer: "SketchUp", date: "Date not specified", detail: "Tiana Schwarz earned the SketchUp Fundamentals (Desktop) certification, validating skills in precision modeling, texturing, and scene creation using the desktop version of SketchUp. The certification confirms her ability to navigate the full toolset and produce cross-platform visualizations." },
 ];
 
-type RecognitionCategory = "Technical & Career" | "Academic Honors" | "Climbing" | "Athletics";
+type RecognitionCategory = "Writing & Media" | "Academic Honors" | "Climbing & Athletics";
 type Recognition = {
   title: string;
   source: string;
@@ -367,29 +367,37 @@ type Recognition = {
 };
 
 const recognition: Recognition[] = [
-  { title: "Between Chalk and Code: Lessons from Climbing and Cyber", source: "Reinvented Magazine", category: "Technical & Career", description: "Tiana Schwarz authored an article exploring how climbing has shaped her approach to cybersecurity, problem-solving, perseverance, and learning through difficult challenges.", url: "https://www.reinventedmagazine.com/post/between-chalk-and-code-lessons-from-climbing-and-cyber" },
+  { title: "Between Chalk and Code: Lessons from Climbing and Cyber", source: "Reinvented Magazine", category: "Writing & Media", description: "Tiana Schwarz authored an article exploring how climbing has shaped her approach to cybersecurity, problem-solving, perseverance, and learning through difficult challenges.", url: "https://www.reinventedmagazine.com/post/between-chalk-and-code-lessons-from-climbing-and-cyber" },
+  { title: "The Impact Driver Podcast", source: "The Impact Driver · Planned appearance", category: "Writing & Media", description: "A potential future podcast feature discussing climbing and the intersection of athletic and professional pursuits. Details and release date are pending confirmation." },
   { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe", category: "Academic Honors", description: "Tiana Schwarz was part of the UCCS A.R.E.S. Project team recognized by the Colorado Space Grant Consortium for innovative research on inertial measurement units (IMUs) in microgravity. The team explored how wearable technology could support human movement and monitoring in space.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
   { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy", category: "Academic Honors", description: "SkyView Academy featured alumna Tiana Schwarz (Class of 2018), highlighting her academic journey, professional work in cybersecurity, and continued involvement in climbing and community activities.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018" },
   { title: "2022–2023 Colorado Space Grant Consortium Institutional Scholarship", source: "Colorado Space Grant Consortium", category: "Academic Honors", description: "Tiana Schwarz was selected as a recipient of the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship, part of NASA's National Space Grant College and Fellowship Program supporting future scientists, engineers, and leaders.", },
   { title: "Fall 2023 President's List", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized on the Fall 2023 President's List at the University of Colorado Colorado Springs for achieving a 4.0 semester GPA in the College of Engineering and Applied Science.", url: "https://communique.uccs.edu/?p=153687" },
   { title: "Fall 2021 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized for academic excellence during the Fall 2021 semester in the College of Engineering and Applied Science at UCCS, where she studied Computer Science in the ABET-accredited program.", url: "https://communique.uccs.edu/?p=137114" },
   { title: "Fall 2019 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized for academic excellence during the Fall 2019 semester in the College of Engineering and Applied Science at UCCS, where she studied Computer Science in the ABET-accredited program.", url: "https://communique.uccs.edu/?p=118157" },
-  { title: "Crux: 9 Photos That Capture the Power and Struggle of a Climb's Hardest Move", source: "Climbing Magazine · Chris Thai", category: "Climbing", description: "Tiana Schwarz was featured in Climbing Magazine's Crux photo contest as an honorable mention in Chris Thai's photograph, Flo Storm Crux. The image captures Schwarz preparing for the dynamic crux of Flo Storm (V8) in Heaven's Gate near Eleven Mile Canyon, Colorado, where the defining move requires throwing to the next hold and cutting feet.", url: "https://www.climbing.com/culture-climbing/crux-winning-photo-summer-2026-contest/" },
-  { title: "2024 Collegiate National Championships", source: "USA Climbing", category: "Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/" },
-  { title: "Eagle Valley Shines at Weekend of Mixed Climbing Events", source: "Vail Daily", category: "Climbing", description: "Tiana Schwarz of the University of Colorado Colorado Springs won the women’s lead/top-rope category at a weekend of mixed climbing events hosted by Eagle Climbing & Fitness.", url: "https://www.vaildaily.com/news/eagle-climbing-and-fitness-hosts-weekend-of-mixed-climbing-events-eagle-valley-middle-school-climber-tops-individual-leaderboard/" },
-  { title: "SkyView Academy High School Track & Field Records", source: "Athletic.net", category: "Athletics", description: "Tiana Schwarz is the current SkyView Academy record holder in the 400m, 800m, 4×400m relay, 4×800m relay, and SMR 800m relay, and ranks third all-time in the 200m, with primary focus on the 400m and 800m. Last updated August 2026.", url: "https://www.athletic.net/team/42708/track-and-field-outdoor/2026/team-records/f" },
-  { title: "Great Southwest Classic Colorado Entry List", source: "MileSplit Colorado", category: "Athletics", description: "Tiana Schwarz was selected to represent Colorado at the prestigious Great Southwest Track & Field Classic, an invite-only meet at the University of New Mexico that draws top high school athletes from across the nation. Competing in the 800m, she ran a 2:26.03 against elite competition in this nationally recognized multi-day event.", url: "https://co.milesplit.com/articles/155390/updated-great-southwest-entry-list-for-colorado" },
-  { title: "Colorado Class 3A Volleyball Statistical Leaders", source: "Colorado Preps", category: "Athletics", description: "At the Class 3A volleyball level in Colorado, Tiana Schwarz ranked seventh in digs with 368 total, placing her among the elite dig leaders in the state that Fall 2017 season.", url: "https://coloradopreps.com/class-3a-volleyball-statistical-leaders/" },
-  { title: "Volleyball Players to Watch: SkyView Academy", source: "Colorado Community Media", category: "Athletics", description: "Colorado Community Media featured Tiana Schwarz in coverage of SkyView Academy volleyball and the team's competitive development.", url: "https://www.coloradocommunitymedia.com/stories/volleyball-squads-work-in-ways-like-football-teams,253643/" },
-  { title: "Colorado 3A Girls Track and Field State Meet Results 2015", source: "The Denver Post", category: "Athletics", description: "Tiana Schwarz placed sixth in the 400m dash with a time of 1:00.04. In the 800m, despite suffering a fall mid-race that required immediate stitches, she pushed through to finish 16th, clocking a 64-second opening lap. She also anchored SkyView Academy's 4×800m relay team to a seventh-place finish, earning valuable points for the school.", url: "https://www.denverpost.com/2015/05/16/colorado-3a-girls-track-and-field-state-meet-results-2015/" },
-  { title: "Top Small-School Track Performances", source: "MileSplit Colorado", category: "Athletics", description: "Coverage of Colorado small-school track and field performances during the 2015 season.", url: "https://co.milesplit.com/articles/151240/top-small-school-performances-of-the-past-week" },
-  { title: "2016 Colorado State Track Championships", source: "MileSplit Colorado", category: "Athletics", description: "Tiana Schwarz competed in the 2016 Colorado State Track and Field Championships as part of SkyView Academy's 4×800m relay team, which finished 14th in 10:43.30.", url: "https://co.milesplit.com/meets/220074-colorado-state-track-and-field-championships-2016/results/453815/raw" },
+  { title: "Crux: 9 Photos That Capture the Power and Struggle of a Climb's Hardest Move", source: "Climbing Magazine · Chris Thai", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in Climbing Magazine's Crux photo contest as an honorable mention in Chris Thai's photograph, Flo Storm Crux. The image captures Schwarz preparing for the dynamic crux of Flo Storm (V8) in Heaven's Gate near Eleven Mile Canyon, Colorado, where the defining move requires throwing to the next hold and cutting feet.", url: "https://www.climbing.com/culture-climbing/crux-winning-photo-summer-2026-contest/" },
+  { title: "2024 Collegiate National Championships", source: "USA Climbing", category: "Climbing & Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/" },
+  { title: "Eagle Valley Shines at Weekend of Mixed Climbing Events", source: "Vail Daily", category: "Climbing & Athletics", description: "Tiana Schwarz of the University of Colorado Colorado Springs won the women’s lead/top-rope category at a weekend of mixed climbing events hosted by Eagle Climbing & Fitness.", url: "https://www.vaildaily.com/news/eagle-climbing-and-fitness-hosts-weekend-of-mixed-climbing-events-eagle-valley-middle-school-climber-tops-individual-leaderboard/" },
+  { title: "SkyView Academy High School Track & Field Records", source: "Athletic.net", category: "Climbing & Athletics", description: "Tiana Schwarz is the current SkyView Academy record holder in the 400m, 800m, 4×400m relay, 4×800m relay, and SMR 800m relay, and ranks third all-time in the 200m, with primary focus on the 400m and 800m. Last updated August 2026.", url: "https://www.athletic.net/team/42708/track-and-field-outdoor/2026/team-records/f" },
+  { title: "Great Southwest Classic Colorado Entry List", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Tiana Schwarz was selected to represent Colorado at the prestigious Great Southwest Track & Field Classic, an invite-only meet at the University of New Mexico that draws top high school athletes from across the nation. Competing in the 800m, she ran a 2:26.03 against elite competition in this nationally recognized multi-day event.", url: "https://co.milesplit.com/articles/155390/updated-great-southwest-entry-list-for-colorado" },
+  { title: "Colorado Class 3A Volleyball Statistical Leaders", source: "Colorado Preps", category: "Climbing & Athletics", description: "At the Class 3A volleyball level in Colorado, Tiana Schwarz ranked seventh in digs with 368 total, placing her among the elite dig leaders in the state that Fall 2017 season.", url: "https://coloradopreps.com/class-3a-volleyball-statistical-leaders/" },
+  { title: "Volleyball Players to Watch: SkyView Academy", source: "Colorado Community Media", category: "Climbing & Athletics", description: "Colorado Community Media featured Tiana Schwarz in coverage of SkyView Academy volleyball and the team's competitive development.", url: "https://www.coloradocommunitymedia.com/stories/volleyball-squads-work-in-ways-like-football-teams,253643/" },
+  { title: "Colorado 3A Girls Track and Field State Meet Results 2015", source: "The Denver Post", category: "Climbing & Athletics", description: "Tiana Schwarz placed sixth in the 400m dash with a time of 1:00.04. In the 800m, despite suffering a fall mid-race that required immediate stitches, she pushed through to finish 16th, clocking a 64-second opening lap. She also anchored SkyView Academy's 4×800m relay team to a seventh-place finish, earning valuable points for the school.", url: "https://www.denverpost.com/2015/05/16/colorado-3a-girls-track-and-field-state-meet-results-2015/" },
+  { title: "Top Small-School Track Performances", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Coverage of Colorado small-school track and field performances during the 2015 season.", url: "https://co.milesplit.com/articles/151240/top-small-school-performances-of-the-past-week" },
+  { title: "2016 Colorado State Track Championships", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Tiana Schwarz competed in the 2016 Colorado State Track and Field Championships as part of SkyView Academy's 4×800m relay team, which finished 14th in 10:43.30.", url: "https://co.milesplit.com/meets/220074-colorado-state-track-and-field-championships-2016/results/453815/raw" },
 ];
 
 function PortfolioAdditions() {
   const [category, setCategory] = useState<"All" | RecognitionCategory>("All");
-  const categories: Array<"All" | RecognitionCategory> = ["All", "Technical & Career", "Academic Honors", "Climbing", "Athletics"];
+  const categories: Array<"All" | RecognitionCategory> = ["All", "Writing & Media", "Academic Honors", "Climbing & Athletics"];
   const visible = category === "All" ? recognition : recognition.filter((item) => item.category === category);
+
+  // Prevent browser scroll anchoring from moving the page when filtered cards change height.
+  const changeCategory = (nextCategory: "All" | RecognitionCategory) => {
+    const previousScroll = window.scrollY;
+    setCategory(nextCategory);
+    window.requestAnimationFrame(() => window.scrollTo(0, previousScroll));
+  };
 
   return (
     <>
@@ -409,13 +417,13 @@ function PortfolioAdditions() {
         </div>
       </section>
 
-      <section className="portfolio-extra-section" id="recognition">
+      <section className="portfolio-extra-section" id="recognition" style={{ overflowAnchor: "none" }}>
         <div className="section-label">PUBLICATIONS & RECOGNITION</div>
         <h2>Writing, research & milestones.</h2>
-        <p className="extra-intro">Published work, academic honors, competition coverage, and athletics records.</p>
+        <p className="extra-intro">Published writing, media features, academic honors, and competition results.</p>
         <div className="recognition-filters" aria-label="Filter publications and recognition">
           {categories.map((item) => (
-            <button key={item} type="button" className={category === item ? "selected" : ""} onClick={() => setCategory(item)} aria-pressed={category === item}>
+            <button key={item} type="button" className={category === item ? "selected" : ""} onClick={() => changeCategory(item)} aria-pressed={category === item}>
               {item}
             </button>
           ))}
@@ -423,9 +431,6 @@ function PortfolioAdditions() {
         <div className="extra-grid">
           {visible.map((item) => (
             <article className="extra-card" key={item.title}>
-              {item.source.startsWith("Climbing Magazine") && (
-                <img className="recognition-feature-image" src={assetPath("/images/bouldering-Chris-Thai.webp")} alt="Tiana Schwarz climbing Flo Storm V8, photographed by Chris Thai" loading="lazy" />
-              )}
               <span className="extra-kicker">{item.category} · {item.source}</span>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
@@ -453,6 +458,12 @@ function PortfolioAdditions() {
             <p>I maintain a collection of volunteer opportunities and community organizations around Colorado Springs that I've researched, volunteered with, or recommend.</p>
             <p>It focuses primarily on homelessness, healthcare access, food insecurity, and support for older adults.</p>
             <a className="extra-link" href="https://github.com/track001/VolunteeringinCOS" target="_blank" rel="noopener noreferrer">Explore Volunteering in Colorado Springs ↗</a>
+          </article>
+          <article className="extra-card">
+            <span className="extra-kicker">WOMEN'S CLIMBING · SPRINGS CLIMBING CENTER</span>
+            <h3>Women's Climb Nights</h3>
+            <p className="extra-org">Springs Climbing Center · Colorado Springs</p>
+            <p>Co-hosted two women-focused climbing nights, welcoming more than 60 women into the gym across the events. The gym was reserved for participants to help create a welcoming space for climbing, connection, and community.</p>
           </article>
           <article className="extra-card">
             <span className="extra-kicker">COMMUNITY SERVICE · COLORADO SPRINGS</span>
@@ -548,18 +559,15 @@ export default function App() {
         <nav className="nav-links">
           <a href="#work">Projects</a>
           <span>|</span>
-
+          <a href="#resumes">Résumés</a>
+          <span>|</span>
           <a href="#experience">Experience</a>
           <span>|</span>
-
           <a href="#recognition">Recognition</a>
           <span>|</span>
           <a href="#community">Community</a>
           <span>|</span>
           <a href="#about">About</a>
-          <span>|</span>
-
-          <a href="#resumes">Résumés</a>
         </nav>
       </header>
 
@@ -736,6 +744,58 @@ export default function App() {
         </section>
 
         {/* =====================================================
+            RESUMES
+        ===================================================== */}
+
+        <section className="coming-section resume-section" id="resumes">
+          <div className="section-heading">
+            <div>
+              <div className="section-label">RÉSUMÉS</div>
+
+              <h2>
+                I currently maintain both a STEM resume and a routesetting
+                resume.
+              </h2>
+
+              <p>
+                Engineering and climbing have both become significant parts of
+                my professional life.
+              </p>
+            </div>
+          </div>
+
+          <div className="resume-preview">
+            {resumes.map((resume) => (
+              <article className="resume-card" key={resume.title}>
+                <div className="resume-card-top">
+                  <span className="resume-number">{resume.number}</span>
+                  <span className="resume-label">{resume.label}</span>
+                </div>
+
+                <h2>{resume.title}</h2>
+
+                <p>{resume.description}</p>
+
+                <div className="resume-actions">
+                  <a
+                    className="resume-button"
+                    href={resume.file}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View Résumé ↗
+                  </a>
+
+                  <a className="resume-download" href={resume.file} download>
+                    Download PDF ↓
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* =====================================================
             EXPERIENCE / TIMELINE
         ===================================================== */}
 
@@ -815,58 +875,6 @@ export default function App() {
         </section>
 
         <PortfolioAdditions />
-
-        {/* =====================================================
-            RESUMES
-        ===================================================== */}
-
-        <section className="coming-section resume-section" id="resumes">
-          <div className="section-heading">
-            <div>
-              <div className="section-label">RÉSUMÉS</div>
-
-              <h2>
-                I currently maintain both a STEM resume and a routesetting
-                resume.
-              </h2>
-
-              <p>
-                Engineering and climbing have both become significant parts of
-                my professional life.
-              </p>
-            </div>
-          </div>
-
-          <div className="resume-preview">
-            {resumes.map((resume) => (
-              <article className="resume-card" key={resume.title}>
-                <div className="resume-card-top">
-                  <span className="resume-number">{resume.number}</span>
-                  <span className="resume-label">{resume.label}</span>
-                </div>
-
-                <h2>{resume.title}</h2>
-
-                <p>{resume.description}</p>
-
-                <div className="resume-actions">
-                  <a
-                    className="resume-button"
-                    href={resume.file}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Résumé ↗
-                  </a>
-
-                  <a className="resume-download" href={resume.file} download>
-                    Download PDF ↓
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
 
         {/* =====================================================
             ABOUT
