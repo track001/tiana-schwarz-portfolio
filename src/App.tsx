@@ -377,7 +377,7 @@ const recognition: Recognition[] = [
   { title: "Between Chalk and Code: Lessons from Climbing and Cyber", source: "Reinvented Magazine", category: "Writing & Media", description: "Tiana Schwarz authored an article exploring how climbing has shaped her approach to cybersecurity, problem-solving, perseverance, and learning through difficult challenges.", url: "https://www.reinventedmagazine.com/post/between-chalk-and-code-lessons-from-climbing-and-cyber" },
   { title: "Climbing Club Gains Popularity in Its First Semester", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz founded and served as president of this iteration of the UCCS Climbing Club, partnering with the on-campus SOLE recreation center and Springs Climbing Center to make climbing more accessible to college students. The club welcomed both recreational and competitive climbers while representing UCCS in USA Climbing Collegiate competitions.", url: "https://scribe.uccs.edu/climbing-club-gains-popularity-in-its-first-semester/" },
   { title: "Springs Climbing Center Continues to Push Students to Greater Heights", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in The Scribe, the University of Colorado Colorado Springs student newspaper, in its coverage of Springs Climbing Center and the local student climbing community.", url: "https://scribe.uccs.edu/springs-climbing-center-continues-to-push-students-to-greater-heights/" },
-  { title: "The Impact Driver Podcast · Upcoming Guest", source: "The Impact Driver · Climbing Business Journal · Upcoming / Not Yet Published", category: "Writing & Media", description: "Tiana Schwarz has been invited to appear on The Impact Driver Podcast, a Climbing Business Journal series exploring the people, ideas, and challenges shaping the routesetting industry. The planned conversation will draw on her experience in climbing and routesetting. Once released, the episode is expected to be available in audio on Apple Podcasts, Spotify, and Podbean, with a video version on YouTube and a written transcript. Recording and publication details are pending." },
+  { title: "The Impact Driver Podcast · Upcoming Guest", source: "The Impact Driver · Climbing Business Journal · Upcoming / Not Yet Published", category: "Writing & Media", description: "Tiana Schwarz has been invited to appear on The Impact Driver Podcast, a Climbing Business Journal podcast focused on routesetting and the people, ideas, and challenges shaping the routesetting industry. The planned conversation will draw on her experience as a routesetter and climbing coach. Once released, the episode is expected to be available in audio on Apple Podcasts, Spotify, and Podbean, with a video version on YouTube and a written transcript. Recording and publication details are pending." },
   { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe", category: "Academic Honors", description: "Tiana Schwarz was part of the UCCS A.R.E.S. Project team recognized by the Colorado Space Grant Consortium for innovative research on inertial measurement units (IMUs) in microgravity. The team explored how wearable technology could support human movement and monitoring in space.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
   { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy", category: "Academic Honors", description: "SkyView Academy featured alumna Tiana Schwarz (Class of 2018), highlighting her academic journey, professional work in cybersecurity, and continued involvement in climbing and community activities.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018", sortDate: "2025-11-04" },
   { title: "2022–2023 Colorado Space Grant Consortium Institutional Scholarship", source: "Colorado Space Grant Consortium", category: "Academic Honors", sortDate: "2022-08-01", description: "Tiana Schwarz was selected for the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship, part of NASA's National Space Grant College and Fellowship Program supporting future scientists, engineers, and leaders." },
@@ -448,7 +448,8 @@ const partnerLogos = [
   { name: "Escape Climbing", file: "escape-climbing.png", context: "Escape Athlete · Athlete support" },
   { name: "Climbing Business Journal", file: "climbingbusinessjournal.png", context: "Climbing industry publication" },
   { name: "Climbing Magazine", file: "climbing-magazine.png", context: "Photography feature" },
-  { name: "The Impact Driver Podcast", file: "impactdriver.png", context: "Invited podcast guest · Upcoming episode" },
+  { name: "The Impact Driver Podcast", file: "impactdriver.png", context: "Invited guest · Routesetting podcast · Episode pending" },
+  { name: "Colorado Space Grant Consortium (COSGC) · Scholarship recipient & research presenter", file: "csgc.jpeg", context: "Scholarship recipient · Research presenter" },
 ];
 
 function PortfolioAdditions() {
@@ -1014,7 +1015,7 @@ export default function App() {
               "Asian Vibes in Denver (AVID)",
               "Centura Diversity & Inclusion Council",
               "Colorado Space Business Roundtable (CSBR)",
-              "Colorado Space Grant Consortium (COSGC)",
+              "Colorado Space Grant Consortium (COSGC) · Scholarship recipient & research presenter",
               "Fellowship of Christian Athletes (FCA)",
               "Phi Alpha Delta (P.A.D.)",
               "Springs Rescue Mission · Volunteer",
@@ -1027,7 +1028,8 @@ export default function App() {
               "The Denver Post · Featured in competition coverage",
               "The Scribe · Featured in university news",
               "Climbing Magazine · Featured climber",
-              "Climbing Business Journal · Climbing industry connection",
+              "Climbing Business Journal · Routesetting podcast invitation",
+              "The Impact Driver Podcast · Invited routesetting guest (upcoming)",
             ].map((name) => <span className="association-pill" key={name}>{name}</span>)}
           </div>
         </section>
@@ -1038,7 +1040,7 @@ export default function App() {
           <p className="extra-intro">Selected publications, climbing organizations, and professional connections. Each label identifies the relationship; logos do not imply sponsorship or endorsement.</p>
           <div className="organization-logo-grid">
             {partnerLogos.map(item => <div className="organization-logo-card" key={item.file}>
-              <img src={assetPath(`/images/${item.file}`)} alt={`${item.name} logo`} loading="lazy" />
+              <img src={assetPath(`/images/${item.file}`)} alt={`${item.name} logo`} loading="lazy" style={item.file === "impactdriver.png" ? { background: "#080808", padding: "8px" } : undefined} />
               <strong>{item.name}</strong>
               <span>{item.context}</span>
             </div>)}
