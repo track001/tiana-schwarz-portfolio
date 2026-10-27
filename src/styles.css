@@ -2068,3 +2068,184 @@ footer {
     right: 10px;
   }
 }
+
+
+/* ============================================================
+   CERTIFICATIONS, PUBLICATIONS & COMMUNITY INVOLVEMENT
+   ============================================================ */
+
+/* Security+ banner */
+.security-banner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border);
+  background: rgba(53, 23, 20, 0.42);
+  color: var(--ivory);
+  font-size: 12px;
+  letter-spacing: 0.055em;
+}
+
+.security-banner span:first-child {
+  color: var(--red-bright);
+  font-weight: 700;
+}
+
+.security-banner a,
+.extra-link {
+  color: var(--red-bright);
+  text-decoration: none;
+}
+
+.security-banner a:hover,
+.extra-link:hover {
+  text-decoration: underline;
+}
+
+/* Section layouts */
+.portfolio-extra-section {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 48px), var(--max-width));
+  margin: 0 auto;
+  padding: 94px 0 22px;
+  scroll-margin-top: 35px;
+}
+
+.portfolio-extra-section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4.2vw, 52px);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 16px 0;
+  color: var(--white);
+}
+
+.extra-intro {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 690px;
+  margin: 0 0 32px;
+}
+
+/* Certification, publication, and volunteer cards */
+.extra-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.extra-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 27px;
+  background: linear-gradient(145deg, var(--panel), #0b0908);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.extra-kicker {
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--red-bright);
+  line-height: 1.6;
+}
+
+.extra-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 13px 0;
+  color: var(--white);
+}
+
+.extra-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0 0 18px;
+}
+
+.extra-card .extra-org {
+  color: var(--ivory);
+}
+
+.extra-footnote {
+  margin-top: auto;
+  padding-top: 10px;
+  color: var(--amber);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.extra-link {
+  margin-top: auto;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Publication category filters */
+.recognition-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 26px;
+}
+
+.recognition-filters button {
+  cursor: pointer;
+  background: transparent;
+  color: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  padding: 10px 15px;
+  font: inherit;
+  font-size: 12px;
+}
+
+.recognition-filters button:hover,
+.recognition-filters button.selected {
+  background: var(--red-deep);
+  border-color: var(--red-bright);
+  color: var(--white);
+}
+
+.recognition-filters button:focus-visible,
+.extra-link:focus-visible,
+.security-banner a:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 700px) {
+  .portfolio-extra-section {
+    width: min(calc(100% - 32px), var(--max-width));
+    padding-top: 66px;
+  }
+
+  .extra-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .extra-card {
+    padding: 22px;
+  }
+
+  .security-banner {
+    justify-content: flex-start;
+    padding: 12px 16px;
+    font-size: 11px;
+  }
+}
+
