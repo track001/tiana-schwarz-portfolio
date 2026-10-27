@@ -106,7 +106,7 @@ const projects: Project[] = [
     title: "A.R.E.S.",
     subtitle: "Off-Planet IMU Wearable Research",
     description:
-      "Undergraduate space research exploring wearable inertial measurement units to capture human movement and evaluate skeletal loading conditions during off-planet operations. Built and tested a multi-sensor Arduino system for collecting acceleration and angular velocity data, with MATLAB used for motion analysis and modeling.",
+      "The A.R.E.S. Project explored wearable inertial measurement units (IMUs) for tracking human movement and evaluating skeletal loading during off-planet operations. Our team built and tested a multi-sensor Arduino system and used MATLAB for motion analysis. We presented the research at the Colorado Space Grant Consortium and received an award recognizing the project.",
     stack: [
       "Arduino",
       "C++",
@@ -118,7 +118,7 @@ const projects: Project[] = [
 
     images: [
       assetPath("/images/ares-preview1.png"),
-      assetPath("/images/ares-preview2.png"),
+      assetPath("/images/csogc-present.jpeg"),
       assetPath("/images/ares-preview3.png"),
     ],
   },
@@ -378,7 +378,7 @@ const recognition: Recognition[] = [
   { title: "Climbing Club Gains Popularity in Its First Semester", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz founded and served as president of this iteration of the UCCS Climbing Club, partnering with the on-campus SOLE recreation center and Springs Climbing Center to make climbing more accessible to college students. The club welcomed both recreational and competitive climbers while representing UCCS in USA Climbing Collegiate competitions.", url: "https://scribe.uccs.edu/climbing-club-gains-popularity-in-its-first-semester/" },
   { title: "Springs Climbing Center Continues to Push Students to Greater Heights", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in The Scribe, the University of Colorado Colorado Springs student newspaper, in its coverage of Springs Climbing Center and the local student climbing community.", url: "https://scribe.uccs.edu/springs-climbing-center-continues-to-push-students-to-greater-heights/" },
   { title: "The Impact Driver Podcast · Upcoming Guest", source: "The Impact Driver · Climbing Business Journal · Upcoming / Not Yet Published", category: "Writing & Media", description: "Tiana Schwarz has been invited to appear on The Impact Driver Podcast, a Climbing Business Journal podcast focused on routesetting and the people, ideas, and challenges shaping the routesetting industry. The planned conversation will draw on her experience as a routesetter and climbing coach. Once released, the episode is expected to be available in audio on Apple Podcasts, Spotify, and Podbean, with a video version on YouTube and a written transcript. Recording and publication details are pending." },
-  { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe", category: "Academic Honors", description: "Tiana Schwarz was part of the UCCS A.R.E.S. Project team recognized by the Colorado Space Grant Consortium for innovative research on inertial measurement units (IMUs) in microgravity. The team explored how wearable technology could support human movement and monitoring in space.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
+  { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe", category: "Academic Honors", description: "Tiana Schwarz and the UCCS A.R.E.S. Project team presented their research on wearable inertial measurement units (IMUs) at the Colorado Space Grant Consortium and received an award for their work. The project investigated how wearable sensors could measure movement and help study physical conditions during space operations.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
   { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy", category: "Academic Honors", description: "SkyView Academy featured alumna Tiana Schwarz (Class of 2018), highlighting her academic journey, professional work in cybersecurity, and continued involvement in climbing and community activities.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018", sortDate: "2025-11-04" },
   { title: "2022–2023 Colorado Space Grant Consortium Institutional Scholarship", source: "Colorado Space Grant Consortium", category: "Academic Honors", sortDate: "2022-08-01", description: "Tiana Schwarz was selected for the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship, part of NASA's National Space Grant College and Fellowship Program supporting future scientists, engineers, and leaders." },
   { title: "Fall 2023 President's List", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized on the Fall 2023 President's List at the University of Colorado Colorado Springs for achieving a 4.0 semester GPA in the College of Engineering and Applied Science.", url: "https://communique.uccs.edu/?p=153687" },
@@ -441,15 +441,15 @@ function TimeframeButtons({ value, onChange }: { value: Timeframe; onChange: (va
 }
 
 const partnerLogos = [
-  { name: "The Denver Post", file: "denverpost.png", context: "Competition coverage" },
-  { name: "USA Climbing", file: "usaclimbing-logo.png", context: "Competitions, coaching & routesetting" },
-  { name: "Colorado Space Business Roundtable", file: "csbr.png", context: "Alumni ambassador" },
-  { name: "The Scribe", file: "the-scribe.png", context: "University newspaper features" },
-  { name: "Escape Climbing", file: "escape-climbing.png", context: "Escape Athlete · Athlete support" },
-  { name: "Climbing Business Journal", file: "climbingbusinessjournal.png", context: "Climbing industry publication" },
-  { name: "Climbing Magazine", file: "climbing-magazine.png", context: "Photography feature" },
+  { name: "The Denver Post", file: "denverpost.png", context: "State track championship coverage", url: "https://www.denverpost.com/2015/05/16/colorado-3a-girls-track-and-field-state-meet-results-2015/" },
+  { name: "USA Climbing", file: "usaclimbing-logo.png", context: "Collegiate national championships, coaching & routesetting", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/" },
+  { name: "Colorado Space Business Roundtable", file: "csbr.png", context: "Alumni ambassador", url: "https://coloradosbr.org/" },
+  { name: "The Scribe", file: "the-scribe.png", context: "UCCS student newspaper · A.R.E.S. research feature", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
+  { name: "Escape Climbing", file: "escape-climbing.png", context: "Escape Athlete · Athlete support", url: "https://escapeclimbing.com/" },
+  { name: "Climbing Business Journal", file: "climbingbusinessjournal.png", context: "Upcoming Impact Driver routesetting podcast · Pending" },
+  { name: "Climbing Magazine", file: "climbing-magazine.png", context: "Featured climber · Chris Thai photo honorable mention", url: "https://www.climbing.com/culture-climbing/crux-winning-photo-summer-2026-contest/" },
   { name: "The Impact Driver Podcast", file: "impactdriver.png", context: "Invited guest · Routesetting podcast · Episode pending" },
-  { name: "Colorado Space Grant Consortium (COSGC) · Scholarship recipient & research presenter", file: "csgc.jpeg", context: "Scholarship recipient · Research presenter" },
+  { name: "Colorado Space Grant Consortium (COSGC)", file: "csgc.jpeg", context: "Scholarship recipient · A.R.E.S. research presenter", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
 ];
 
 function PortfolioAdditions() {
@@ -572,6 +572,10 @@ export default function App() {
           .section-expand-button:focus-visible{outline:2px solid var(--amber,#e7b17a);outline-offset:3px}
           .organization-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:24px 0 45px}
           .organization-logo-card{min-width:0;display:flex;flex-direction:column;align-items:center;text-align:center;gap:9px;padding:20px 12px;border:1px solid var(--border,#40302c);background:rgba(27,21,20,.65);border-radius:6px}
+          .organization-logo-link{text-decoration:none;cursor:pointer;transition:transform .2s ease,border-color .2s ease}
+          .organization-logo-link:hover{transform:translateY(-3px);border-color:var(--red-bright,#e97759)}
+          .organization-logo-link:focus-visible{outline:2px solid var(--amber,#e7b17a);outline-offset:3px}
+          .organization-link-hint{margin-top:auto;color:var(--red-bright,#e97759)!important;font-weight:600}
           .organization-logo-card img{display:block;width:100%;height:85px;object-fit:contain;background:#fff;border-radius:3px;padding:10px;box-sizing:border-box}
           .organization-logo-card strong{color:var(--ivory,#eee0d8);font-size:13px;line-height:1.4}
           .organization-logo-card span{color:var(--muted,#b0a7a0);font-size:11px;line-height:1.5}
@@ -1037,13 +1041,23 @@ export default function App() {
         <section className="portfolio-extra-section" id="featured-organizations" aria-labelledby="featured-organizations-heading">
           <div className="section-label">PUBLICATIONS & ORGANIZATIONS</div>
           <h2 id="featured-organizations-heading">Featured in, involved with & connected to.</h2>
-          <p className="extra-intro">Selected publications, climbing organizations, and professional connections. Each label identifies the relationship; logos do not imply sponsorship or endorsement.</p>
+          <p className="extra-intro">Selected publications, climbing organizations, and professional connections. Select a logo to read the related coverage or visit the organization. Podcast links will be added after publication. Each label identifies the relationship; logos do not imply endorsement.</p>
           <div className="organization-logo-grid">
-            {partnerLogos.map(item => <div className="organization-logo-card" key={item.file}>
-              <img src={assetPath(`/images/${item.file}`)} alt={`${item.name} logo`} loading="lazy" style={item.file === "impactdriver.png" ? { background: "#080808", padding: "8px" } : undefined} />
-              <strong>{item.name}</strong>
-              <span>{item.context}</span>
-            </div>)}
+            {partnerLogos.map(item => {
+              const content = <>
+                <img src={assetPath(`/images/${item.file}`)} alt={`${item.name} logo`} loading="lazy" style={item.file === "impactdriver.png" ? { background: "#080808", padding: "8px" } : undefined} />
+                <strong>{item.name}</strong>
+                <span>{item.context}</span>
+                {item.url && <span className="organization-link-hint">View article or organization ↗</span>}
+              </>;
+              return item.url ? (
+                <a className="organization-logo-card organization-logo-link" key={item.file} href={item.url} target="_blank" rel="noopener noreferrer" aria-label={`Open ${item.name}: ${item.context}`}>
+                  {content}
+                </a>
+              ) : (
+                <div className="organization-logo-card" key={item.file}>{content}</div>
+              );
+            })}
           </div>
         </section>
       </main>
