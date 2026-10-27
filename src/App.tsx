@@ -370,16 +370,20 @@ type Recognition = {
 };
 
 const recognition: Recognition[] = [
+  { title: "B.S. Computer Science · Cum Laude", source: "UCCS · College of Engineering and Applied Science", category: "Academic Honors", sortDate: "2023-12-15", description: "Tiana Schwarz earned her B.S. in Computer Science from UCCS in December 2023, graduating Cum Laude through the College of Engineering and Applied Science. She earned a perfect 4.0 GPA in her final semester and received the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship." },
+  { title: "Dean's List · Eight Semesters", source: "UCCS · College of Engineering and Applied Science", category: "Academic Honors", sortDate: "2023-12-15", description: "Recognized across eight academic semesters: Fall 2018, Spring 2019, Spring 2021, Summer 2021, Fall 2021, Spring 2023, Summer 2023, and Fall 2023. UCCS published academic honors announcements for multiple semesters, including President’s List recognition for the 4.0 GPA earned in Fall 2023. The eight-semester distinction reflects the academic honors recorded on her LinkedIn profile." },
+  { title: "Track & Field Awards · SkyView Academy", source: "CHSAA · SkyView Academy", category: "Climbing & Athletics", sortDate: "2018-05-01", description: "Earned the 2015 Heart of the Hawk Award and Varsity MVP recognition. At the 2015 Colorado state meet, placed sixth in the 400m, 16th in the 800m, seventh with the 4×800m relay, and 12th with the 4×400m relay. Competed for Colorado at the Great Southwest Invitational in the 800m. Returned to state competition in the 4×800m relay in 2016 (14th) and anchored the 2017 4×400m relay team to 11th place.", url: "https://co.milesplit.com/athletes/4986072/stats" },
+  { title: "AMTA Mock Trial · Award Recognition", source: "American Mock Trial Association", category: "Academic Honors", description: "Tiana Schwarz participated in AMTA Mock Trial and received an award. Award title and date are to be confirmed." },
   { title: "Between Chalk and Code: Lessons from Climbing and Cyber", source: "Reinvented Magazine", category: "Writing & Media", description: "Tiana Schwarz authored an article exploring how climbing has shaped her approach to cybersecurity, problem-solving, perseverance, and learning through difficult challenges.", url: "https://www.reinventedmagazine.com/post/between-chalk-and-code-lessons-from-climbing-and-cyber" },
   { title: "Climbing Club Gains Popularity in Its First Semester", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz founded and served as president of this iteration of the UCCS Climbing Club, partnering with the on-campus SOLE recreation center and Springs Climbing Center to make climbing more accessible to college students. The club welcomed both recreational and competitive climbers while representing UCCS in USA Climbing Collegiate competitions.", url: "https://scribe.uccs.edu/climbing-club-gains-popularity-in-its-first-semester/" },
   { title: "Springs Climbing Center Continues to Push Students to Greater Heights", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in The Scribe, the University of Colorado Colorado Springs student newspaper, in its coverage of Springs Climbing Center and the local student climbing community.", url: "https://scribe.uccs.edu/springs-climbing-center-continues-to-push-students-to-greater-heights/" },
-  { title: "The Impact Driver Podcast", source: "The Impact Driver · Planned appearance", category: "Writing & Media", description: "A potential future podcast feature discussing climbing and the intersection of athletic and professional pursuits. Details and release date are pending confirmation." },
+  { title: "The Impact Driver Podcast · Upcoming Guest", source: "The Impact Driver · Climbing Business Journal · Upcoming / Not Yet Published", category: "Writing & Media", description: "Tiana Schwarz has been invited to appear on The Impact Driver Podcast, a Climbing Business Journal series exploring the people, ideas, and challenges shaping the routesetting industry. The planned conversation will draw on her experience in climbing and routesetting. Once released, the episode is expected to be available in audio on Apple Podcasts, Spotify, and Podbean, with a video version on YouTube and a written transcript. Recording and publication details are pending." },
   { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe", category: "Academic Honors", description: "Tiana Schwarz was part of the UCCS A.R.E.S. Project team recognized by the Colorado Space Grant Consortium for innovative research on inertial measurement units (IMUs) in microgravity. The team explored how wearable technology could support human movement and monitoring in space.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
   { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy", category: "Academic Honors", description: "SkyView Academy featured alumna Tiana Schwarz (Class of 2018), highlighting her academic journey, professional work in cybersecurity, and continued involvement in climbing and community activities.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018", sortDate: "2025-11-04" },
-  { title: "2022–2023 Colorado Space Grant Consortium Institutional Scholarship", source: "Colorado Space Grant Consortium", category: "Academic Honors", description: "Tiana Schwarz was selected as a recipient of the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship, part of NASA's National Space Grant College and Fellowship Program supporting future scientists, engineers, and leaders." },
+  { title: "2022–2023 Colorado Space Grant Consortium Institutional Scholarship", source: "Colorado Space Grant Consortium", category: "Academic Honors", sortDate: "2022-08-01", description: "Tiana Schwarz was selected for the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship, part of NASA's National Space Grant College and Fellowship Program supporting future scientists, engineers, and leaders." },
   { title: "Fall 2023 President's List", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized on the Fall 2023 President's List at the University of Colorado Colorado Springs for achieving a 4.0 semester GPA in the College of Engineering and Applied Science.", url: "https://communique.uccs.edu/?p=153687" },
-  { title: "Fall 2021 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized for academic excellence during the Fall 2021 semester in the College of Engineering and Applied Science at UCCS, where she studied Computer Science in the ABET-accredited program.", url: "https://communique.uccs.edu/?p=137114" },
-  { title: "Fall 2019 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized for academic excellence during the Fall 2019 semester in the College of Engineering and Applied Science at UCCS, where she studied Computer Science in the ABET-accredited program.", url: "https://communique.uccs.edu/?p=118157" },
+  { title: "Fall 2021 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "UCCS published academic honors for the Fall 2021 semester. This article is one of several university announcements documenting Tiana Schwarz’s Dean’s List and President’s List recognitions throughout her Computer Science studies.", url: "https://communique.uccs.edu/?p=137114" },
+  { title: "Fall 2019 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "UCCS published academic honors for the Fall 2019 semester, part of the broader record of Dean’s List and President’s List distinctions Tiana Schwarz earned during her undergraduate studies.", url: "https://communique.uccs.edu/?p=118157" },
   { title: "Crux: 9 Photos That Capture the Power and Struggle of a Climb's Hardest Move", source: "Climbing Magazine · Chris Thai", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in Climbing Magazine's Crux photo contest as an honorable mention in Chris Thai's photograph, Flo Storm Crux. The image captures Schwarz preparing for the dynamic crux of Flo Storm (V8) in Heaven's Gate near Eleven Mile Canyon, Colorado, where the defining move requires throwing to the next hold and cutting feet.", url: "https://www.climbing.com/culture-climbing/crux-winning-photo-summer-2026-contest/" },
   { title: "USA Climbing Competition Results & Rankings", source: "USAC Database · Athlete profile", category: "Climbing & Athletics", description: "USA Climbing collegiate competition record, including first-place finishes in the 2024 Collegiate National Boulder qualifier and final (Women's Intermediate), first place at the 2024 Collegiate divisional Boulder competition, and additional collegiate qualifying results. Athlete ID: 29690465. The linked database provides event-by-event rankings, including Boulder and Lead/Top Rope tabs.", url: "https://usac.climb8a.com/climber/29690465", sortDate: "2024-05-24" },
   { title: "2024 Collegiate National Championships", source: "USA Climbing", category: "Climbing & Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/", sortDate: "2024-05-24" },
@@ -411,7 +415,7 @@ const communityItems: CommunityItem[] = [
   { title: "CU Medical Foot Clinic", category: "HEALTHCARE ACCESS", dateLabel: "February–June 2022", sortDate: "2022-06-01", organization: "Springs Rescue Mission · Colorado Springs", description: "Supported podiatric care for adults experiencing homelessness alongside medical professionals, including foot-health screening, patient education, and follow-up referrals." },
   { title: "Diversity & Inclusion Council", category: "HEALTH EQUITY", dateLabel: "February 2022–June 2023", sortDate: "2023-06-01", organization: "CommonSpirit Health / Centura Health", description: "Served on the Health Disparities Committee, contributing to discussions and initiatives focused on health equity and inclusive practices for staff and patients." },
   { title: "Assisted Living Community Project", category: "COMMUNITY DEVELOPMENT", dateLabel: "January–May 2018", sortDate: "2018-05-01", organization: "Big Idea Project · La Veta, Colorado", description: "Led a student team developing plans for an assisted living community space intended to address isolation among older adults, including project documentation and a video sharing residents' perspectives." },
-  { title: "Alumni Ambassador", category: "AEROSPACE MENTORSHIP", dateLabel: "August 2024–Present", sortDate: "2026-10-27", organization: "Colorado Space Business Roundtable (CSBR)", description: "Support aerospace and technology networking, mentorship, career guidance, and outreach for students and early-career professionals." },
+  { title: "Alumni Ambassador", category: "AEROSPACE MENTORSHIP", dateLabel: "August 2024–Present", sortDate: "2026-10-27", organization: "Colorado Space Business Roundtable (CSBR) · Alumni Ambassador", description: "Support aerospace and technology networking, mentorship, career guidance, and outreach for students and early-career professionals." },
   { title: "Volunteering in Colorado Springs", category: "COMMUNITY RESOURCE", dateLabel: "Ongoing", sortDate: "2026-10-27", description: "I maintain a GitHub collection of local volunteer opportunities and organizations focused on homelessness, healthcare access, food insecurity, and older adults.", url: "https://github.com/track001/VolunteeringinCOS", linkLabel: "Explore volunteering resources ↗" },
   { title: "Women's Climb Nights", category: "CLIMBING COMMUNITY", dateLabel: "2026", sortDate: "2026-09-25", organization: "Springs Climbing Center · Colorado Springs", description: "Co-hosted two women's climbing nights that welcomed more than 60 participants across the events. Reserved the gym for these gatherings to help create a welcoming environment for climbing, connection, and community." },
   { title: "Community Food Pantry Support", category: "FOOD ACCESS", dateLabel: "Date not specified", organization: "Colorado Springs, Colorado", description: "Supported food pantry efforts serving underserved communities and improving access to essential food resources." },
@@ -444,6 +448,7 @@ const partnerLogos = [
   { name: "Escape Climbing", file: "escape-climbing.png", context: "Escape Athlete · Athlete support" },
   { name: "Climbing Business Journal", file: "climbingbusinessjournal.png", context: "Climbing industry publication" },
   { name: "Climbing Magazine", file: "climbing-magazine.png", context: "Photography feature" },
+  { name: "The Impact Driver Podcast", file: "impactdriver.png", context: "Invited podcast guest · Upcoming episode" },
 ];
 
 function PortfolioAdditions() {
@@ -456,7 +461,21 @@ function PortfolioAdditions() {
   const previewCount = 4;
   const categories: Array<"All" | RecognitionCategory> = ["All", "Writing & Media", "Academic Honors", "Climbing & Athletics"];
   const visibleCredentials = newestFirst(recentOnly(credentials, certTime));
-  const visibleRecognition = newestFirst(recentOnly(recognition.filter(item => category === "All" || item.category === category), recognitionTime));
+  const datedRecognition = newestFirst(recentOnly(recognition.filter(item => category === "All" || item.category === category), recognitionTime));
+  // The unfiltered landing view intentionally mixes writing, academic honors,
+  // and climbing achievements instead of showing only the most recent dates.
+  const featuredRecognitionTitles = [
+    "Between Chalk and Code: Lessons from Climbing and Cyber",
+    "Alumni Spotlight: Class of 2018",
+    "2024 Collegiate National Championships",
+    "2022–2023 Colorado Space Grant Consortium Institutional Scholarship",
+  ];
+  const visibleRecognition = category === "All" && recognitionTime === "All Time"
+    ? [
+        ...featuredRecognitionTitles.flatMap(title => datedRecognition.filter(item => item.title === title)),
+        ...datedRecognition.filter(item => !featuredRecognitionTitles.includes(item.title)),
+      ]
+    : datedRecognition;
   const visibleCommunity = newestFirst(recentOnly(communityItems, communityTime));
 
   return <>
@@ -791,30 +810,6 @@ export default function App() {
 
 <p>{project.description}</p>
 
-{project.title === "TRON Telemetry" && project.github && (
-  <a
-    href={project.github}
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{
-      display: "inline-flex",
-      alignItems: "center",
-      gap: "8px",
-      width: "fit-content",
-      marginTop: "12px",
-      marginBottom: "20px",
-      color: "#e97759",
-      fontSize: "14px",
-      fontWeight: 600,
-      letterSpacing: "0.04em",
-      textDecoration: "none",
-      borderBottom: "1px solid #e97759",
-      paddingBottom: "5px",
-    }}
-  >
-    ↓ DOWNLOAD TRON TELEMETRY ON GITHUB ↗
-  </a>
-)}
 
 <div className="tags">
 
@@ -1014,7 +1009,7 @@ export default function App() {
           <div className="associations-list">
             {[
               "Aerospace States Association (ASA)",
-              "AMTA Mock Trial",
+              "AMTA Mock Trial · Award Recipient",
               "American Institute of Aeronautics and Astronautics (AIAA)",
               "Asian Vibes in Denver (AVID)",
               "Centura Diversity & Inclusion Council",
@@ -1027,6 +1022,12 @@ export default function App() {
               "UCCS Pre-Health Society",
               "UCCS Pre-Law Society",
               "UCCS Climbing Club · Founder & President (USA Climbing Collegiate)",
+              "USA Climbing · Athlete, Coach & Routesetter",
+              "Escape Climbing · Escape Athlete",
+              "The Denver Post · Featured in competition coverage",
+              "The Scribe · Featured in university news",
+              "Climbing Magazine · Featured climber",
+              "Climbing Business Journal · Climbing industry connection",
             ].map((name) => <span className="association-pill" key={name}>{name}</span>)}
           </div>
         </section>
