@@ -353,7 +353,7 @@ type Credential = {
 const credentials: Credential[] = [
   { title: "CompTIA Security+ (SY0-601)", issuer: "CompTIA", date: "May 29, 2024", validity: "Valid through May 29, 2027", detail: "Tiana Schwarz earned the CompTIA Security+ (SY0-601) certification, validating foundational knowledge of threats, vulnerabilities, security architecture, security operations, and risk management. She is currently working through CompTIA CertMaster continuing education renewal materials to renew the certification before its May 29, 2027 expiration; renewal is in progress, not yet completed.", sortDate: "2024-05-29" },
   { title: "Level 2 Youth Coach", issuer: "USA Climbing", date: "November 2023", validity: "Membership through August 14, 2027", detail: "USA Climbing Level 2 Youth Coach with experience developing youth athletes, guiding structured practices, supporting competition preparation, and fostering a positive team environment.", sortDate: "2023-11-01" },
-  { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "With support from the Amy Stone Project, Tiana Schwarz completed USA Climbing Level 1 Routesetter training in Chicago, IL, developing skills in movement design, route development, setting practices, and competition routesetting.", sortDate: "2026-07-12", images: ["l1-part1.jpg", "l1-part2.jpg", "l1-part3.jpg"] },
+  { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "With support from the Amy Stone Project, Tiana Schwarz completed USA Climbing Level 1 Routesetter training at First Ascent Block 37 in Chicago, Illinois, developing skills in movement design, route development, setting practices, and competition routesetting.", sortDate: "2026-07-12", images: ["l1-part1.jpg", "l1-part2.jpg", "l1-part3.jpg"] },
   { title: "Para Routesetting", issuer: "USA Climbing", date: "April 17, 2026", detail: "Tiana Schwarz completed a three-day USA Climbing Para Routesetting course focused on making climbing accessible to athletes with a wide range of physical, visual, and neurological impairments. Para routesetting adapts movement, hold selection, reach, body positioning, route progression, and safety considerations to different functional abilities without removing meaningful challenge. Having experienced multiple serious knee injuries and three knee surgeries involving ACL, PCL, and meniscus repairs during her climbing career, this work is especially personal to her: inclusive setting can help more people find a path into climbing and continue participating after major physical setbacks.", sortDate: "2026-04-17", images: ["parasetting-1.jpg", "parasetting-2.jpg"] },
   { title: "CPR / AED / First Aid", issuer: "National CPR Foundation", date: "August 13, 2026", validity: "Renewal August 13, 2028", detail: "Tiana Schwarz completed CPR, AED, and First Aid training covering emergency response, lifesaving techniques, and basic first aid procedures.", sortDate: "2026-08-13" },
   { title: "Cyber Security Analyst Virtual Experience", issuer: "Telstra / Forage", date: "July 10, 2023", detail: "Tiana Schwarz completed the Telstra Cyber Security Analyst program, gaining hands-on experience in malware attack response, firewall rule creation, Python-based mitigation, and incident post-mortem documentation.", sortDate: "2023-07-10" },
@@ -418,7 +418,7 @@ const communityItems: CommunityItem[] = [
   { title: "Pikes Peak Regional Science & Engineering Fair", category: "STEM OUTREACH", dateLabel: "February 2022", sortDate: "2022-02-01", organization: "Volunteer Judge · Colorado", description: "Reviewed more than 40 STEM projects by students in grades 6–12 from four Colorado counties, evaluated presentations, and offered feedback to encourage future scientists and engineers." },
   { title: "CU Medical Foot Clinic", category: "HEALTHCARE ACCESS", dateLabel: "February–June 2022", sortDate: "2022-06-01", organization: "Springs Rescue Mission · Colorado Springs", description: "Supported podiatric care for adults experiencing homelessness alongside medical professionals, including foot-health screening, patient education, and follow-up referrals." },
   { title: "Diversity & Inclusion Council", category: "HEALTH EQUITY", dateLabel: "February 2022–June 2023", sortDate: "2023-06-01", organization: "CommonSpirit Health / Centura Health", description: "Served on the Health Disparities Committee, contributing to discussions and initiatives focused on health equity and inclusive practices for staff and patients." },
-  { title: "Assisted Living Community Project", category: "COMMUNITY DEVELOPMENT", dateLabel: "January–May 2018", sortDate: "2018-05-01", organization: "Big Idea Project · La Veta, Colorado", description: "Led a student team developing plans for an assisted living community space intended to address isolation among older adults, including project documentation and a video sharing residents' perspectives." },
+  { title: "Assisted Living Community Project", category: "COMMUNITY DEVELOPMENT", dateLabel: "January–May 2018", sortDate: "2018-05-01", organization: "Big Idea Project · La Veta, Colorado · The World Journal, March 29, 2018 · Courtesy Beckie Ferrell", url: "https://worldjournalnewspaper.com/la-veta-village-gifted-again-with-youth/", linkLabel: "Read World Journal feature ↗", description: "Participated in SkyView Academy’s Big Idea Project at La Veta Village, helping interview four senior residents about their lives, restore a garden, and clean and remove demolition debris to prepare the community space for future events. The team documented residents’ stories through video and a book, and its service was featured in The World Journal on March 29, 2018." },
   { title: "Alumni Ambassador", category: "AEROSPACE MENTORSHIP", dateLabel: "August 2024–Present", sortDate: "2026-10-27", organization: "Colorado Space Business Roundtable (CSBR) · Alumni Ambassador", description: "Support aerospace and technology networking, mentorship, career guidance, and outreach for students and early-career professionals." },
   { title: "Volunteering in Colorado Springs", category: "COMMUNITY RESOURCE", dateLabel: "Ongoing", sortDate: "2026-10-27", description: "I maintain a GitHub collection of local volunteer opportunities and organizations focused on homelessness, healthcare access, food insecurity, and older adults.", url: "https://github.com/track001/VolunteeringinCOS", linkLabel: "Explore volunteering resources ↗" },
   { title: "Women's Climb Night · Fall Edition", category: "CLIMBING COMMUNITY", dateLabel: "September 26, 2026", sortDate: "2026-09-26", organization: "Springs Climbing Center · Colorado Springs", description: "Co-hosted a reserved-gym women's climbing event focused on connection, mentorship, and community. Across both editions, more than 60 women participated.", images: ["2womenclimbnight-part1.jpg", "2womenclimbnight-part2.jpg", "2womenclimbnight-part3.jpg", "2womenclimbnight-part4.jpg"], links: [{ label: "Fall Edition · Photo album ↗", url: "https://photos.app.goo.gl/rgmw6X1LwNFdekPc9" }] },
@@ -602,8 +602,17 @@ const climbingCompetitions: CompetitionResult[] = [
   { date: "2023 · date TBD", name: "BIPOC Women's Climbing Competition", location: "Gym / location TBD", qualifiers: "1st", finals: "1st", note: "Reported winner; event date and organizer to confirm" },
   { date: "Date TBD", name: "Bouldergeist", location: "Canyon's Rock Climbing Gym · Texas", qualifiers: "2nd", finals: "1st", note: "Event date to confirm" },
   { date: "Date TBD", name: "Nashville Open Competition · Name TBD", location: "Nashville, TN · gym TBD", qualifiers: "TBD", finals: "Did not compete", note: "Qualified for finals but did not attend due to graduation" },
+  { date: "Date TBD", name: "Board Battles", location: "Gym / location TBD", qualifiers: "TBD", finals: "TBD", note: "Add year, event location and placements" },
   { date: "Date TBD", name: "BFL6 · Lead Climbing", location: "Gym / location TBD", qualifiers: "1st", finals: "6th", note: "Event date to confirm", url: "https://bflclimbing.com/?venue=bfl3" },
 ];
+
+const competitionDateOrder = (date: string): number => {
+  const exact = Date.parse(date);
+  if (Number.isFinite(exact)) return exact;
+  const year = date.match(/\b20\d{2}\b/);
+  return year ? new Date(Number(year[0]), 0, 1).getTime() : 0;
+};
+const competitionsNewestFirst = [...climbingCompetitions].sort((a, b) => competitionDateOrder(b.date) - competitionDateOrder(a.date));
 
 export default function App() {
   const [openTimelineItem, setOpenTimelineItem] = useState<string | null>(null);
@@ -633,6 +642,7 @@ export default function App() {
           .competition-table th{color:#f2c5a2;background:rgba(240,158,109,.06);font-size:12px}
           .competition-table td{color:#ded2ca}
           .competition-table td strong{display:block;color:#f3e8e0;font-weight:600}
+          .competition-missing{background:#ffe173;color:#382900;border-radius:3px;padding:2px 5px;font-weight:700;display:inline-block}
           .competition-table td small{display:block;margin-top:5px;color:#ad9c92;line-height:1.5}
           .competition-table td a{display:inline-block;margin-top:5px;color:#eeb285}
           .section-expand-button{display:block;width:fit-content;max-width:100%;margin:25px auto 4px;padding:13px 22px;border:1px solid var(--red-bright,#e97759);border-radius:30px;background:rgba(40,25,23,.75);color:var(--ivory,#f3e9e1);font:inherit;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s}
@@ -1071,7 +1081,10 @@ export default function App() {
               My career has given me the opportunities to diverge across multiple paths of interest, from engineering and cybersecurity to healthcare, research, and climbing. I like being able to bring what I learn in one area into something completely different.
             </p>
             <p>
-              Outside of work, I'm usually climbing, routesetting, coaching, or working on a project I thought would be fun to build. I'm passionate about mentorship and routesetting, and about making climbing more accessible to others. I've climbed up to V11, flashed multiple V10s, and am a board climber at heart. I love creating opportunities for people to try something new and grow through climbing. I was especially excited to be featured in Tension Climbing’s Board Report, something I hold dearly as a board climber at heart. Tension Climbing is my favorite climbing brand, and I deeply appreciate the quality of its products and its commitment to progressing the board climbing community.
+              Outside of work, I'm usually climbing, routesetting, coaching, or working on a project I thought would be fun to build. I'm passionate about mentorship and routesetting, and about making climbing more accessible to others. I've climbed up to V11, flashed multiple V10s, and am a board climber at heart. I love creating opportunities for people to try something new and grow through climbing. Being featured in Tension Climbing’s Board Report meant a lot to me, especially because the board climbing community is something I hold dearly.
+            </p>
+            <p>
+              I actively seek opportunities to learn from other routesetters and setting teams, whether through clinics, commercial setting, or volunteering at competitions. In July 2026, I had the opportunity to set commercially with First Ascent Block 37 in Chicago and learn from Brit Booth. I also learned from Holly Chen at The Spot Denver and set a citizens' boulder for the Death Moth competition in January 2026. I continue reaching out to experienced routesetters, including Brad Weaver, to learn different approaches and offer help wherever I can.
             </p>
             <p>
               You can see the <a href="https://www.instagram.com/p/DbGk6XglvJX/?img_index=6&amp;xtok=MTh3N2dyaHp3ZHpwZw==" target="_blank" rel="noopener noreferrer">Tension Climbing Board Report feature ↗</a>. This site is a place to keep track of the things I've built, the communities I've been part of, and the projects I want to keep improving.
@@ -1126,13 +1139,13 @@ export default function App() {
           </div>
           <details className="competition-disclosure">
             <summary>View competition results ({climbingCompetitions.length})</summary>
-            <p style={{padding:"0 20px",fontSize:13,opacity:.8}}>I’m continuing to add competition details as I gather dates, locations, and placements.</p>
+            <p style={{padding:"0 20px",fontSize:13,opacity:.8}}>I’m continuing to add competition details as I gather dates, locations, and placements. Yellow highlights indicate details I still need to find.</p>
             <div className="competition-table-wrap">
               <table className="competition-table">
                 <thead><tr><th>Date</th><th>Competition</th><th>Gym / Location</th><th>Qualifiers</th><th>Finals</th></tr></thead>
-                <tbody>{climbingCompetitions.map((event, index) => <tr key={`${event.name}-${index}`}>
-                  <td>{event.date}</td><td><strong>{event.name}</strong>{event.note && <small>{event.note}</small>}{event.url && <a href={event.url} target="_blank" rel="noopener noreferrer">Results ↗</a>}</td>
-                  <td>{event.location}</td><td>{event.qualifiers}</td><td>{event.finals}</td>
+                <tbody>{competitionsNewestFirst.map((event, index) => <tr key={`${event.name}-${index}`}>
+                  <td>{/TBD|Date TBD|date TBD|month TBD/i.test(event.date) ? <span className="competition-missing">{event.date}</span> : event.date}</td><td><strong>{event.name}</strong>{event.note && <small>{event.note}</small>}{event.url && <a href={event.url} target="_blank" rel="noopener noreferrer">Results ↗</a>}</td>
+                  <td>{/TBD|location TBD|gym TBD/i.test(event.location) ? <span className="competition-missing">{event.location}</span> : event.location}</td><td>{/TBD|\?/i.test(event.qualifiers) ? <span className="competition-missing">{event.qualifiers}</span> : event.qualifiers}</td><td>{/TBD|\?/i.test(event.finals) ? <span className="competition-missing">{event.finals}</span> : event.finals}</td>
                 </tr>)}</tbody>
               </table>
             </div>
