@@ -673,15 +673,27 @@ export default function App() {
             .project-grid,.resume-preview,.extra-grid { grid-template-columns:1fr !important; }
             .portfolio-extra-section { width:calc(100% - 32px) !important; }
             .extra-card { min-width:0 !important;overflow-wrap:anywhere; }
-            .extra-card h3 { font-size:clamp(21px,5vw,27px) !important; }
+            .extra-card h3 { font-size:clamp(19px,4vw,23px) !important; line-height:1.25; }
             .recognition-filters { gap:8px !important; }
             .recognition-filters button { white-space:normal !important; }
             .timeline-item { min-width:0 !important;overflow-wrap:anywhere; }
           }
+          /* Restore compact typography without altering the established desktop design. */
+          .extra-card h3 { font-size:clamp(20px,2vw,24px); line-height:1.25; }
+          .extra-card p, .extra-card li { font-size:14px; line-height:1.65; }
+          .portfolio-extra-section { max-width:100%; }
+          .resume-preview iframe { max-width:100%; }
+          .project-image-wrap, .project-card { min-width:0; }
+          @media(max-width:800px){
+            .extra-card h3 { font-size:clamp(19px,4vw,23px) !important; }
+            .extra-card p, .extra-card li { font-size:14px; }
+            .mini-photo-slides img { height:clamp(180px,48vw,300px); }
+            .competition-table-wrap { -webkit-overflow-scrolling:touch; }
+          }
           @media(max-width:480px){
             .nav { padding-left:16px !important;padding-right:16px !important; }
             .nav-contact { font-size:11px !important; }
-            .hero h1 { font-size:clamp(36px,10vw,56px) !important; }
+            .hero h1 { font-size:clamp(34px,9vw,48px) !important; }
             .extra-card { padding:20px !important; }
             .association-pill { font-size:12px; }
           }
@@ -811,7 +823,7 @@ export default function App() {
                 color: "#e8ddd5",
               }}
             >
-              <p style={{ fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: "clamp(18px, 2vw, 24px)", margin: "0 0 8px" }}>
+              <p style={{ fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: "clamp(16px, 1.7vw, 20px)", margin: "0 0 8px" }}>
                 “Further up and further in!”
               </p>
               <cite style={{ fontSize: "12px", fontStyle: "normal", letterSpacing: "0.06em", color: "#c5b4aa" }}>
@@ -927,19 +939,6 @@ export default function App() {
                 </div>
               </article>
             ))}
-
-            <article className="project-card placeholder">
-              <div className="placeholder-inner">
-               <span>05 / NEXT</span>
-
-                <h2>Adding More Projects Soon...</h2>
-
-                <p>
-                  Additional projects will be added as I finalize documentation,
-                  images, and live hosting.
-                </p>
-              </div>
-            </article>
           </div>
         </section>
 
