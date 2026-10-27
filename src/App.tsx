@@ -1066,6 +1066,14 @@ export default function App() {
               This site is a place to keep track of the things I've built, the communities I've been part of, and the projects I want to keep improving.
             </p>
           </div>
+          <div style={{marginTop:28}}>
+            <h3 style={{fontSize:"1.1rem",marginBottom:8}}>Climbing, coaching & routesetting</h3>
+            <MiniPhotoSlides label="Climbing, coaching and routesetting" images={[
+              "aboutme-climbing1-.jpg", "aboutme-climbing2-.jpg", "aboutme-climbing-3.jpg",
+              "aboutme-routesetting-3.jpg", "about me setting 1.jpg", "about me setting 2.jpg",
+              "2026-07-15+BoardReport.jpg", "2026-08-31-climbing-magazine.jpg"
+            ]} />
+          </div>
         </section>
 
         <section className="portfolio-extra-section" id="associations" aria-labelledby="associations-heading">
@@ -1105,6 +1113,15 @@ export default function App() {
           <div className="section-label">CLIMBING COMPETITIONS</div>
           <h2 id="competitions-heading">Competition results & placements.</h2>
           <p className="extra-intro">A developing record of collegiate and open competitions. Unconfirmed placements and dates are marked for verification rather than presented as official results.</p>
+          <div style={{margin:"22px 0 28px"}}>
+            <h3 style={{fontSize:"1.1rem",marginBottom:8}}>Competition photo highlights</h3>
+            <p className="extra-intro">Selected images from competitions and climbing events.</p>
+            <MiniPhotoSlides label="Competition highlights" images={[
+              "2025-09-25+MBP-1.jpg", "2025-09-25+MBP-2.jpg", "2025-09-25+MBP-3.jpg",
+              "2025-12-06+purepressure-1.jpg", "2025-12-06+purepressure-2.jpg", "2025-12-06+purepressure-3.jpg",
+              "2026-01-31-NYR-Arizona.jpg", "2025-08-02+HTC-1.jpg", "2025-08-02+HTC-3.jpg", "2025-08-02+HTC-4.jpg"
+            ]} />
+          </div>
           <details className="competition-disclosure">
             <summary>View competition results ({climbingCompetitions.length})</summary>
             <div className="competition-table-wrap">
