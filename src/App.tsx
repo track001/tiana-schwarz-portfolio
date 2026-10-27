@@ -265,11 +265,11 @@ const timeline: TimelineItem[] = [
   {
     id: "pts",
     date: "AUG 2026 — PRESENT",
-    organization: "PACIFIC TECHNOLOGIES & SOLUTIONS",
+    organization: "PACIFIC TECHNOLOGIES & SOLUTIONS / GOLDBELT",
     title: "MRT-C Mission Analyst",
     location: "Colorado Springs, CO",
     summary:
-      "Cyber mission analysis supporting U.S. Space Force mission assurance, cyber terrain, and risk assessments.",
+      "Cyber mission analyst supporting Combat Forces Command (CFC) through cyber mission assurance, cyber terrain assessments, and operational risk analysis.",
     details: [
       "Analyze mission-relevant cyber terrain, system dependencies, vulnerabilities, and Key Terrain–Cyber supporting USSF mission systems.",
       "Support mission decomposition through Mission Thread Engineering (MEngT) and develop technical analysis supporting Operational Risk Assessments (ORAs), Asset Defense Plans (ADPs), and MRT-C mission data.",
@@ -351,9 +351,9 @@ type Credential = {
 };
 
 const credentials: Credential[] = [
-  { title: "CompTIA Security+ (SY0-601)", issuer: "CompTIA", date: "May 29, 2024", validity: "Valid through May 29, 2027", detail: "Tiana Schwarz earned the CompTIA Security+ (SY0-601) certification, validating foundational knowledge of threats, vulnerabilities, security architecture, security operations, and risk management.", sortDate: "2024-05-29" },
+  { title: "CompTIA Security+ (SY0-601)", issuer: "CompTIA", date: "May 29, 2024", validity: "Valid through May 29, 2027", detail: "Tiana Schwarz earned the CompTIA Security+ (SY0-601) certification, validating foundational knowledge of threats, vulnerabilities, security architecture, security operations, and risk management. She is currently working through CompTIA CertMaster continuing education renewal materials to renew the certification before its May 29, 2027 expiration; renewal is in progress, not yet completed.", sortDate: "2024-05-29" },
   { title: "Level 2 Youth Coach", issuer: "USA Climbing", date: "November 2023", validity: "Membership through August 14, 2027", detail: "USA Climbing Level 2 Youth Coach with experience developing youth athletes, guiding structured practices, supporting competition preparation, and fostering a positive team environment.", sortDate: "2023-11-01" },
-  { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "Tiana Schwarz completed USA Climbing Level 1 Routesetter training, developing skills in movement design, route development, setting practices, and competition routesetting.", sortDate: "2026-07-12", images: ["l1-part1.jpg", "l1-part2.jpg", "l1-part3.jpg"] },
+  { title: "Level 1 Routesetter", issuer: "USA Climbing", date: "July 12, 2026", validity: "Routesetter membership through July 9, 2027", detail: "With support from the Amy Stone Project, Tiana Schwarz completed USA Climbing Level 1 Routesetter training in Chicago, IL, developing skills in movement design, route development, setting practices, and competition routesetting.", sortDate: "2026-07-12", images: ["l1-part1.jpg", "l1-part2.jpg", "l1-part3.jpg"] },
   { title: "Para Routesetting", issuer: "USA Climbing", date: "April 17, 2026", detail: "Tiana Schwarz completed a three-day USA Climbing Para Routesetting course focused on making climbing accessible to athletes with a wide range of physical, visual, and neurological impairments. Para routesetting adapts movement, hold selection, reach, body positioning, route progression, and safety considerations to different functional abilities without removing meaningful challenge. Having experienced multiple serious knee injuries and three knee surgeries involving ACL, PCL, and meniscus repairs during her climbing career, this work is especially personal to her: inclusive setting can help more people find a path into climbing and continue participating after major physical setbacks.", sortDate: "2026-04-17", images: ["parasetting-1.jpg", "parasetting-2.jpg"] },
   { title: "CPR / AED / First Aid", issuer: "National CPR Foundation", date: "August 13, 2026", validity: "Renewal August 13, 2028", detail: "Tiana Schwarz completed CPR, AED, and First Aid training covering emergency response, lifesaving techniques, and basic first aid procedures.", sortDate: "2026-08-13" },
   { title: "Cyber Security Analyst Virtual Experience", issuer: "Telstra / Forage", date: "July 10, 2023", detail: "Tiana Schwarz completed the Telstra Cyber Security Analyst program, gaining hands-on experience in malware attack response, firewall rule creation, Python-based mitigation, and incident post-mortem documentation.", sortDate: "2023-07-10" },
@@ -375,27 +375,27 @@ const recognition: Recognition[] = [
   { title: "B.S. Computer Science · Cum Laude", source: "UCCS · College of Engineering and Applied Science", category: "Academic Honors", sortDate: "2023-12-15", description: "Tiana Schwarz earned her B.S. in Computer Science from UCCS in December 2023, graduating Cum Laude through the College of Engineering and Applied Science. She earned a perfect 4.0 GPA in her final semester and received the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship." },
   { title: "Dean's List · Eight Semesters", source: "UCCS · College of Engineering and Applied Science", category: "Academic Honors", sortDate: "2023-12-15", description: "Recognized across eight academic semesters: Fall 2018, Spring 2019, Spring 2021, Summer 2021, Fall 2021, Spring 2023, Summer 2023, and Fall 2023. UCCS published academic honors announcements for multiple semesters, including President’s List recognition for the 4.0 GPA earned in Fall 2023. The eight-semester distinction reflects the academic honors recorded on her LinkedIn profile." },
   { title: "Track & Field Awards · SkyView Academy", source: "CHSAA · SkyView Academy", category: "Climbing & Athletics", sortDate: "2018-05-01", description: "Earned the 2015 Heart of the Hawk Award and Varsity MVP recognition. At the 2015 Colorado state meet, placed sixth in the 400m, 16th in the 800m, seventh with the 4×800m relay, and 12th with the 4×400m relay. Competed for Colorado at the Great Southwest Invitational in the 800m. Returned to state competition in the 4×800m relay in 2016 (14th) and anchored the 2017 4×400m relay team to 11th place.", url: "https://co.milesplit.com/athletes/4986072/stats" },
-  { title: "AMTA Mock Trial · Award Recognition", source: "American Mock Trial Association", category: "Academic Honors", description: "Tiana Schwarz participated in AMTA Mock Trial and received an award. Award title and date are to be confirmed." },
+  { title: "AMTA Mock Trial · Outstanding Witness", source: "American Mock Trial Association · February 2022", category: "Academic Honors", sortDate: "2022-02-01", description: "Recognized as an Outstanding Witness through AMTA’s ballot process in February 2022. AMTA-certified judges scored her 8/10 for Direct Examination and 9/10 for Cross Examination. The role required memorization, familiarity with courtroom proceedings and terminology, and effective communication with attorney roles." },
   { title: "Between Chalk and Code: Lessons from Climbing and Cyber", source: "Reinvented Magazine", category: "Writing & Media", description: "Tiana Schwarz authored an article exploring how climbing has shaped her approach to cybersecurity, problem-solving, perseverance, and learning through difficult challenges.", url: "https://www.reinventedmagazine.com/post/between-chalk-and-code-lessons-from-climbing-and-cyber", images: ["betweenchalkandcode.png"] },
-  { title: "Climbing Club Gains Popularity in Its First Semester", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz founded and served as president of this iteration of the UCCS Climbing Club, partnering with the on-campus SOLE recreation center and Springs Climbing Center to make climbing more accessible to college students. The club welcomed both recreational and competitive climbers while representing UCCS in USA Climbing Collegiate competitions.", url: "https://scribe.uccs.edu/climbing-club-gains-popularity-in-its-first-semester/" },
-  { title: "Springs Climbing Center Continues to Push Students to Greater Heights", source: "The Scribe · UCCS", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in The Scribe, the University of Colorado Colorado Springs student newspaper, in its coverage of Springs Climbing Center and the local student climbing community.", url: "https://scribe.uccs.edu/springs-climbing-center-continues-to-push-students-to-greater-heights/" },
+  { title: "Climbing Club Gains Popularity in Its First Semester", source: "The Scribe · Paul Czarnecki · September 7, 2022", category: "Climbing & Athletics", description: "Tiana Schwarz founded and served as president of this iteration of the UCCS Climbing Club, partnering with the on-campus SOLE recreation center and Springs Climbing Center to make climbing more accessible to college students. The club welcomed both recreational and competitive climbers while representing UCCS in USA Climbing Collegiate competitions.", url: "https://scribe.uccs.edu/climbing-club-gains-popularity-in-its-first-semester/" , sortDate: "2022-09-07" },
+  { title: "Springs Climbing Center Continues to Push Students to Greater Heights", source: "The Scribe · Taylor B · November 27, 2020", category: "Climbing & Athletics", description: "Tiana Schwarz was featured in The Scribe, the University of Colorado Colorado Springs student newspaper, in its coverage of Springs Climbing Center and the local student climbing community.", url: "https://scribe.uccs.edu/springs-climbing-center-continues-to-push-students-to-greater-heights/" , sortDate: "2020-11-27" },
   { title: "The Impact Driver Podcast · Upcoming Guest", source: "The Impact Driver · Climbing Business Journal · Upcoming / Not Yet Published", category: "Writing & Media", description: "Tiana Schwarz has been invited to appear on The Impact Driver Podcast, a Climbing Business Journal podcast focused on routesetting and the people, ideas, and challenges shaping the routesetting industry. The planned conversation will draw on her experience as a routesetter and climbing coach. Once released, the episode is expected to be available in audio on Apple Podcasts, Spotify, and Podbean, with a video version on YouTube and a written transcript. Recording and publication details are pending." },
-  { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe", category: "Academic Honors", description: "Tiana Schwarz and the UCCS A.R.E.S. Project team presented their research on wearable inertial measurement units (IMUs) at the Colorado Space Grant Consortium and received an award for their work. The project investigated how wearable sensors could measure movement and help study physical conditions during space operations.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" },
-  { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy", category: "Academic Honors", description: "SkyView Academy featured alumna Tiana Schwarz (Class of 2018), highlighting her academic journey, professional work in cybersecurity, and continued involvement in climbing and community activities.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018", sortDate: "2025-11-04" },
+  { title: "UCCS A.R.E.S. Project Wins Space Grant Prize", source: "The Scribe · SCRIBEADMIN · May 2, 2022", category: "Academic Honors", description: "Tiana Schwarz and the UCCS A.R.E.S. Project team presented their research on wearable inertial measurement units (IMUs) at the Colorado Space Grant Consortium and received an award for their work. The project investigated how wearable sensors could measure movement and help study physical conditions during space operations.", url: "https://scribe.uccs.edu/uccs-ares-project-wins-prize-from-colorado-space-grant-consortium/" , sortDate: "2022-05-02" },
+  { title: "Alumni Spotlight: Class of 2018", source: "SkyView Academy · November 4, 2025", category: "Academic Honors", description: "SkyView Academy featured alumna Tiana Schwarz (Class of 2018), highlighting her academic journey, professional work in cybersecurity, and continued involvement in climbing and community activities.", url: "https://www.skyviewacademy.org/p/~board/alumni/post/alumni-spotlight-tiana-schwarz-class-of-2018", sortDate: "2025-11-04" },
   { title: "2022–2023 Colorado Space Grant Consortium Institutional Scholarship", source: "Colorado Space Grant Consortium", category: "Academic Honors", sortDate: "2022-08-01", description: "Tiana Schwarz was selected for the 2022–2023 Colorado Space Grant Consortium Institutional Scholarship, part of NASA's National Space Grant College and Fellowship Program supporting future scientists, engineers, and leaders." },
   { title: "Fall 2023 President's List", source: "UCCS Communique", category: "Academic Honors", description: "Tiana Schwarz was recognized on the Fall 2023 President's List at the University of Colorado Colorado Springs for achieving a 4.0 semester GPA in the College of Engineering and Applied Science.", url: "https://communique.uccs.edu/?p=153687" },
   { title: "Fall 2021 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "UCCS published academic honors for the Fall 2021 semester. This article is one of several university announcements documenting Tiana Schwarz’s Dean’s List and President’s List recognitions throughout her Computer Science studies.", url: "https://communique.uccs.edu/?p=137114" },
   { title: "Fall 2019 President's and Dean's Lists", source: "UCCS Communique", category: "Academic Honors", description: "UCCS published academic honors for the Fall 2019 semester, part of the broader record of Dean’s List and President’s List distinctions Tiana Schwarz earned during her undergraduate studies.", url: "https://communique.uccs.edu/?p=118157" },
   { title: "Crux: 9 Photos That Capture the Power and Struggle of a Climb's Hardest Move", source: "Climbing Magazine · Chris Thai · August 31, 2026", category: "Climbing & Athletics", sortDate: "2026-08-31", description: "Tiana Schwarz was featured in Climbing Magazine's Crux photo contest as an honorable mention in Chris Thai's photograph, Flo Storm Crux. The image captures Schwarz preparing for the dynamic crux of Flo Storm (V8) in Heaven's Gate near Eleven Mile Canyon, Colorado, where the defining move requires throwing to the next hold and cutting feet.", url: "https://www.climbing.com/culture-climbing/crux-winning-photo-summer-2026-contest/" },
   { title: "USA Climbing Competition Results & Rankings", source: "USAC Database · Athlete profile", category: "Climbing & Athletics", description: "USA Climbing collegiate competition record, including first-place finishes in the 2024 Collegiate National Boulder qualifier and final (Women's Intermediate), first place at the 2024 Collegiate divisional Boulder competition, and additional collegiate qualifying results. Athlete ID: 29690465. The linked database provides event-by-event rankings, including Boulder and Lead/Top Rope tabs.", url: "https://usac.climb8a.com/climber/29690465", sortDate: "2024-05-24" },
-  { title: "2024 Collegiate National Championships · May 28, 2024", source: "USA Climbing", category: "Climbing & Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/", sortDate: "2024-05-28", images: ["2024-championships.jpg"] },
-  { title: "Eagle Valley Shines at Weekend of Mixed Climbing Events", source: "Vail Daily", category: "Climbing & Athletics", description: "Tiana Schwarz of the University of Colorado Colorado Springs won the women’s lead/top-rope category at a weekend of mixed climbing events hosted by Eagle Climbing & Fitness.", url: "https://www.vaildaily.com/news/eagle-climbing-and-fitness-hosts-weekend-of-mixed-climbing-events-eagle-valley-middle-school-climber-tops-individual-leaderboard/" },
+  { title: "2024 Collegiate National Championships · May 28, 2024", source: "USA Climbing · May 28, 2024", category: "Climbing & Athletics", description: "At her first Collegiate Nationals, delayed by multiple knee surgeries, Tiana Schwarz placed first in both qualifiers and finals for Bouldering and Sport Climbing in the Intermediate category at the 2024 USA Climbing Collegiate National Championships. As the inaugural year for the Intermediate division, her performance marked a meaningful return to competitive climbing.", url: "https://usaclimbing.org/news/2024-collegiate-national-championships-conclude-in-arizona/", sortDate: "2024-05-28", images: ["2024-championships.jpg"] },
+  { title: "Eagle Valley Shines at Weekend of Mixed Climbing Events", source: "Vail Daily · Veronica Kuffel · December 7, 2023", category: "Climbing & Athletics", description: "Tiana Schwarz of the University of Colorado Colorado Springs won the women’s lead/top-rope category at a weekend of mixed climbing events hosted by Eagle Climbing & Fitness.", url: "https://www.vaildaily.com/news/eagle-climbing-and-fitness-hosts-weekend-of-mixed-climbing-events-eagle-valley-middle-school-climber-tops-individual-leaderboard/" , sortDate: "2023-12-07" },
   { title: "SkyView Academy High School Track & Field Records", source: "Athletic.net", category: "Climbing & Athletics", description: "Tiana Schwarz is the current SkyView Academy record holder in the 400m, 800m, 4×400m relay, 4×800m relay, and SMR 800m relay, and ranks third all-time in the 200m, with primary focus on the 400m and 800m. Last updated August 2026.", url: "https://www.athletic.net/team/42708/track-and-field-outdoor/2026/team-records/f" },
-  { title: "Great Southwest Classic Colorado Entry List", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Tiana Schwarz was selected to represent Colorado at the prestigious Great Southwest Track & Field Classic, an invite-only meet at the University of New Mexico that draws top high school athletes from across the nation. Competing in the 800m, she ran a 2:26.03 against elite competition in this nationally recognized multi-day event.", url: "https://co.milesplit.com/articles/155390/updated-great-southwest-entry-list-for-colorado" },
+  { title: "Great Southwest Classic Colorado Entry List", source: "MileSplit Colorado · Alan Versaw · May 27, 2015", category: "Climbing & Athletics", description: "Tiana Schwarz was selected to represent Colorado at the prestigious Great Southwest Track & Field Classic, an invite-only meet at the University of New Mexico that draws top high school athletes from across the nation. Competing in the 800m, she ran a 2:26.03 against elite competition in this nationally recognized multi-day event.", url: "https://co.milesplit.com/articles/155390/updated-great-southwest-entry-list-for-colorado" , sortDate: "2015-05-27" },
   { title: "Colorado Class 3A Volleyball Statistical Leaders", source: "Colorado Preps", category: "Climbing & Athletics", description: "At the Class 3A volleyball level in Colorado, Tiana Schwarz ranked seventh in digs with 368 total, placing her among the elite dig leaders in the state that Fall 2017 season.", url: "https://coloradopreps.com/class-3a-volleyball-statistical-leaders/" },
   { title: "Volleyball Players to Watch: SkyView Academy", source: "Colorado Community Media", category: "Climbing & Athletics", description: "Colorado Community Media featured Tiana Schwarz in coverage of SkyView Academy volleyball and the team's competitive development.", url: "https://www.coloradocommunitymedia.com/stories/volleyball-squads-work-in-ways-like-football-teams,253643/" },
-  { title: "Colorado 3A Girls Track and Field State Meet Results 2015", source: "The Denver Post", category: "Climbing & Athletics", description: "Tiana Schwarz placed sixth in the 400m dash with a time of 1:00.04. In the 800m, despite suffering a fall mid-race that required immediate stitches, she pushed through to finish 16th, clocking a 64-second opening lap. She also anchored SkyView Academy's 4×800m relay team to a seventh-place finish, earning valuable points for the school.", url: "https://www.denverpost.com/2015/05/16/colorado-3a-girls-track-and-field-state-meet-results-2015/", sortDate: "2015-05-16" },
-  { title: "Top Small-School Track Performances", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Coverage of Colorado small-school track and field performances during the 2015 season.", url: "https://co.milesplit.com/articles/151240/top-small-school-performances-of-the-past-week" },
+  { title: "Colorado 3A Girls Track and Field State Meet Results 2015", source: "The Denver Post · May 16, 2015", category: "Climbing & Athletics", description: "Tiana Schwarz placed sixth in the 400m dash with a time of 1:00.04. In the 800m, despite suffering a fall mid-race that required immediate stitches, she pushed through to finish 16th, clocking a 64-second opening lap. She also anchored SkyView Academy's 4×800m relay team to a seventh-place finish, earning valuable points for the school.", url: "https://www.denverpost.com/2015/05/16/colorado-3a-girls-track-and-field-state-meet-results-2015/", sortDate: "2015-05-16" },
+  { title: "Top Small-School Track Performances", source: "MileSplit Colorado · Alan Versaw · April 13, 2015", category: "Climbing & Athletics", description: "Coverage of Colorado small-school track and field performances during the 2015 season.", url: "https://co.milesplit.com/articles/151240/top-small-school-performances-of-the-past-week" , sortDate: "2015-04-13" },
   { title: "2016 Colorado State Track Championships", source: "MileSplit Colorado", category: "Climbing & Athletics", description: "Tiana Schwarz competed in the 2016 Colorado State Track and Field Championships as part of SkyView Academy's 4×800m relay team, which finished 14th in 10:43.30.", url: "https://co.milesplit.com/meets/220074-colorado-state-track-and-field-championships-2016/results/453815/raw" },
 ];
 
@@ -421,8 +421,8 @@ const communityItems: CommunityItem[] = [
   { title: "Assisted Living Community Project", category: "COMMUNITY DEVELOPMENT", dateLabel: "January–May 2018", sortDate: "2018-05-01", organization: "Big Idea Project · La Veta, Colorado", description: "Led a student team developing plans for an assisted living community space intended to address isolation among older adults, including project documentation and a video sharing residents' perspectives." },
   { title: "Alumni Ambassador", category: "AEROSPACE MENTORSHIP", dateLabel: "August 2024–Present", sortDate: "2026-10-27", organization: "Colorado Space Business Roundtable (CSBR) · Alumni Ambassador", description: "Support aerospace and technology networking, mentorship, career guidance, and outreach for students and early-career professionals." },
   { title: "Volunteering in Colorado Springs", category: "COMMUNITY RESOURCE", dateLabel: "Ongoing", sortDate: "2026-10-27", description: "I maintain a GitHub collection of local volunteer opportunities and organizations focused on homelessness, healthcare access, food insecurity, and older adults.", url: "https://github.com/track001/VolunteeringinCOS", linkLabel: "Explore volunteering resources ↗" },
-  { title: "Women's Climb Nights", category: "CLIMBING COMMUNITY", dateLabel: "February 13, 2025 & September 26, 2026", sortDate: "2026-09-26", organization: "Springs Climbing Center · Colorado Springs", description: "Co-hosted the Galentine's Edition on February 13, 2025 and Fall Edition on September 26, 2026, welcoming more than 60 participants across both events. These gym-reserved gatherings created space for climbing, connection, and community.", images: ["1womenclimbnight-part1.jpg", "1womenclimbnight-part2.jpg", "1womenclimbnight-part3.jpg", "1womenclimbnight-part4.jpg", "2womenclimbnight-part1.jpg", "2womenclimbnight-part2.jpg", "2womenclimbnight-part3.jpg", "2womenclimbnight-part4.jpg"], links: [{ label: "Fall Edition · September 26, 2026 · Photo album ↗", url: "https://photos.app.goo.gl/rgmw6X1LwNFdekPc9" }, { label: "Galentine's Edition · February 13, 2025 · Photo album ↗", url: "https://photos.app.goo.gl/5CsNSrwEaoYZDmaWA" }] },
-  { title: "Amy Stone Project", category: "CLIMBING COMMUNITY", dateLabel: "Date not specified", organization: "Amy Stone Project", description: "Climbing community initiative and connection.", images: ["amy-stone-project.png"] },
+  { title: "Women's Climb Night · Fall Edition", category: "CLIMBING COMMUNITY", dateLabel: "September 26, 2026", sortDate: "2026-09-26", organization: "Springs Climbing Center · Colorado Springs", description: "Co-hosted a reserved-gym women's climbing event focused on connection, mentorship, and community. Across both editions, more than 60 women participated.", images: ["2womenclimbnight-part1.jpg", "2womenclimbnight-part2.jpg", "2womenclimbnight-part3.jpg", "2womenclimbnight-part4.jpg"], links: [{ label: "Fall Edition · Photo album ↗", url: "https://photos.app.goo.gl/rgmw6X1LwNFdekPc9" }] },
+  { title: "Women's Climb Night · Galentine's Edition", category: "CLIMBING COMMUNITY", dateLabel: "February 13, 2026", sortDate: "2026-02-13", organization: "Springs Climbing Center · Colorado Springs", description: "Co-hosted a Galentine's climbing night, creating a welcoming, reserved-gym space for women to climb together and build community.", images: ["1womenclimbnight-part1.jpg", "1womenclimbnight-part2.jpg", "1womenclimbnight-part3.jpg", "1womenclimbnight-part4.jpg"], links: [{ label: "Galentine's Edition · Photo album ↗", url: "https://photos.app.goo.gl/5CsNSrwEaoYZDmaWA" }] },
   { title: "Community Food Pantry Support", category: "FOOD ACCESS", dateLabel: "Date not specified", organization: "Colorado Springs, Colorado", description: "Supported food pantry efforts serving underserved communities and improving access to essential food resources." },
 ];
 
@@ -481,7 +481,7 @@ function PortfolioAdditions() {
   const toggleSection = (name: string) => setExpandedSections(current => ({ ...current, [name]: !current[name] }));
   const previewCount = 4;
   const categories: Array<"All" | RecognitionCategory> = ["All", "Writing & Media", "Academic Honors", "Climbing & Athletics"];
-  const visibleCredentials = newestFirst(recentOnly(credentials, certTime));
+  const visibleCredentials = [...recentOnly(credentials, certTime)].sort((a, b) => { const order = ["CompTIA Security+ (SY0-601)", "CPR / AED / First Aid", "Level 1 Routesetter", "Para Routesetting", "Level 2 Youth Coach"]; const ai = order.indexOf(a.title); const bi = order.indexOf(b.title); return (ai < 0 ? 99 : ai) - (bi < 0 ? 99 : bi); });
   const datedRecognition = newestFirst(recentOnly(recognition.filter(item => category === "All" || item.category === category), recognitionTime));
   // The unfiltered landing view intentionally mixes writing, academic honors,
   // and climbing achievements instead of showing only the most recent dates.
@@ -560,7 +560,7 @@ function PortfolioAdditions() {
           <h3>{item.title}</h3>
           {item.organization && <p className="extra-org">{item.organization}</p>}
           <p>{item.description}</p>
-          {item.title === "Women's Climb Nights" && <p className="extra-footnote">Gallery: Fall 2026 (photos 1–4), Galentine's 2025 (photos 5–8).</p>}
+
           <MiniPhotoSlides images={item.images} label={item.title} />
           {item.links?.map(link => <a key={link.url} className="extra-link" href={link.url} target="_blank" rel="noopener noreferrer" style={{display:"block",marginTop:8}}>{link.label}</a>)}
           {item.url && <a className="extra-link" href={item.url} target="_blank" rel="noopener noreferrer">{item.linkLabel || "Learn more ↗"}</a>}
@@ -581,27 +581,29 @@ function PortfolioAdditions() {
 
 type CompetitionResult = { date: string; name: string; location: string; qualifiers: string; finals: string; note?: string; url?: string };
 const climbingCompetitions: CompetitionResult[] = [
+  { date: "August 7, 2026", name: "Campus Boulder Competition", location: "Campus Boulder · Boulder, CO", qualifiers: "3rd overall", finals: "No finals", note: "Final placement determined by qualifying round" },
+  { date: "January 31, 2026", name: "New Year's Resolution (NYR) Competition", location: "Black Rock Bouldering Gym · Phoenix, AZ", qualifiers: "4th", finals: "5th?", note: "Finals rank needs confirmation" },
+  { date: "December 13, 2025", name: "Pure Pressure", location: "Pure Bouldering Gym", qualifiers: "1st", finals: "1st", note: "" },
+  { date: "September 25, 2025", name: "Minneapolis BoulderFest", location: "Minneapolis, MN · gym TBD", qualifiers: "4th", finals: "5th", note: "" },
+  { date: "2025 · date TBD", name: "Seattle BoulderFest", location: "Seattle, WA · gym TBD", qualifiers: "7th or 8th?", finals: "TBD", note: "Qualifier ranking and finals participation unconfirmed" },
   { date: "May 28, 2024", name: "USA Climbing Collegiate Nationals · Boulder · Women's Intermediate", location: "Arizona · USA Climbing", qualifiers: "1st", finals: "1st", url: "https://usac.climb8a.com/climber/29690465" },
   { date: "May 28, 2024", name: "USA Climbing Collegiate Nationals · Lead / Top Rope · Women's Intermediate", location: "Arizona · USA Climbing", qualifiers: "1st", finals: "1st", url: "https://usac.climb8a.com/climber/29690465" },
+  { date: "April 19, 2024", name: "SCC Community Dyno Competition", location: "Springs Climbing Center · Colorado Springs, CO", qualifiers: "N/A", finals: "3rd", note: "Overall placement; round format to confirm" },
   { date: "2024 · date TBD", name: "USA Climbing Collegiate Divisional · Boulder", location: "Gym / location TBD", qualifiers: "TBD", finals: "1st", note: "Verify round placement and date against USAC results", url: "https://usac.climb8a.com/climber/29690465" },
   { date: "2024 · date TBD", name: "USA Climbing Collegiate Divisional · Lead / Top Rope", location: "Gym / location TBD", qualifiers: "TBD", finals: "TBD", note: "Awaiting event-specific result", url: "https://usac.climb8a.com/climber/29690465" },
-  { date: "April 19, 2024", name: "SCC Community Dyno Competition", location: "Springs Climbing Center · Colorado Springs, CO", qualifiers: "N/A", finals: "3rd", note: "Overall placement; round format to confirm" },
-  { date: "2023 · date TBD", name: "BIPOC Women's Climbing Competition", location: "Gym / location TBD", qualifiers: "1st", finals: "1st", note: "Reported winner; event date and organizer to confirm" },
   { date: "2024 · date TBD", name: "BIPOC Women's Climbing Competition", location: "Gym / location TBD", qualifiers: "1st", finals: "1st", note: "Reported consecutive win; event date and organizer to confirm" },
   { date: "2024 · month TBD", name: "Hotter Than Chicken", location: "Nashville, TN · gym TBD", qualifiers: "2nd", finals: "3rd", note: "Month and year need confirmation" },
-  { date: "September 25, 2025", name: "Minneapolis BoulderFest", location: "Minneapolis, MN · gym TBD", qualifiers: "4th", finals: "5th", note: "Date and placements supplied by athlete; verify official results" },
-  { date: "2025 · date TBD", name: "Seattle BoulderFest", location: "Seattle, WA · gym TBD", qualifiers: "7th or 8th?", finals: "TBD", note: "Qualifier ranking and finals participation unconfirmed" },
-  { date: "January 31, 2026", name: "New Year's Resolution (NYR) Competition", location: "Black Rock Bouldering Gym · Phoenix, AZ", qualifiers: "4th", finals: "5th?", note: "Finals rank needs confirmation" },
+  { date: "September 3, 2023", name: "BFL Climbing Combine", location: "Gym / location TBD", qualifiers: "4th?", finals: "5th?", note: "", url: "https://bflclimbing.com/?venue=bfl3" },
+  { date: "2023 · date TBD", name: "BIPOC Women's Climbing Competition", location: "Gym / location TBD", qualifiers: "1st", finals: "1st", note: "Reported winner; event date and organizer to confirm" },
   { date: "Date TBD", name: "Bouldergeist", location: "Canyon's Rock Climbing Gym · Texas", qualifiers: "2nd", finals: "1st", note: "Event date to confirm" },
   { date: "Date TBD", name: "Nashville Open Competition · Name TBD", location: "Nashville, TN · gym TBD", qualifiers: "TBD", finals: "Did not compete", note: "Qualified for finals but did not attend due to graduation" },
-  { date: "September 3, 2023", name: "BFL Climbing Combine", location: "Gym / location TBD", qualifiers: "4th?", finals: "5th?", note: "Both placements need confirmation", url: "https://bflclimbing.com/?venue=bfl3" },
   { date: "Date TBD", name: "BFL6 · Lead Climbing", location: "Gym / location TBD", qualifiers: "1st", finals: "6th", note: "Event date to confirm", url: "https://bflclimbing.com/?venue=bfl3" },
-  { date: "December 13, 2025", name: "Pure Pressure", location: "Pure Bouldering Gym", qualifiers: "1st", finals: "1st", note: "Placements reported by athlete" },
 ];
 
 export default function App() {
   const [openTimelineItem, setOpenTimelineItem] = useState<string | null>(null);
   const [showFullTimeline, setShowFullTimeline] = useState(false);
+  const [showAllOrganizations, setShowAllOrganizations] = useState(false);
 
   const toggleTimelineItem = (id: string) => {
     setOpenTimelineItem((current) => (current === id ? null : id));
@@ -949,6 +951,10 @@ export default function App() {
                     Download PDF ↓
                   </a>
                 </div>
+                <div style={{marginTop:18, border:"1px solid rgba(240,158,109,.25)", borderRadius:8, overflow:"hidden", background:"#fff"}}>
+                  <iframe src={`${resume.file}#toolbar=0&navpanes=0&view=FitH`} title={`${resume.title} PDF preview`} loading="lazy" style={{width:"100%",height:430,border:0,display:"block"}} />
+                </div>
+                <p style={{fontSize:12,opacity:.7}}>PDF preview. Use View Résumé if your browser does not display embedded PDFs.</p>
               </article>
             ))}
           </div>
@@ -1060,10 +1066,10 @@ export default function App() {
               My career has given me the opportunities to diverge across multiple paths of interest, from engineering and cybersecurity to healthcare, research, and climbing. I like being able to bring what I learn in one area into something completely different.
             </p>
             <p>
-              Outside of work, I'm usually climbing, routesetting, coaching, or working on a project I thought would be fun to build. I'm passionate about mentorship and routesetting, and about making climbing more accessible to others. I've climbed up to V11, flashed multiple V10s, and am a board climber at heart. I love creating opportunities for people to try something new and grow through climbing.
+              Outside of work, I'm usually climbing, routesetting, coaching, or working on a project I thought would be fun to build. I'm passionate about mentorship and routesetting, and about making climbing more accessible to others. I've climbed up to V11, flashed multiple V10s, and am a board climber at heart. I love creating opportunities for people to try something new and grow through climbing. I was especially excited to be featured in the Board Report as a dedicated board climber and longtime enthusiast of Tension Climbing, whose quality products and contributions to the progression of the board climbing community I deeply appreciate.
             </p>
             <p>
-              This site is a place to keep track of the things I've built, the communities I've been part of, and the projects I want to keep improving.
+              You can see the <a href="https://www.instagram.com/p/DbGk6XglvJX/?img_index=6&amp;xtok=MTh3N2dyaHp3ZHpwZw==" target="_blank" rel="noopener noreferrer">Tension Climbing Board Report feature ↗</a>. This site is a place to keep track of the things I've built, the communities I've been part of, and the projects I want to keep improving.
             </p>
           </div>
           <div style={{marginTop:28}}>
@@ -1082,39 +1088,26 @@ export default function App() {
           <p className="extra-intro">A selection of academic, professional, athletic, and community organizations I've participated in, supported, or helped lead.</p>
           <div className="associations-list">
             {[
-              "Aerospace States Association (ASA)",
-              "AMTA Mock Trial · Award Recipient",
-              "American Institute of Aeronautics and Astronautics (AIAA)",
-              "Amy Stone Project · Climbing Community Initiative",
-              "Asian Vibes in Denver (AVID)",
-              "Centura Diversity & Inclusion Council",
-              "Colorado Space Business Roundtable (CSBR)",
-              "Colorado Space Grant Consortium (COSGC) · Scholarship recipient & research presenter",
-              "Fellowship of Christian Athletes (FCA)",
-              "Phi Alpha Delta (P.A.D.)",
-              "Springs Rescue Mission · Volunteer",
-              "Society of Women Engineers (SWE)",
-              "UCCS Pre-Health Society",
-              "UCCS Pre-Law Society",
-              "UCCS Climbing Club · Founder & President (USA Climbing Collegiate)",
+              "UCCS Climbing Club · Founder & President",
               "USA Climbing · Athlete, Coach & Routesetter",
               "Escape Climbing · Escape Athlete",
-              "The Denver Post · Featured in competition coverage",
-              "The Scribe · Featured in university news",
-              "Climbing Magazine · Featured climber",
-              "Climbing Business Journal · Routesetting podcast invitation",
-              "The Impact Driver Podcast · Invited routesetting guest (upcoming)",
+              "Society of Women Engineers (SWE)",
+              "Colorado Space Business Roundtable (CSBR) · Alumni Ambassador",
+              ...(showAllOrganizations ? [
+                "Aerospace States Association (ASA)", "AMTA Mock Trial · Outstanding Witness", "American Institute of Aeronautics and Astronautics (AIAA)", "Asian Vibes in Denver (AVID)", "Centura Diversity & Inclusion Council", "Colorado Space Grant Consortium (COSGC)", "Fellowship of Christian Athletes (FCA)", "Phi Alpha Delta (P.A.D.)", "Springs Rescue Mission · Volunteer", "UCCS Pre-Health Society", "UCCS Pre-Law Society"
+              ] : []),
             ].map((name) => <span className="association-pill" key={name}>{name}</span>)}
           </div>
+          <button className="section-expand-button" type="button" onClick={() => setShowAllOrganizations(v => !v)}>{showAllOrganizations ? "Show fewer organizations" : "Show all organizations"}</button>
         </section>
 
 
         <section className="portfolio-extra-section" id="climbing-competitions" aria-labelledby="competitions-heading">
           <div className="section-label">CLIMBING COMPETITIONS</div>
           <h2 id="competitions-heading">Competition results & placements.</h2>
-          <p className="extra-intro">A developing record of collegiate and open competitions. Unconfirmed placements and dates are marked for verification rather than presented as official results.</p>
+          <p className="extra-intro">A developing record of collegiate and open competitions. I am adding more dates, locations, and placements as I gather them.</p>
           <div className="extra-grid" style={{margin:"22px 0 28px"}}>
-            <div><h3 style={{fontSize:"1.1rem",marginBottom:8}}>Heart and Soul · 2025</h3><MiniPhotoSlides label="Heart and Soul 2026" images={["heart and soul 2025.jpg"]} /></div>
+            <div><h3 style={{fontSize:"1.1rem",marginBottom:8}}>Heart and Soul · 2025</h3><MiniPhotoSlides label="Heart and Soul 2025" images={["heart and soul 2025.jpg"]} /></div>
             <div><h3 style={{fontSize:"1.1rem",marginBottom:8}}>BFL6 · 2026</h3><MiniPhotoSlides label="BFL6 2026" images={["BFL 2026.jpg"]} /></div>
           </div>
           <div style={{margin:"22px 0 28px"}}>
@@ -1128,6 +1121,7 @@ export default function App() {
           </div>
           <details className="competition-disclosure">
             <summary>View competition results ({climbingCompetitions.length})</summary>
+            <p style={{padding:"0 20px",fontSize:13,opacity:.8}}>I’m continuing to add competition details as I gather dates, locations, and placements.</p>
             <div className="competition-table-wrap">
               <table className="competition-table">
                 <thead><tr><th>Date</th><th>Competition</th><th>Gym / Location</th><th>Qualifiers</th><th>Finals</th></tr></thead>
