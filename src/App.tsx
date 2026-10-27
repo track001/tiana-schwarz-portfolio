@@ -838,6 +838,30 @@ export default function App() {
             </div>
           </div>
 
+          {/* Crescent sits just outside the portrait rim, like a cradle. */}
+          <style>{`
+            .hero-photo-wrap { isolation: isolate; overflow: visible; }
+            .hero-photo-wrap::after {
+              content: "";
+              position: absolute;
+              width: 264px;
+              height: 264px;
+              top: -13px;
+              left: 50%;
+              transform: translateX(-50%) rotate(-12deg);
+              border-radius: 50%;
+              box-shadow: 23px 8px 0 -7px rgba(223, 163, 108, 0.70),
+                          29px 10px 25px -14px rgba(223, 101, 78, 0.28);
+              pointer-events: none;
+              z-index: 0;
+            }
+            .hero-photo-wrap .hero-photo { position: relative; z-index: 1; }
+            .hero-photo-wrap .hero-status { position: relative; z-index: 1; }
+            .space-background::before { display: none; }
+            @media (max-width: 700px) {
+              .hero-photo-wrap::after { width: 196px; height: 196px; top: -9px; box-shadow: 17px 6px 0 -5px rgba(223,163,108,.70), 22px 8px 19px -12px rgba(223,101,78,.28); }
+            }
+          `}</style>
           <div className="hero-photo-wrap">
             <img
               className="hero-photo"
@@ -1084,7 +1108,7 @@ export default function App() {
               Outside of work, I'm usually climbing, routesetting, coaching, or working on a project I thought would be fun to build. I'm passionate about mentorship and routesetting, and about making climbing more accessible to others. I've climbed up to V11, flashed multiple V10s, and am a board climber at heart. I love creating opportunities for people to try something new and grow through climbing. Being featured in Tension Climbing’s Board Report meant a lot to me, especially because the board climbing community is something I hold dearly.
             </p>
             <p>
-              I actively seek opportunities to learn from other routesetters and setting teams, whether through clinics, commercial setting, or volunteering at competitions. In July 2026, I had the opportunity to set commercially with First Ascent Block 37 in Chicago and learn from Brit Booth. I also learned from Holly Chen at The Spot Denver and set a citizens' boulder for the Death Moth competition in January 2026. I continue reaching out to experienced routesetters, including Brad Weaver, to learn different approaches and offer help wherever I can.
+              I proactively seek opportunities to learn from routesetters and other setting teams through clinics, commercial setting, and competitions. In July 2026, I set commercially at First Ascent Block 37 in Chicago while learning from routesetter Brit Booth. I have also learned from Holly Chen at The Spot Denver and set a citizens' boulder for the Death Moth competition in January 2026. Brad Weaver, an Olympic and IFSC (now World Climbing) competition routesetter, has generously offered guidance as I begin my routesetting journey. I'm deeply appreciative of his support, the knowledge shared by other setters, and the continued encouragement and experience of my home gym's routesetting team.
             </p>
             <p>
               You can see the <a href="https://www.instagram.com/p/DbGk6XglvJX/?img_index=6&amp;xtok=MTh3N2dyaHp3ZHpwZw==" target="_blank" rel="noopener noreferrer">Tension Climbing Board Report feature ↗</a>. This site is a place to keep track of the things I've built, the communities I've been part of, and the projects I want to keep improving.
@@ -1159,7 +1183,7 @@ export default function App() {
           <div className="organization-logo-grid">
             {partnerLogos.map(item => {
               const content = <>
-                <img src={assetPath(`/images/${item.file}`)} alt={`${item.name} logo`} loading="lazy" style={item.file === "impactdriver.png" ? { background: "#080808", padding: "8px" } : undefined} />
+                <img src={assetPath(`/images/${item.file}`)} alt={`${item.name} logo`} loading="lazy" style={["impactdriver.png", "escape-climbing.png"].includes(item.file) ? { background: "#080808", padding: "8px", objectFit: "contain" } : undefined} />
                 <strong>{item.name}</strong>
                 <span>{item.context}</span>
                 {item.url && <span className="organization-link-hint">View article or organization ↗</span>}
