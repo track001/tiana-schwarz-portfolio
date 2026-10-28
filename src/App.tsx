@@ -586,24 +586,28 @@ function PortfolioAdditions() {
 
 type CompetitionResult = { date: string; name: string; location: string; qualifiers: string; finals: string; note?: string; url?: string };
 const climbingCompetitions: CompetitionResult[] = [
-  { date: "August 7, 2026", name: "Campus Boulder Competition", location: "Campus Boulder · Boulder, CO", qualifiers: "3rd overall", finals: "No finals", note: "Final placement determined by qualifying round" },
-  { date: "January 31, 2026", name: "New Year's Resolution (NYR) Competition", location: "Black Rock Bouldering Gym · Phoenix, AZ", qualifiers: "4th", finals: "5th?", note: "Finals rank needs confirmation" },
-  { date: "December 13, 2025", name: "Pure Pressure", location: "Pure Bouldering Gym", qualifiers: "1st", finals: "1st", note: "" },
-  { date: "September 25, 2025", name: "Minneapolis BoulderFest", location: "Minneapolis, MN · gym TBD", qualifiers: "4th", finals: "5th", note: "" },
-  { date: "2025 · date TBD", name: "Seattle BoulderFest", location: "Seattle, WA · gym TBD", qualifiers: "7th or 8th?", finals: "TBD", note: "Qualifier ranking and finals participation unconfirmed" },
+  { date: "October 6, 2026", name: "Board Battles · Qualifiers", location: "The Spot Denver · Denver, CO", qualifiers: "Results not provided", finals: "Scheduled for early 2027", note: "Qualifier event held October 6, 2026; finals expected in early 2027" },
+  { date: "August 29, 2026", name: "BFL 6", location: "Longmont Climbing Collective · Longmont, CO", qualifiers: "1st", finals: "6th", note: "", url: "https://www.youtube.com/watch?v=nO47bFLzbH0" },
+  { date: "August 7, 2026", name: "Campus Comp", location: "The Campus Boulder · Boulder, CO", qualifiers: "3rd overall", finals: "No separate finals", note: "Overall result determined by qualifiers" },
+  { date: "May 17, 2026", name: "SCC Community Comp", location: "Springs Climbing Center · Colorado Springs, CO", qualifiers: "Not available", finals: "3rd overall", note: "Overall placement recorded; qualifier placement not provided" },
+  { date: "May 9, 2026", name: "Heart & Soul", location: "Denver Bouldering Club · Denver, CO", qualifiers: "Outside top 6", finals: "Did not qualify", note: "Only the top six advanced; remaining qualifying results were not published" },
+  { date: "January 31, 2026", name: "New Year's Resolution (NYR) Competition", location: "Black Rock Bouldering Gym · Phoenix, AZ", qualifiers: "4th", finals: "Not recorded", note: "" },
+  { date: "December 6, 2025", name: "Pure Pressure", location: "Pure Bouldering · Colorado Springs, CO", qualifiers: "1st", finals: "1st" },
+  { date: "November 7, 2025", name: "Seattle BoulderFest", location: "Seattle Bouldering Project · Seattle, WA", qualifiers: "8th", finals: "Did not qualify", note: "Top six advanced to finals" },
+  { date: "September 28, 2025", name: "CityROCK Rock and Rock", location: "CityROCK · Colorado Springs, CO", qualifiers: "6th", finals: "5th" },
+  { date: "September 25, 2025", name: "Minneapolis BoulderFest", location: "Minneapolis, MN · gym TBD", qualifiers: "4th", finals: "5th" },
+  { date: "September 13, 2025", name: "Heart of Stone", location: "Loveland Climbing Collective · Loveland, CO", qualifiers: "8th", finals: "Did not qualify" },
+  { date: "August 2, 2025", name: "Hotter Than Chicken (HTC)", location: "Climb Kraft · Nashville, TN", qualifiers: "2nd", finals: "3rd" },
+  { date: "May 3, 2025", name: "Clash for the Cash", location: "The Crag TN · Franklin, TN", qualifiers: "Not available", finals: "Did not compete", note: "Qualified for finals but did not attend due to graduation" },
+  { date: "October 26, 2024", name: "Bouldergeist", location: "Canyons · Texas", qualifiers: "2nd", finals: "1st" },
   { date: "May 28, 2024", name: "USA Climbing Collegiate Nationals · Boulder · Women's Intermediate", location: "Arizona · USA Climbing", qualifiers: "1st", finals: "1st", url: "https://usac.climb8a.com/climber/29690465" },
   { date: "May 28, 2024", name: "USA Climbing Collegiate Nationals · Lead / Top Rope · Women's Intermediate", location: "Arizona · USA Climbing", qualifiers: "1st", finals: "1st", url: "https://usac.climb8a.com/climber/29690465" },
-  { date: "April 19, 2024", name: "SCC Community Dyno Competition", location: "Springs Climbing Center · Colorado Springs, CO", qualifiers: "N/A", finals: "3rd", note: "Overall placement; round format to confirm" },
-  { date: "2024 · date TBD", name: "USA Climbing Collegiate Divisional · Boulder", location: "Gym / location TBD", qualifiers: "TBD", finals: "1st", note: "Verify round placement and date against USAC results", url: "https://usac.climb8a.com/climber/29690465" },
-  { date: "2024 · date TBD", name: "USA Climbing Collegiate Divisional · Lead / Top Rope", location: "Gym / location TBD", qualifiers: "TBD", finals: "TBD", note: "Awaiting event-specific result", url: "https://usac.climb8a.com/climber/29690465" },
-  { date: "2024 · date TBD", name: "BIPOC Women's Climbing Competition", location: "Gym / location TBD", qualifiers: "1st", finals: "1st", note: "Reported consecutive win; event date and organizer to confirm" },
-  { date: "2024 · month TBD", name: "Hotter Than Chicken", location: "Nashville, TN · gym TBD", qualifiers: "2nd", finals: "3rd", note: "Month and year need confirmation" },
-  { date: "September 3, 2023", name: "BFL Climbing Combine", location: "Gym / location TBD", qualifiers: "4th?", finals: "5th?", note: "", url: "https://bflclimbing.com/?venue=bfl3" },
-  { date: "2023 · date TBD", name: "BIPOC Women's Climbing Competition", location: "Gym / location TBD", qualifiers: "1st", finals: "1st", note: "Reported winner; event date and organizer to confirm" },
-  { date: "Date TBD", name: "Bouldergeist", location: "Canyon's Rock Climbing Gym · Texas", qualifiers: "2nd", finals: "1st", note: "Event date to confirm" },
-  { date: "Date TBD", name: "Nashville Open Competition · Name TBD", location: "Nashville, TN · gym TBD", qualifiers: "TBD", finals: "Did not compete", note: "Qualified for finals but did not attend due to graduation" },
-  { date: "Date TBD", name: "Board Battles", location: "Gym / location TBD", qualifiers: "TBD", finals: "TBD", note: "Add year, event location and placements" },
-  { date: "Date TBD", name: "BFL6 · Lead Climbing", location: "Gym / location TBD", qualifiers: "1st", finals: "6th", note: "Event date to confirm", url: "https://bflclimbing.com/?venue=bfl3" },
+  { date: "April 19, 2024", name: "SCC Community Dyno Competition", location: "Springs Climbing Center · Colorado Springs, CO", qualifiers: "Not available", finals: "3rd overall" },
+  { date: "2024 · date TBD", name: "BIPOC", location: "Gym / location TBD", qualifiers: "1st", finals: "1st" },
+  { date: "2024 · date TBD", name: "USA Climbing Collegiate Divisional · Boulder", location: "Gym / location TBD", qualifiers: "Not available", finals: "1st", url: "https://usac.climb8a.com/climber/29690465" },
+  { date: "2024 · date TBD", name: "USA Climbing Collegiate Divisional · Lead / Top Rope", location: "Gym / location TBD", qualifiers: "Not available", finals: "Not available", url: "https://usac.climb8a.com/climber/29690465" },
+  { date: "September 3, 2023", name: "BFL 4", location: "BFL Gym · Denver, CO", qualifiers: "Not available", finals: "Not available", url: "https://bflclimbing.com/?venue=bfl3" },
+  { date: "2023 · date TBD", name: "BIPOC", location: "Gym / location TBD", qualifiers: "1st", finals: "1st" },
 ];
 
 const competitionDateOrder = (date: string): number => {
@@ -1162,13 +1166,13 @@ export default function App() {
           </div>
           <details className="competition-disclosure">
             <summary>View competition results ({climbingCompetitions.length})</summary>
-            <p style={{padding:"0 20px",fontSize:13,opacity:.8}}>I’m continuing to add competition details as I gather dates, locations, and placements. Yellow highlights indicate details I still need to find.</p>
+            <p style={{padding:"0 20px",fontSize:13,opacity:.8}}>I’m continuing to add competition details as I gather dates, locations, and placements. Yellow highlights identify dates, locations, or placements I am still gathering.</p>
             <div className="competition-table-wrap">
               <table className="competition-table">
                 <thead><tr><th>Date</th><th>Competition</th><th>Gym / Location</th><th>Qualifiers</th><th>Finals</th></tr></thead>
                 <tbody>{competitionsNewestFirst.map((event, index) => <tr key={`${event.name}-${index}`}>
                   <td>{/TBD|Date TBD|date TBD|month TBD/i.test(event.date) ? <span className="competition-missing">{event.date}</span> : event.date}</td><td><strong>{event.name}</strong>{event.note && <small>{event.note}</small>}{event.url && <a href={event.url} target="_blank" rel="noopener noreferrer">Results ↗</a>}</td>
-                  <td>{/TBD|location TBD|gym TBD/i.test(event.location) ? <span className="competition-missing">{event.location}</span> : event.location}</td><td>{/TBD|\?/i.test(event.qualifiers) ? <span className="competition-missing">{event.qualifiers}</span> : event.qualifiers}</td><td>{/TBD|\?/i.test(event.finals) ? <span className="competition-missing">{event.finals}</span> : event.finals}</td>
+                  <td>{/TBD|location TBD|gym TBD/i.test(event.location) ? <span className="competition-missing">{event.location}</span> : event.location}</td><td>{/TBD|Not available|Results not provided/i.test(event.qualifiers) ? <span className="competition-missing">{event.qualifiers}</span> : event.qualifiers}</td><td>{/TBD|Not available/i.test(event.finals) ? <span className="competition-missing">{event.finals}</span> : event.finals}</td>
                 </tr>)}</tbody>
               </table>
             </div>
